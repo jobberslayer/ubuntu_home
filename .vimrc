@@ -11,6 +11,7 @@ set ruler
 set number
 set ignorecase
 set smartcase
+colorscheme slate
 
 "set nocompatible
 "filetype on
