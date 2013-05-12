@@ -12,6 +12,7 @@ set number
 set ignorecase
 set smartcase
 colorscheme slate
+filetype plugin on
 
 "set nocompatible
 "filetype on
@@ -41,6 +42,9 @@ colorscheme slate
 "NERDTree plugin
 :map <Leader>t :NERDTreeToggle<CR>
 :map <Leader>tm :NERDTreeMirror<CR>
+
+"CommandT - Fuzzy File Finder
+:map <Leader>ff :CommandT<CR>
 
 "CTags
 :map <Leader>c :TlistToggle<CR>
