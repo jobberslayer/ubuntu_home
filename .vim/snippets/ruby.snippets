@@ -418,23 +418,3 @@ snippet tas
 	task :${2:task_name => [:dependent, :tasks]} do
 		${3}
 	end
-# ADAPT snippets
-snippet record
-	record :record_type => :${1:rectype}, :file_name => "#{@input_dir}/${2:filename}", :file_type => :${3:fixed_width}
-	end_record
-snippet field
-	field :name => :${1:field_name}, :start => ${2:start}, :end => ${3:end} 
-snippet parent
-	parent :record_type => :${1:rectype}, :key => :${2:incident_system_number}
-	end_parent
-snippet child
-	child :record_type => :${1:rectype}, :linked_by => :${2:incident_system_number}
-snippet canon
-	canonical.${1:rectype}.${2:field_name} = source.attributes.${3:src_name}
-snippet address
-	address = Appriss::Adapt::Canonical::Rms::Address.new
-	address.address.address = source.attributes.${1:src_address}
-	address.address.city = source.attributes.${2:src_city}
-	address.address.state = source.attributes.${3:src_state}
-	address.address.zipcode = clean_number(source.attributes.${4:src_zip_code})
-	canonical.addresses << address
