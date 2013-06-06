@@ -1,0 +1,19 @@
+tint2 : another systray is running
+tint2 : nb monitor 1, nb monitor used 1, nb desktop 4
+
+(process:12426): GLib-CRITICAL **: g_hash_table_foreach: assertion `version == hash_table->version' failed
+real transparency off.... depth: 24
+xRandr: Found crtc's: 1
+xRandr: Linking output VBOX0 with crtc 0
+tint2 : nb monitor 1, nb monitor used 1, nb desktop 4
+
+(process:12467): GLib-CRITICAL **: g_hash_table_foreach: assertion `version == hash_table->version' failed
+real transparency off.... depth: 24
+xRandr: Found crtc's: 1
+xRandr: Linking output VBOX0 with crtc 0
+tint2 : nb monitor 1, nb monitor used 1, nb desktop 4
+
+(process:13259): GLib-CRITICAL **: g_hash_table_foreach: assertion `version == hash_table->version' failed
+real transparency off.... depth: 24
+xRandr: Found crtc's: 1
+xRandr: Linking output VBOX0 with crtc 0
