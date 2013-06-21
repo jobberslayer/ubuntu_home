@@ -231,7 +231,7 @@
       <action name="ToggleMaximize"/>
     </keybind>
     <keybind key="W-C-Down">
-      <action name="ToggleMaximize"/>
+      <action name="Iconify"/>
     </keybind>
     <keybind key="W-F1">
       <action name="GoToDesktop">
