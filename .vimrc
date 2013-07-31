@@ -25,8 +25,11 @@ filetype plugin on
 :map <Leader>u :<<CR>
 
 :map <Leader>e :e .<CR>
-:map <Leader># :s/\(\s*\)/\1#/<CR>
+":map <Leader># :s/\(\s*\)/\1#/<CR>
 :map <Leader>! :s/#//<CR>
+
+"Commenting
+:map <Leader># <c-_><c-_>
 
 "tabs
 :map <Leader>nt :tabnew<CR>
