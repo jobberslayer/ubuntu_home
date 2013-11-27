@@ -24,6 +24,10 @@ filetype plugin on
 :map <Leader>i :><CR>
 :map <Leader>u :<<CR>
 
+"CtrlP - fuzzy file search
+:map <Leader>ff :CtrlP<CR>
+:map <Leader>fb :CtrlPBuffer<CR>
+
 :map <Leader>e :e .<CR>
 ":map <Leader># :s/\(\s*\)/\1#/<CR>
 :map <Leader>! :s/#//<CR>
@@ -47,7 +51,7 @@ filetype plugin on
 :map <Leader>tm :NERDTreeMirror<CR>
 
 "CommandT - Fuzzy File Finder
-:map <Leader>ff :CommandT<CR>
+":map <Leader>ff :CommandT<CR>
 
 "CTags
 :map <Leader>c :TlistToggle<CR>
