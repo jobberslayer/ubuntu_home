@@ -1,3 +1,4 @@
+"install vim-gtk so we get clipboard support please
 set expandtab
 set softtabstop=0
 set shiftwidth=2
@@ -46,12 +47,21 @@ filetype plugin on
 :map <c-k> :wincmd k<CR>
 :map <c-j> :wincmd j<CR>
 
+"resize windows
+:map <c-right> <c-w>>
+:map <c-left> <c-w><
+:map <c-down> <c-w>+
+:map <c-up> <c-w>-
+
 "NERDTree plugin
 :map <Leader>t :NERDTreeToggle<CR>
 :map <Leader>tm :NERDTreeMirror<CR>
 
 "CommandT - Fuzzy File Finder
 ":map <Leader>ff :CommandT<CR>
+
+"ClipBoard paste
+:map <Leader>cp :put +<CR>
 
 "CTags
 :map <Leader>c :TlistToggle<CR>
