@@ -56,6 +56,8 @@ filetype plugin on
 "NERDTree plugin
 :map <Leader>t :NERDTreeToggle<CR>
 :map <Leader>tm :NERDTreeMirror<CR>
+"put NERDTree on the right side
+let g:NERDTreeWinPos = "right"
 
 "CommandT - Fuzzy File Finder
 ":map <Leader>ff :CommandT<CR>
