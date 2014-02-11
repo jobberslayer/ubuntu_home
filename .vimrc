@@ -25,6 +25,9 @@ filetype plugin on
 :map <Leader>i :><CR>
 :map <Leader>u :<<CR>
 
+"GUndo
+:map <Leader>u :GundoToggle<CR>
+
 "CtrlP - fuzzy file search
 :map <Leader>ff :CtrlP<CR>
 :map <Leader>fb :CtrlPBuffer<CR>
@@ -58,9 +61,6 @@ filetype plugin on
 :map <Leader>tm :NERDTreeMirror<CR>
 "put NERDTree on the right side
 let g:NERDTreeWinPos = "right"
-
-"CommandT - Fuzzy File Finder
-":map <Leader>ff :CommandT<CR>
 
 "ClipBoard paste
 :map <Leader>cp :put +<CR>
