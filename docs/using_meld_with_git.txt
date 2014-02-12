@@ -1,0 +1,16 @@
+This will allow me to use meld diff gui with git
+
+* apt-get install meld
+* make sure bin/diff.py exists
+* git config --global diff.external $HOME/bin/diff.py
+* git diff filename  
+
+CONTENTS OF diff.py IF MISSING
+================================
+
+#!/usr/bin/python
+
+import sys
+import os
+
+os.system('meld "%s" "%s"' % (sys.argv[2], sys.argv[5]))

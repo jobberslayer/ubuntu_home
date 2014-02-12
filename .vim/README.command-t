@@ -1,0 +1,10 @@
+# needs to be compile with version of ruby used with verion of vim
+# :ruby p RUBY_VERSION
+# probably 1.8.7
+rvm install 1.8.7 #if not already installed
+rvm 1.8.7
+cd ~/.vim/ruby/command-t
+ruby extconf.rb
+make
+make clean
+sudo make install 
