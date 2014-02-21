@@ -41,8 +41,8 @@ filetype plugin on
 
 "tabs
 :map <Leader>nt :tabnew<CR>
-:map <c-p>   :tabp<CR>
-:map <c-n>  :tabn<CR>
+:map <Leader>l   :tabp<CR>
+:map <Leader>h  :tabn<CR>
 
 "navigating windows
 :map <c-l> :wincmd l<CR>
