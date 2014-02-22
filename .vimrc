@@ -12,7 +12,8 @@ set ruler
 set number
 set ignorecase
 set smartcase
-colorscheme slate
+"colorscheme slate
+colorscheme desert
 filetype plugin on
 
 "folding settings
@@ -20,6 +21,8 @@ set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
+
+"Reminder EasyMotion is triggered using ;;w where ; is my leader char
 
 "set nocompatible
 "filetype on
