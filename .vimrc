@@ -16,6 +16,12 @@ set smartcase
 colorscheme desert
 filetype plugin on
 
+"REMINDER NOTES
+"SNIPMATE - type shortcut work then press tab
+"SURROUND - select using V or C-v and then hit S and what you want to surround
+"           with. cst<tagname> to change tags cs'" to change ' to ", etc. Same
+"           with ds for deleting tags.
+
 "folding settings
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
@@ -32,7 +38,12 @@ set foldlevel=1         "this is just what i use
 "bufferlist plugin
 :map <Leader>b :call BufferList()<CR>
 :map <Leader>i :><CR>
-:map <Leader>u :<<CR>
+:map <Leader>ui :<<CR>
+
+"edit/reload .vimrc
+:map <Leader>config :tabnew $MYVIMRC<CR>
+:map <Leader>vimrc :so $MYVIMRC
+:map <Leader>plugin :tabnew ~/.vim<CR>
 
 "GUndo
 :map <Leader>u :GundoToggle<CR>
@@ -50,8 +61,8 @@ set foldlevel=1         "this is just what i use
 
 "tabs
 :map <Leader>nt :tabnew<CR>
-:map <Leader>l   :tabp<CR>
-:map <Leader>h  :tabn<CR>
+:map <Leader>h   :tabp<CR>
+:map <Leader>l  :tabn<CR>
 
 "navigating windows
 :map <c-l> :wincmd l<CR>
