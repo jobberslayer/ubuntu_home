@@ -52,7 +52,7 @@ set foldlevel=1         "this is just what i use
 :map <Leader>ff :CtrlP<CR>
 :map <Leader>fb :CtrlPBuffer<CR>
 
-:map <Leader>e :e .<CR>
+:map <Leader>e :Explore<CR>
 ":map <Leader># :s/\(\s*\)/\1#/<CR>
 :map <Leader>! :s/#//<CR>
 
