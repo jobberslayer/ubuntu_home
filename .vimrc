@@ -88,7 +88,9 @@ set foldlevel=1         "this is just what i use
 let g:NERDTreeWinPos = "right"
 
 "ClipBoard paste
-:map <Leader>cp :put +<CR>
+:map <Leader>cp :put "+<CR>
+:map <Leader>paste :set paste
+:map <Leader>paste_done :set nopaste
 
 "CTags
 :map <Leader>c :TlistToggle<CR>
