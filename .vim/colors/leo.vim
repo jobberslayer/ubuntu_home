@@ -14,7 +14,7 @@
 " in your .vimrc
 
 " Tips:
-" :verbose hi StatusLine
+:q" :verbose hi StatusLine
 " Color numbers (0-255) see:
 "		http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 "	:so $VIMRUNTIME/syntax/hitest.vim

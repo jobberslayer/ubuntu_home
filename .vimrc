@@ -15,7 +15,7 @@ set smartcase
 "colorscheme slate
 "colorscheme desert
 "colorscheme molokai
-colorscheme leo 
+colorscheme xoria256
 filetype plugin on
 
 "REMINDER NOTES
