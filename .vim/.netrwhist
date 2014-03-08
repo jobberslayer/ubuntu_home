@@ -1,8 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/kevin/.cache/sessions'
-let g:netrw_dirhist_2='/home/kevin/workspace/rotation'
-let g:netrw_dirhist_3='/home/kevin/workspace/prayerlist'
-let g:netrw_dirhist_4='/home/kevin/workspace/rotation'
-let g:netrw_dirhist_5='/home/kevin/workspace/rotation/test'
-let g:netrw_dirhist_6='/home/kevin/workspace/rotation'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/kevin/.vim/plugin'

@@ -13,7 +13,9 @@ set number
 set ignorecase
 set smartcase
 "colorscheme slate
-colorscheme desert
+"colorscheme desert
+"colorscheme molokai
+colorscheme leo 
 filetype plugin on
 
 "REMINDER NOTES
@@ -58,6 +60,9 @@ set foldlevel=1         "this is just what i use
 
 "Commenting
 :map <Leader># <c-_><c-_>
+
+"reload snippets after a change to one
+:map <Leader>resnip :call ReloadAllSnippets()
 
 "tabs
 :map <Leader>nt :tabnew<CR>
