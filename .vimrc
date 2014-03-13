@@ -22,15 +22,14 @@ filetype plugin on
 "SNIPMATE - type shortcut work then press tab
 "SURROUND - select using V or C-v and then hit S and what you want to surround
 "           with. cst<tagname> to change tags cs'" to change ' to ", etc. Same
-"           with ds for deleting tags.
+"           with dst for deleting tags and ds' for deleteing ' for example.
+"EASYMOTION - ;;w then the letter you want to jump to 
 
 "folding settings
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
-
-"Reminder EasyMotion is triggered using ;;w where ; is my leader char
 
 "set nocompatible
 "filetype on
@@ -46,6 +45,9 @@ set foldlevel=1         "this is just what i use
 :map <Leader>config :tabnew $MYVIMRC<CR>
 :map <Leader>vimrc :so $MYVIMRC
 :map <Leader>plugin :tabnew ~/.vim<CR>
+
+" paste from system clipboard
+:map <Leader>pp "*p<CR>
 
 "GUndo
 :map <Leader>u :GundoToggle<CR>
