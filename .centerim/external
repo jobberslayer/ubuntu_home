@@ -1,0 +1,58 @@
+#
+# External actions
+# ----------------
+#
+# Every section starts with a line containing the "%action <name>",
+# "%pre-send <name>", "%pre-receive <name>" or "%manual <name>" text.
+# Please note that the <name> of any kind is necessary. It mustn't be
+# empty. Inside it the following parameters can be used:
+#
+# event
+# -----
+# Can be "msg", "sms", "url", "online", "offline", "auth",
+# "contacts" or "notification".
+#
+# The latter means CenterIM's own notifications, such as birthday reminders,
+# away messages, and other stuff. Specifying several event types is
+# also allowed. "all" stands for all the event types.
+#
+# proto
+# -----
+# Can be "icq", "yahoo", "aim", "irc", "msn", "lj", "rss" or "jab". Or
+# combination of these words. "all" can be used as a synonym for all of
+# them.
+#
+# status
+# ------
+# Can be "online", "away", "dnd", "na", "occupied", "ffc" or "invisible".
+# Specifying several ones is possible. "all" stands for all of possible
+# status modes.
+#
+# options
+# -------
+# Possible options for an action are:
+#
+#       stdin           The incoming message text is to be passed to
+#                       stdin of the script to be executed.
+#
+#       stdout          The script output is to be sent as a reply
+#                       message (if not empty).
+#
+#       nowait          Don't wait for the script to finish. Obviously, the
+#                       stdout option won't make sense if this one is used.
+#
+# Then, the section named "%exec" should follow. It contains a piece of
+# script to be executed being copied to a file first.
+#
+%action         GUI Notification 
+event           msg
+proto           all 
+status          all
+options         stdin stdout
+
+%exec
+fname=`head -n 2 $CONTACT_INFODIR/info | tail -n 1`
+lname=`head -n 3 $CONTACT_INFODIR/info | tail -n 1`
+msg=`cat`
+/usr/bin/notify-send -t 5000 "`echo "$fname $lname: $msg" | cut -c 1-30`"
+
