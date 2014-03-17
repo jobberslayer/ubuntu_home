@@ -24,6 +24,7 @@ filetype plugin on
 "           with. cst<tagname> to change tags cs'" to change ' to ", etc. Same
 "           with dst for deleting tags and ds' for deleteing ' for example.
 "EASYMOTION - ;;w then the letter you want to jump to 
+"Zen/Emmet - Ctrl + y and Comma
 
 "folding settings
 set foldmethod=indent   "fold based on indent
