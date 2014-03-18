@@ -25,6 +25,7 @@ filetype plugin on
 "           with dst for deleting tags and ds' for deleteing ' for example.
 "EASYMOTION - ;;w then the letter you want to jump to 
 "Zen/Emmet - Ctrl + y and Comma
+"BufExplorer - ;be current window, ;bs - hsplit, ;bv - vsplit
 
 "folding settings
 set foldmethod=indent   "fold based on indent
@@ -56,6 +57,9 @@ set foldlevel=1         "this is just what i use
 "CtrlP - fuzzy file search
 :map <Leader>ff :CtrlP<CR>
 :map <Leader>fb :CtrlPBuffer<CR>
+
+"BufExplorer sorting
+let g:bufExplorerSortBy='name'
 
 :map <Leader>e :Explore<CR>
 ":map <Leader># :s/\(\s*\)/\1#/<CR>
