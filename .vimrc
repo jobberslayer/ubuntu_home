@@ -65,6 +65,10 @@ let g:bufExplorerSortBy='name'
 ":map <Leader># :s/\(\s*\)/\1#/<CR>
 :map <Leader>! :s/#//<CR>
 
+" Conque Shell
+:map <Leader>shell :ConqueTermSplit bash
+:map <Leader>shelltab :ConqueTermTab bash
+
 "Commenting
 :map <Leader># <c-_><c-_>
 
