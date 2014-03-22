@@ -1,0 +1,1 @@
+place in $HOME/.config

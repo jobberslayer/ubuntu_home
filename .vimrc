@@ -25,7 +25,12 @@ filetype plugin on
 "           with dst for deleting tags and ds' for deleteing ' for example.
 "EASYMOTION - ;;w then the letter you want to jump to 
 "Zen/Emmet - Ctrl + y and Comma
-"BufExplorer - ;be current window, ;bs - hsplit, ;bv - vsplit
+"BufExplorer - ;be or ;b (set up below) current window, ;bs - hsplit, ;bv - vsplit
+"CtrlP - ctrl-p and then F5 to refresh
+"Use Ctrl-v then hit a modifier sequence when trying to map one.
+"
+"Explore reminders
+"% to create a new file
 
 "folding settings
 set foldmethod=indent   "fold based on indent
@@ -37,11 +42,22 @@ set foldlevel=1         "this is just what i use
 "filetype on
 "filetype plugin on
 
+" alternative to hitting escape key
+:imap jj <Esc>
+
+" insert a line above and stay in insert mode
+:imap ;o O
+
+" save file while in insert mode and return to insert mode immediately
+:imap ;w <ESC>:w<CR>a
+
 :let mapleader = ";"
-"bufferlist plugin
-:map <Leader>b :call BufferList()<CR>
+:map <Leader>b :BufExplorer<CR>
 :map <Leader>i :><CR>
 :map <Leader>ui :<<CR>
+
+" alternative to saving file while in command mode
+:map <Leader>w :w<CR>
 
 "edit/reload .vimrc
 :map <Leader>config :tabnew $MYVIMRC<CR>
@@ -100,8 +116,8 @@ let g:NERDTreeWinPos = "right"
 
 "ClipBoard paste
 :map <Leader>cp :put "+<CR>
-:map <Leader>paste :set paste
-:map <Leader>paste_done :set nopaste
+:map <Leader>pp :set paste
+:map <Leader>np :set nopaste
 
 "CTags
 :map <Leader>c :TlistToggle<CR>
