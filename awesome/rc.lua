@@ -73,9 +73,9 @@ layouts =
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {
-  names = { "1-code", "2-test", "3-web", "4-misc", "5-chat", "6", "7", "8", "9"},
-  layout = { layouts[2], layouts[2], layouts[2], layouts[2], layouts[2],
-    layouts[2], layouts[2], layouts[2], layouts[2]
+  names = { "1-web", "2-code", "3-test", "4-misc", "5-chat", "6", "7", "8", "9-gimp"},
+  layout = { layouts[1], layouts[2], layouts[2], layouts[2], layouts[2],
+    layouts[2], layouts[2], layouts[2], layouts[1]
   }
 }
 for s = 1, screen.count() do
@@ -106,7 +106,8 @@ mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
 
 -- {{{ Wibox
 -- Create a textclock widget
-mytextclock = awful.widget.textclock({ align = "right" })
+--mytextclock = awful.widget.textclock({ align = "right" })
+mytextclock = awful.widget.textclock({align="right"}, "%a %b %d, %I:%M%P", 60)
 
 -- Create a systray
 mysystray = widget({ type = "systray" })
@@ -234,18 +235,25 @@ globalkeys = awful.util.table.join(
             end
         end),
 
+     awful.key({ modkey, "Control" }, "-",  function () awful.client.moveresize( 20,  20, -40, -40) end),
+     awful.key({ modkey, "Control" }, "=", function () awful.client.moveresize(-20, -20,  40,  40) end),
+     awful.key({ modkey, "Control" }, "j",  function () awful.client.moveresize(  0,  20,   0,   0) end),
+     awful.key({ modkey, "Control" }, "k",    function () awful.client.moveresize(  0, -20,   0,   0) end),
+     awful.key({ modkey, "Control" }, "h",  function () awful.client.moveresize(-20,   0,   0,   0) end),
+     awful.key({ modkey, "Control" }, "l", function () awful.client.moveresize( 20,   0,   0,   0) end),
+
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
-    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
-    awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),
+    awful.key({ modkey,           }, "=",     function () awful.tag.incmwfact( 0.05)    end),
+    awful.key({ modkey,           }, "-",     function () awful.tag.incmwfact(-0.05)    end),
     awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1)      end),
     awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1)      end),
     awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1)         end),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1)         end),
-    awful.key({ modkey, "Control"          }, "space", function () awful.layout.inc(layouts,  1) end),
+    awful.key({ modkey, "Control" }, "space", function () awful.layout.inc(layouts,  1) end),
     awful.key({ modkey, "Control", "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
@@ -349,6 +357,19 @@ awful.rules.rules = {
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
+    -- WKL: put stuff in specific tags
+    {
+      rule = {class = "Pidgin"},
+      properties = { tag = tags[1][5] }
+    },
+    {
+      rule = {instance = "Navigator"},
+      properties = { tag = tags[1][3] }
+    },
+    {
+      rule = {instance = "gimp-2.8"},
+      properties = { tag = tags[1][9] }
+    }
 }
 -- }}}
 
@@ -400,24 +421,10 @@ function run_once(prg,arg_string,pname,screen)
   end
 end
 
-awful.rules.rules = {
-  {
-    rule = {class = "Pidgin"},
-    properties = { tag = tags[1][5] }
-  },
-  {
-    rule = {instance = "google-chrome"},
-    properties = { tag = tags[1][3] }
-  },
-  {
-    rule = {instance = "Navigator"},
-    properties = { tag = tags[1][2] }
-  }
-}
-
+-- AUTOSTART STUFF
 run_once("pidgin")
 run_once("synapse", "-s")
 run_once("parcellite")
-run_once("google-chrome")
-run_once("firefox")
+--run_once("google-chrome")
+--run_once("firefox")
 -- /AUTOSTART STUFF
