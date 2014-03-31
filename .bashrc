@@ -3,4 +3,7 @@ export TERM="xterm-256color"
 
 alias ps2="ps auxw|grep -v grep|grep"
 
+# use command line like vi
+set -o vi
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

@@ -21,8 +21,8 @@ snippet hr
 snippet br
 	<br/>
 snippet form_for
-	<% form_for ${1:type}, ${2:obj}, :url => {} do |${3}| %>
-		${4}
+	<%= form_for ${1:obj}, :url => {} do |${2}| %>
+		${3}
 	<% end %>
 snippet cycle
 	<%= cycle('${1:odd}', '${2:even}') %>
@@ -31,11 +31,24 @@ snippet cycle=
 snippet button_class
 	class: "btn btn-large btn-primary"
 
-snippet <% 
+snippet code 
 	<% ${1} %>
+#
 
-snippet <%=
-	<%= ${1} %>
+snippet end
+	<% end %>
+#
+
+snippet else
+	<% else %>
+#
+
+snippet mycycle
+	<%= cycle('oddrow', 'evenrow') %>
+#
+
+snippet newcycle
+	<% reset_cycle(${1}) %>
 #
 
 #Some css help for zurb foundation

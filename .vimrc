@@ -18,6 +18,9 @@ set smartcase
 colorscheme xoria256
 filetype plugin on
 
+"put filename in status line
+set statusline=%f
+
 "REMINDER NOTES
 "SNIPMATE - type shortcut work then press tab
 "SURROUND - select using V or C-v and then hit S and what you want to surround
@@ -50,6 +53,8 @@ set foldlevel=1         "this is just what i use
 
 " save file while in insert mode and return to insert mode immediately
 :imap ;w <ESC>:w<CR>a
+" save file while in insert mode and leave in command mode 
+:imap ;ww <ESC>:w<CR>
 
 :let mapleader = ";"
 :map <Leader>b :BufExplorer<CR>

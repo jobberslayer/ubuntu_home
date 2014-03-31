@@ -54,5 +54,5 @@ options         stdin stdout
 fname=`head -n 2 $CONTACT_INFODIR/info | tail -n 1`
 lname=`head -n 3 $CONTACT_INFODIR/info | tail -n 1`
 msg=`cat`
-/usr/bin/notify-send -t 5000 "$fname $lname" "`echo "$msg" | cut -c 1-30`"
+/usr/bin/notify-send -t 60000 "$fname $lname" "`echo "$msg" | cut -c 1-30`"
 
