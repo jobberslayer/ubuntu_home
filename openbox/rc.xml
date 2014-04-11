@@ -383,6 +383,11 @@
         <command>terminator</command>
       </action>
     </keybind>
+    <keybind key="W-w">
+      <action name="Execute">
+        <command>skippy-xd</command>
+      </action>
+    </keybind>
     <keybind key="W-r">
         <action name="Resize"/>
     </keybind>
