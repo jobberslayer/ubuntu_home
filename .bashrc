@@ -2,6 +2,8 @@ export PS1='\n${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[01;34
 export TERM="xterm-256color"
 
 alias ps2="ps auxw|grep -v grep|grep"
+alias jim="rvm gemset use"
+alias remap="xmodmap /home/kevin/bin/caplock_to_escape.xmodmap"
 
 # use command line like vi
 set -o vi

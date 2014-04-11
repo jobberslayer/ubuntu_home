@@ -22,6 +22,7 @@ filetype plugin on
 set statusline=%f
 
 "REMINDER NOTES
+" gv - rehighlight the last visual select
 "SNIPMATE - type shortcut work then press tab
 "SURROUND - select using V or C-v and then hit S and what you want to surround
 "           with. cst<tagname> to change tags cs'" to change ' to ", etc. Same
@@ -31,6 +32,8 @@ set statusline=%f
 "BufExplorer - ;be or ;b (set up below) current window, ;bs - hsplit, ;bv - vsplit
 "CtrlP - ctrl-p and then F5 to refresh
 "Use Ctrl-v then hit a modifier sequence when trying to map one.
+"
+"Maximize current split - ;m
 "
 "Explore reminders
 "% to create a new file
@@ -58,8 +61,9 @@ set foldlevel=1         "this is just what i use
 
 :let mapleader = ";"
 :map <Leader>b :BufExplorer<CR>
-:map <Leader>i :><CR>
-:map <Leader>ui :<<CR>
+
+" delete all buffers
+:map <Leader>dab :bd *
 
 " alternative to saving file while in command mode
 :map <Leader>w :w<CR>
@@ -132,3 +136,25 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 :map <Leader>err :Error<CR>:wincmd j<CR>
+
+nnoremap <C-W>O :call MaximizeToggle()<CR>
+nnoremap <C-W>o :call MaximizeToggle()<CR>
+nnoremap <C-W><C-O> :call MaximizeToggle()<CR>
+
+function! MaximizeToggle()
+  if exists("s:maximize_session")
+    exec "source " . s:maximize_session
+    call delete(s:maximize_session)
+    unlet s:maximize_session
+    let &hidden=s:maximize_hidden_save
+    unlet s:maximize_hidden_save
+  else
+    let s:maximize_hidden_save = &hidden
+    let s:maximize_session = tempname()
+    set hidden
+    exec "mksession! " . s:maximize_session
+    only
+  endif
+endfunction
+
+:map <Leader>m o
