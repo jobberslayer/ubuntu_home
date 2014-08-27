@@ -215,9 +215,9 @@ if !exists("g:Perl_NoKeyMappings") || ( exists("g:Perl_NoKeyMappings") && g:Perl
   nnoremap    <buffer>  <silent>  <LocalLeader>ne    <C-C>:call Perl_CodeSnippet("e")<CR>
   "
   noremap    <buffer>  <silent>  <LocalLeader>ntl        :call Perl_BrowseTemplateFiles("Local")<CR>
-	if g:Perl_Installation == 'system'
-		noremap    <buffer>  <silent>  <LocalLeader>ntg        :call Perl_BrowseTemplateFiles("Global")<CR>
-	endif
+	" if g:Perl_Installation == 'system'
+	" 	noremap    <buffer>  <silent>  <LocalLeader>ntg        :call Perl_BrowseTemplateFiles("Global")<CR>
+	" endif
   noremap    <buffer>  <silent>  <LocalLeader>ntr        :call Perl_RereadTemplates()<CR>
   "
   " ----------------------------------------------------------------------------
