@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>M0nst4-sky</name>
+    <name>Onyx-Citrus</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -120,7 +120,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>10</number>
+    <number>5</number>
     <firstdesk>1</firstdesk>
     <names>
       <!-- set names up here if you want to, like this:
@@ -281,7 +281,7 @@
       <action name="ToggleShowDesktop"/>
     </keybind>
     <keybind key="W-m">
-        <action name="ToggleMaximize"/>
+      <action name="ToggleMaximize"/>
     </keybind>
     <!-- Keybindings for windows -->
     <keybind key="A-F4">
@@ -389,10 +389,10 @@
       </action>
     </keybind>
     <keybind key="W-r">
-        <action name="Resize"/>
+      <action name="Resize"/>
     </keybind>
     <keybind key="W-v">
-        <action name="Move"/>
+      <action name="Move"/>
     </keybind>
     <keybind key="Print">
       <action name="Execute">

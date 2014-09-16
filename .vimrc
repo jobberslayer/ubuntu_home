@@ -158,3 +158,6 @@ function! MaximizeToggle()
 endfunction
 
 :map <Leader>m o
+
+"rails.vim
+:map <Leader>z :RV<CR>
