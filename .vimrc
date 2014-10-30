@@ -135,6 +135,7 @@ let g:NERDTreeWinPos = "right"
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set statusline+=%=\ %(%l,%c%V%)\ %P
 :map <Leader>err :Error<CR>:wincmd j<CR>
 
 nnoremap <C-W>O :call MaximizeToggle()<CR>
