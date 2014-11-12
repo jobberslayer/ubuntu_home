@@ -17,6 +17,9 @@ set smartcase
 "colorscheme molokai
 colorscheme xoria256
 filetype plugin on
+set textwidth=125
+set colorcolumn=+1
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 "put filename in status line
 set statusline=%f
