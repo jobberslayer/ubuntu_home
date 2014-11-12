@@ -115,10 +115,10 @@ let g:bufExplorerSortBy='name'
 :map <c-j> :wincmd j<CR>
 
 "resize windows
-:map <c-right> <c-w>>
-:map <c-left> <c-w><
-:map <c-down> <c-w>+
-:map <c-up> <c-w>-
+:map <a-right> <c-w>>
+:map <a-left> <c-w><
+:map <a-down> <c-w>+
+:map <a-up> <c-w>-
 
 "NERDTree plugin
 :map <Leader>t :NERDTreeToggle<CR>
