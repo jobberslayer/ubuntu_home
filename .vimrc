@@ -30,7 +30,7 @@ set statusline=%f
 "SURROUND - select using V or C-v and then hit S and what you want to surround
 "           with. cst<tagname> to change tags cs'" to change ' to ", etc. Same
 "           with dst for deleting tags and ds' for deleteing ' for example.
-"EASYMOTION - ;;w then the letter you want to jump to 
+"EASYMOTION - ;;w (or \\w on some machines?) then the letter you want to jump to 
 "Zen/Emmet - Ctrl + y and Comma
 "BufExplorer - ;be or ;b (set up below) current window, ;bs - hsplit, ;bv - vsplit
 "CtrlP - ctrl-p and then F5 to refresh
