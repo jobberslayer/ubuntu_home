@@ -92,6 +92,7 @@ let g:bufExplorerSortBy='name'
 :map <Leader>e :Explore<CR>
 ":map <Leader># :s/\(\s*\)/\1#/<CR>
 :map <Leader>! :s/#//<CR>
+:map <Leader>cws :%s/\s\+$//
 
 " Conque Shell
 :map <Leader>shell :ConqueTermSplit bash
