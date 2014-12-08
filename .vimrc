@@ -168,7 +168,6 @@ endfunction
 :map <Leader>z :RV<CR>
 
 fun! StripTrailingWhitespace()
-  " Don't strip on these filetypes
   if &ft =~ 'ruby\|javascript\|perl'
     %s/\s\+$//e
   endif
