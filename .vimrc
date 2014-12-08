@@ -35,6 +35,7 @@ set statusline=%f
 "BufExplorer - ;be or ;b (set up below) current window, ;bs - hsplit, ;bv - vsplit
 "CtrlP - ctrl-p and then F5 to refresh
 "Use Ctrl-v then hit a modifier sequence when trying to map one.
+"Reindent the whole file. Do in normal mode. gg=G
 "
 "Maximize current split - ;m
 "
