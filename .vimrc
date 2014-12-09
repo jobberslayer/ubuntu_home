@@ -168,10 +168,45 @@ endfunction
 "rails.vim
 :map <Leader>z :RV<CR>
 
-fun! StripTrailingWhitespace()
-  if &ft =~ 'ruby\|javascript\|perl'
-    %s/\s\+$//e
-  endif
-endfun
-
-autocmd BufWritePre * call StripTrailingWhitespace()
+" Retore cursor position, window position, and last search after running a                                                                                                                                  
+" command.                                                                                                                    
+fun! Preserve(command)                                                                                                        
+  " Save the last search.                                                                                                     
+  let search = @/                                                                                                             
+                                                                                                                              
+  " Save the current cursor position.                                                                                         
+  let cursor_position = getpos('.')                                                                                           
+                                                                                                                              
+  " Save the current window position.                                                                                         
+  normal! H                                                                                                                   
+  let window_position = getpos('.')                                                                                           
+  call setpos('.', cursor_position)                                                                                           
+                                                                                                                              
+  " Execute the command.                                                                                                      
+  execute a:command                                                                                                           
+                                                                                                                              
+  " Restore the last search.                                                                                                  
+  let @/ = search                                                                                                             
+                                                                                                                                 
+  " Restore the previous window position.                                                                                        
+  call setpos('.', window_position)                                                                                              
+  normal! zt                                                                                                                     
+                                                                                                                                 
+  " Restore the previous cursor position.                                                                                        
+  call setpos('.', cursor_position)                                                                                              
+endfun                                                                                                                           
+                                                                                                                                 
+fun! StripTrailingWhitespace()                                                                                                   
+  if &ft =~ 'ruby\|javascript\|perl'                                                                                             
+    %s/\s\+$//e                                                                                                                  
+  endif                                                                                                                          
+endfun                                                                                                                           
+                                                                                                                                 
+fun! FixIndentation()                                                                                                            
+  if &ft =~ 'ruby\|javascript\|perl'                                                                                             
+    call Preserve('normal gg=G')                                                                                                 
+  endif                                                                                                                          
+endfun                                                                                                                           
+                                                                                                                                 
+autocmd BufWritePre * call StripTrailingWhitespace()                                                                             
+autocmd BufWritePre * call FixIndentation()
