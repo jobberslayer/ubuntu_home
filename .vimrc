@@ -17,6 +17,9 @@ set smartcase
 "colorscheme molokai
 colorscheme xoria256
 filetype plugin on
+set textwidth=125
+set colorcolumn=+1
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 "put filename in status line
 set statusline=%f
@@ -27,11 +30,12 @@ set statusline=%f
 "SURROUND - select using V or C-v and then hit S and what you want to surround
 "           with. cst<tagname> to change tags cs'" to change ' to ", etc. Same
 "           with dst for deleting tags and ds' for deleteing ' for example.
-"EASYMOTION - ;;w then the letter you want to jump to 
+"EASYMOTION - ;;w (or \\w on some machines?) then the letter you want to jump to 
 "Zen/Emmet - Ctrl + y and Comma
 "BufExplorer - ;be or ;b (set up below) current window, ;bs - hsplit, ;bv - vsplit
 "CtrlP - ctrl-p and then F5 to refresh
 "Use Ctrl-v then hit a modifier sequence when trying to map one.
+"Reindent the whole file. Do in normal mode. gg=G
 "
 "Maximize current split - ;m
 "
@@ -89,6 +93,7 @@ let g:bufExplorerSortBy='name'
 :map <Leader>e :Explore<CR>
 ":map <Leader># :s/\(\s*\)/\1#/<CR>
 :map <Leader>! :s/#//<CR>
+:map <Leader>cws :%s/\s\+$//
 
 " Conque Shell
 :map <Leader>shell :ConqueTermSplit bash
@@ -112,10 +117,10 @@ let g:bufExplorerSortBy='name'
 :map <c-j> :wincmd j<CR>
 
 "resize windows
-:map <c-right> <c-w>>
-:map <c-left> <c-w><
-:map <c-down> <c-w>+
-:map <c-up> <c-w>-
+:map <a-right> <c-w>>
+:map <a-left> <c-w><
+:map <a-down> <c-w>+
+:map <a-up> <c-w>-
 
 "NERDTree plugin
 :map <Leader>t :NERDTreeToggle<CR>
@@ -135,6 +140,7 @@ let g:NERDTreeWinPos = "right"
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set statusline+=%=\ %(%l,%c%V%)\ %P
 :map <Leader>err :Error<CR>:wincmd j<CR>
 
 nnoremap <C-W>O :call MaximizeToggle()<CR>
@@ -161,3 +167,46 @@ endfunction
 
 "rails.vim
 :map <Leader>z :RV<CR>
+
+" Retore cursor position, window position, and last search after running a                                                                                                                                  
+" command.                                                                                                                    
+fun! Preserve(command)                                                                                                        
+  " Save the last search.                                                                                                     
+  let search = @/                                                                                                             
+                                                                                                                              
+  " Save the current cursor position.                                                                                         
+  let cursor_position = getpos('.')                                                                                           
+                                                                                                                              
+  " Save the current window position.                                                                                         
+  normal! H                                                                                                                   
+  let window_position = getpos('.')                                                                                           
+  call setpos('.', cursor_position)                                                                                           
+                                                                                                                              
+  " Execute the command.                                                                                                      
+  execute a:command                                                                                                           
+                                                                                                                              
+  " Restore the last search.                                                                                                  
+  let @/ = search                                                                                                             
+                                                                                                                                 
+  " Restore the previous window position.                                                                                        
+  call setpos('.', window_position)                                                                                              
+  normal! zt                                                                                                                     
+                                                                                                                                 
+  " Restore the previous cursor position.                                                                                        
+  call setpos('.', cursor_position)                                                                                              
+endfun                                                                                                                           
+                                                                                                                                 
+fun! StripTrailingWhitespace()                                                                                                   
+  if &ft =~ 'ruby\|javascript\|perl'                                                                                             
+    %s/\s\+$//e                                                                                                                  
+  endif                                                                                                                          
+endfun                                                                                                                           
+                                                                                                                                 
+fun! FixIndentation()                                                                                                            
+  if &ft =~ 'ruby\|javascript\|perl'                                                                                             
+    call Preserve('normal gg=G')                                                                                                 
+  endif                                                                                                                          
+endfun                                                                                                                           
+                                                                                                                                 
+autocmd BufWritePre * call StripTrailingWhitespace()                                                                             
+autocmd BufWritePre * call FixIndentation()
