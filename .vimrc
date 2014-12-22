@@ -209,4 +209,7 @@ fun! FixIndentation()
 endfun                                                                                                                           
                                                                                                                                  
 autocmd BufWritePre * call StripTrailingWhitespace()                                                                             
-autocmd BufWritePre * call FixIndentation()
+"autocmd BufWritePre * call FixIndentation()
+
+" make sure slim file type gets set
+autocmd BufNewFile,BufRead *.slim set ft=slim
