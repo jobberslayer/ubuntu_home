@@ -167,6 +167,7 @@ endfunction
 
 "rails.vim
 :map <Leader>z :RV<CR>
+:map <Leader>r :R<CR>
 
 " Retore cursor position, window position, and last search after running a                                                                                                                                  
 " command.                                                                                                                    
