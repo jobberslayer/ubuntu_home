@@ -12,6 +12,7 @@ set ruler
 set number
 set ignorecase
 set smartcase
+set mouse="c"
 "colorscheme slate
 "colorscheme desert
 "colorscheme molokai
@@ -117,10 +118,10 @@ let g:bufExplorerSortBy='name'
 :map <c-j> :wincmd j<CR>
 
 "resize windows
-:map <a-right> <c-w>>
-:map <a-left> <c-w><
-:map <a-down> <c-w>+
-:map <a-up> <c-w>-
+:map <c-right> :vertical resize +5<CR>
+:map <c-left> :vertical resize -5<CR>
+:map <c-up> :resize +5<CR>
+:map <c-down> :resize -5<CR>
 
 "NERDTree plugin
 :map <Leader>t :NERDTreeToggle<CR>
