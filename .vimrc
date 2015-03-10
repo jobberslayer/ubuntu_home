@@ -23,7 +23,7 @@ set colorcolumn=+1
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 " Set open command for nerdtree external opens, aka 'E'
-let g:nerdtree_open_cmd = 'start'
+let g:nerdtree_open_cmd = 'gnome-open'
 
 "put filename in status line
 set statusline=%f

@@ -14,13 +14,12 @@ function! s:callback()
     else
         let path = g:NERDTreeFileNode.GetSelected().path.str({'escape': 1})
 
-        " if !exists("g:nerdtree_plugin_open_cmd")
-        "     echoerr "please set 'g:nerdtree_open_cmd'  to 'open','gnome-open' or 'xdg-open'"
-        "     echoerr "or install vimproc from 'https://github.com/Shougo/vimproc'"
-        "     return
-        " endif
-        "let cmd = g:nerdtree_open_cmd . " " . path
-        let cmd = "gnome-open " . path
+        if !exists("g:nerdtree_open_cmd")
+            echoerr "please set 'g:nerdtree_open_cmd'  to 'open','gnome-open' or 'xdg-open'"
+            echoerr "or install vimproc from 'https://github.com/Shougo/vimproc'"
+            return
+        endif
+        let cmd = g:nerdtree_open_cmd . " " . path
         call system(cmd)
     endif
 endfunction
