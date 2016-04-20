@@ -381,11 +381,6 @@
         <command>skippy-xd</command>
       </action>
     </keybind>
-    <keybind key="W-t">
-      <action name="Execute">
-        <command>/home/kevin/bin/zzz.sh</command>
-      </action>
-    </keybind>
     <keybind key="W-x">
       <action name="Execute">
         <command>terminator</command>
@@ -398,7 +393,17 @@
     </keybind>
     <keybind key="W-space">
       <action name="Execute">
-        <command>rofi -show run -lines 15 -eh 2 -width 100 -padding 500 -opacity "80" -bw 0 -bc "black" -bg "white" -fg "grey" -hlbg "black" -hlfg "white" -columns 1 -font "System San Francisco Display 12" -hlfg "#9575cd"</command>
+        <command>rofi -show run -lines 15 -eh 2 -width 100 -padding 500 -opacity "80" -bw 0 -bc "black" -bg "gray" -fg "black" -hlbg "black" -hlfg "white" -columns 1 -font "System San Francisco Display 12" -hlfg "#9575cd"</command>
+      </action>
+    </keybind>
+    <keybind key="W-semicolon">
+      <action name="Execute">
+        <command>rofi -show window -lines 15 -eh 2 -width 100 -padding 500 -opacity "80" -bw 0 -bc "black" -bg "gray" -fg "black" -hlbg "black" -hlfg "white" -columns 1 -font "System San Francisco Display 12" -hlfg "#9575cd"</command>
+      </action>
+    </keybind>
+    <keybind key="W-t">
+      <action name="Execute">
+        <command>notify-send `date +%Y/%m/%d_%I:%M%p`</command>
       </action>
     </keybind>
     <keybind key="W-r">
