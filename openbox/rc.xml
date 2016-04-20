@@ -30,7 +30,7 @@
     <center>yes</center>
     <!-- whether to place windows in the center of the free area found or
        the top left corner -->
-    <monitor>Primary</monitor>
+    <monitor>Mouse</monitor>
     <!-- with Smart placement on a multi-monitor system, try to place new windows
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is, 'Primary' - only on the primary monitor -->
@@ -227,6 +227,11 @@
         <wrap>no</wrap>
       </action>
     </keybind>
+    <keybind key="W-S-x">
+      <action name="Execute">
+       <command>i3lock --color "#101218"</command>
+      </action>
+    </keybind>
     <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
@@ -276,6 +281,9 @@
       <action name="GoToDesktop">
         <to>10</to>
       </action>
+    </keybind>
+    <keybind key="W-i">
+      <action name="Iconify"/>
     </keybind>
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
@@ -386,6 +394,11 @@
     <keybind key="W-w">
       <action name="Execute">
         <command>skippy-xd</command>
+      </action>
+    </keybind>
+    <keybind key="W-space">
+      <action name="Execute">
+        <command>rofi -show run -lines 15 -eh 2 -width 100 -padding 500 -opacity "80" -bw 0 -bc "black" -bg "white" -fg "grey" -hlbg "black" -hlfg "white" -columns 1 -font "System San Francisco Display 12" -hlfg "#9575cd"</command>
       </action>
     </keybind>
     <keybind key="W-r">

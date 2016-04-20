@@ -5,7 +5,13 @@ alias ps2="ps auxw|grep -v grep|grep"
 alias jim="rvm gemset use"
 alias remap="xmodmap /home/kevin/bin/caplock_to_escape.xmodmap"
 
+alias mymontage='rm out.jpg; montage -geometry 1600x1200 *.jpg out.jpg'
+
+alias myopen='xdg-open'
+
 # use command line like vi
 set -o vi
+
+umask 000
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
