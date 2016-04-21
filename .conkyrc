@@ -15,8 +15,8 @@ draw_shades yes
 draw_outline no
 draw_borders no
 draw_graph_borders yes
-default_color cccccc
-default_shade_color black
+default_color 006666
+default_shade_color CCCCCC
 default_outline_color green
 alignment top_left
 gap_x 5
