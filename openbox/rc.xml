@@ -314,6 +314,16 @@
         <command>gnome-screenshot -w</command>
       </action>
     </keybind>
+    <keybind key="W-S-p">
+      <action name="Execute">
+        <command>shutter -s</command>
+      </action>
+    </keybind>
+    <keybind key="W-f">
+      <action name="Execute">
+        <command>pcmanfm</command>
+      </action>
+    </keybind>
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
