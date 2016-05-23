@@ -4,10 +4,12 @@ export TERM="xterm-256color"
 alias ps2="ps auxw|grep -v grep|grep"
 alias jim="rvm gemset use"
 alias remap="xmodmap /home/kevin/bin/caplock_to_escape.xmodmap"
+alias rr='rails runner'
 
 alias mymontage='rm out.jpg; montage -geometry 1600x1200 *.jpg out.jpg'
 
 alias myopen='xdg-open'
+alias make_excel='unoconv --format xls'
 
 # use command line like vi
 set -o vi

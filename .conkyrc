@@ -18,7 +18,7 @@ draw_graph_borders yes
 default_color 003300
 default_shade_color CCCCCC
 default_outline_color green
-alignment top_left
+alignment bottom_left
 gap_x 5
 gap_y 5
 no_buffers yes
