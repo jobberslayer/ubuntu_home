@@ -48,11 +48,11 @@ default_color FFFFFF
 # -- Lua Load -- #
 lua_load ~/.Conky/clock_rings.lua
 lua_draw_hook_pre clock_rings
+
  
 TEXT
-  ${font Santana:size=12}  Root   ${fs_used /}/${fs_size /}                Home   ${fs_used /home}/${fs_size /home}$font
-${voffset 110}${goto 100}${font Santana:size=20}${time %I:%M%p}${voffset -10}${font Santana:size=10}${font}
-${voffset -28}${goto 268}${hr 2}
+  ${font Santana:size=12}  Disk   ${fs_used /}/${fs_size /}     IP  ${exec ifconfig | grep "inet addr" | grep 'Bcast' |awk -F: '{print $2}' | awk '{print $1}'}     EXTIP ${exec wget http://ipinfo.io/ip -qO -}$font  
+${voffset 100}${goto 100}${font Santana:size=20}${time %I:%M%p}${voffset -10}${font Santana:size=10}${font}
 ${voffset -70}${goto 278}${cpugraph 50,285 d5dcde ffffff} #${voffset -18} ${alignr} ${execi 60 ~/.Conky/gmailnotify.sh}
 ${voffset 16}${goto 285}${time %A, %d %B %Y}						
 ${font Santana:size=14}${voffset -120}${goto 300}BATTERY     ${battery BAT0}
