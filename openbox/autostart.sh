@@ -8,3 +8,4 @@ feh --bg-scale .wallpaper.jpg&
 #cairo-dock&
 #conky&
 .Conky/startconky.sh
+guake&
