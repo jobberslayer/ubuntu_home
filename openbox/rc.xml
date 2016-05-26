@@ -408,12 +408,12 @@
     </keybind>
     <keybind key="W-space">
       <action name="Execute">
-        <command>rofi -show run -lines 15 -eh 2 -width 100 -padding 500 -opacity "80" -bw 0 -bc "black" -bg "gray" -fg "black" -hlbg "black" -hlfg "white" -columns 1 -font "System San Francisco Display 12" -hlfg "#9575cd"</command>
+        <command>rofi -show run</command> 
       </action>
     </keybind>
     <keybind key="W-semicolon">
       <action name="Execute">
-        <command>rofi -show window -lines 15 -eh 2 -width 100 -padding 500 -opacity "80" -bw 0 -bc "black" -bg "gray" -fg "black" -hlbg "black" -hlfg "white" -columns 1 -font "System San Francisco Display 12" -hlfg "#9575cd"</command>
+        <command>rofi -show window</command> 
       </action>
     </keybind>
     <keybind key="W-t">

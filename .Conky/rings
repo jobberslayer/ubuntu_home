@@ -55,4 +55,4 @@ TEXT
 ${voffset 100}${goto 100}${font Santana:size=20}${time %I:%M%p}${voffset -10}${font Santana:size=10}${font}
 ${voffset -70}${goto 278}${cpugraph 50,285 d5dcde ffffff} #${voffset -18} ${alignr} ${execi 60 ~/.Conky/gmailnotify.sh}
 ${voffset 16}${goto 285}${time %A, %d %B %Y}						
-${font Santana:size=14}${voffset -120}${goto 300}BATTERY     ${battery BAT0}
+${font Santana:size=14}${voffset -120}${goto 300}BATTERY ${battery BAT0}

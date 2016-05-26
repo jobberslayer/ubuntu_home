@@ -1,0 +1,13 @@
+rofi.lines: 15 
+rofi.eh: 2 
+rofi.width: 100 
+rofi.padding: 500 
+rofi.opacity: 80 
+rofi.bw: 0 
+rofi.bc: black 
+rofi.bg: #CCCCCC 
+rofi.fg: black 
+rofi.columns: 1 
+rofi.font: System San Francisco Display 12
+rofi.hlfg: #000000 
+rofi.bgalt: #FFFFFF

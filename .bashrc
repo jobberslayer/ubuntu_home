@@ -10,6 +10,7 @@ alias mymontage='rm out.jpg; montage -geometry 1600x1200 *.jpg out.jpg'
 
 alias myopen='xdg-open'
 alias make_excel='unoconv --format xls'
+alias reload_xresources='xrdb -load ~/.Xresources'
 
 # use command line like vi
 set -o vi
