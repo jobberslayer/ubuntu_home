@@ -12,6 +12,10 @@ alias myopen='xdg-open'
 alias make_excel='unoconv --format xls'
 alias reload_xresources='xrdb -load ~/.Xresources'
 
+alias geekfind='geeknote find --search'
+function geekedit() { geeknote edit '$@' ;}
+alias geekshow='geeknote show'
+
 # use command line like vi
 set -o vi
 
