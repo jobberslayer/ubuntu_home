@@ -35,7 +35,7 @@ draw_graph_borders no
  
 # -- Text settings -- #
 use_xft yes
-xftfont Monospace:size=8
+xftfont Monospace:size=9
 xftalpha 0.8
  
 uppercase no
