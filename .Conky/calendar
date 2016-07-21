@@ -37,7 +37,7 @@ draw_graph_borders no
  
 # -- Text settings -- #
 use_xft yes
-xftfont Santana:size=10
+xftfont Monospace:size=8
 xftalpha 0.8
  
 uppercase no
@@ -45,4 +45,4 @@ uppercase no
 default_color FFFFFF
  
 TEXT
-${font Monospace:size=10}${execpi 300 cal -3 | sed 's/_\([0-9]\)/\$\{color\ green\}\1\$\{color\}/g'}${font}
+${execpi 300 cal -3 | sed 's/_\([0-9]\)/\$\{color\ green\}\1\$\{color\}/g'}

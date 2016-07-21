@@ -38,7 +38,7 @@ draw_graph_borders no
  
 # -- Text settings -- #
 use_xft yes
-xftfont Santana:size=10
+xftfont Santana:size=8
 xftalpha 0.8
  
 uppercase no
