@@ -8,3 +8,5 @@ sleep 1
 conky -c ~/.Conky/mem &
 sleep 1
 conky -c ~/.Conky/calendar &
+sleep 1
+conky -c ~/.Conky/weather &

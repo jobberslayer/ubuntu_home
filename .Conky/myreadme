@@ -1,0 +1,5 @@
+need to set up cronjob for weater
+
+# m h  dom mon dow   command
+  0 *  *   *   *     curl wttr.in > /home/kevin/.Conky/latest_weather.txt
+

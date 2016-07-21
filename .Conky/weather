@@ -10,7 +10,7 @@ override_utf8_locale yes
 double_buffer yes
 no_buffers yes
  
-text_buffer_size 2048
+text_buffer_size 4096
 imlib_cache_size 0
  
 # -- Window specifications -- #
@@ -23,12 +23,9 @@ own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
 border_inner_margin 0
 border_outer_margin 0
  
-minimum_size 160 160
-maximum_width 160
- 
-alignment tl
-gap_x 260
-gap_y 333
+alignment bl
+gap_x 30
+gap_y 0
  
 # -- Graphics settings -- #
 draw_shades no
@@ -38,7 +35,7 @@ draw_graph_borders no
  
 # -- Text settings -- #
 use_xft yes
-xftfont Santana:size=10
+xftfont Monospace:size=8
 xftalpha 0.8
  
 uppercase no
@@ -46,13 +43,4 @@ uppercase no
 default_color FFFFFF
  
 TEXT
-${font Santana:size=14}CPU ${alignr}$cpu%${font}
-${font Santana:size=12}${stippled_hr}${font}
-
-Load: ${alignr}${loadavg 1}
-Processes: ${alignr}${running_processes}/${processes}
-
-${top name 1} ${alignr}${top cpu 1}
-${top name 2} ${alignr}${top cpu 2}
-${top name 3} ${alignr}${top cpu 3}
-${top name 4} ${alignr}${top cpu 4}
+${exec cat ~/.Conky/latest_weather.txt|head -37|perl -lpe 's/\[.*?m//g'}
