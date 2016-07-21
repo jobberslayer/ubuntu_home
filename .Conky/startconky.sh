@@ -6,4 +6,5 @@ sleep 5 #time for the main conky to start; needed so that the smaller ones draw 
 conky -c ~/.Conky/cpu &
 sleep 1
 conky -c ~/.Conky/mem &
-#conky -c ~/.Conky/notes &
+sleep 1
+conky -c ~/.Conky/calendar &
