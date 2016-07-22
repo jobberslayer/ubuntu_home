@@ -3,5 +3,5 @@
 default_theme = /home/kevin/.config/tint2/default.tint2rc
 cmd_property = /usr/bin/env python /usr/bin/tintwizard.py
 width = 500
-height = 350
+height = 150
 
