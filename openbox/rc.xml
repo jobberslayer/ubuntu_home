@@ -799,7 +799,18 @@
     <manageDesktops>yes</manageDesktops>
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
+
   <applications>
+    <application name="xfce4-terminal">
+      <desktop>6</desktop>
+      <layer>below</layer>
+      <decor>no</decor>
+      <maximized>yes</maximized>
+    </application>
+    <application name='xfce4-panel'>
+      <layer>below</layer>  
+    </application>
+
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.

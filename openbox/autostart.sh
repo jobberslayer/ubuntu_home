@@ -9,4 +9,4 @@ parcellite&
 #conky&
 .Conky/startconky.sh
 guake&
-stalonetray&
+#stalonetray&

@@ -45,4 +45,4 @@ uppercase no
 default_color FFFFFF
  
 TEXT
-${execpi 300 cal -3 | sed 's/_\([0-9]\)/\$\{color\ green\}\1\$\{color\}/g'}
+${execpi 300 cal -3 | tr -cd '\11\12\15\40-\176' | perl -pe 's/_//g' 
