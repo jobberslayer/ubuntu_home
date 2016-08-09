@@ -37,7 +37,7 @@ draw_graph_borders no
  
 # -- Text settings -- #
 use_xft yes
-xftfont Monospace:size=8
+xftfont Monospace:size=10
 xftalpha 0.8
  
 uppercase no
@@ -45,4 +45,4 @@ uppercase no
 default_color FFFFFF
  
 TEXT
-${execpi 300 cal -3 | tr -cd '\11\12\15\40-\176' | perl -pe 's/_//g' 
+${execpi 300 cal -3 | tr -cd '\11\12\15\40-\176' | ruby -pe "gsub(/_ _(\d{1,})/, '\${color orange} \1\${color}')"
