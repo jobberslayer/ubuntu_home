@@ -1,6 +1,5 @@
 xfce4-panel&
 #tint2&
-nitrogen --restore&
 gnome-settings-daemon&
 compton&
 parcellite&
@@ -10,3 +9,4 @@ parcellite&
 .Conky/startconky.sh
 guake&
 #stalonetray&
+nitrogen --restore&

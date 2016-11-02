@@ -232,6 +232,16 @@
         <command>i3lock --color "#101218"</command>
       </action>
     </keybind>
+    <keybind key="XF86Calculator">
+      <action name="Execute">
+        <command>java -jar /home/kevin/Programs/superbcalc.jar </command>
+      </action>
+    </keybind>
+    <keybind key="W-S-w">
+      <action name="Execute">
+        <command>/home/kevin/.screenlayout/work.sh</command>
+      </action>
+    </keybind>
     <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
