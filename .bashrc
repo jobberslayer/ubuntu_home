@@ -14,6 +14,7 @@ alias jim="rvm gemset use"
 alias remap="xmodmap /home/kevin/bin/caplock_to_escape.xmodmap"
 alias rr='rails runner'
 alias multi-monitors='arandr'
+alias external_ip='wget http://ipinfo.io/ip -qO -'
 
 alias weather='curl wttr.in'
 
