@@ -303,7 +303,9 @@ exec --no-startup-id /home/kevin/.Conky/startconky.sh
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	status_command i3status
+	#status_command i3status
+	status_command i3blocks -c ~/.i3/i3blocks.conf
+	#status_command /home/kevin/.rvm/rubies/ruby-2.1.1/bin/ruby /home/kevin/.i3/i3status.rb
   position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
@@ -312,7 +314,8 @@ bar {
 
 	bindsym button4 nop
 	bindsym button5 nop
-	font pango:Cantarell,Icons 10
+	#font pango:Cantarell,Icons 10
+	font pango:DejaVu Sans Mono, FontAwesome 10 
 
 	colors {
   	background $transparent
