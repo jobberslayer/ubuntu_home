@@ -1,10 +1,51 @@
 figlet wkL
-export PS1='\n${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[01;34m\] \w \n\[\033[1;33m\]@xxxx{\[\033[1;37m\]::::::::::::> \[\033[00m\]'
-host=`hostname`
-yellow='\[\033[1;33m\]'
-red='\e[38;5;196m'
-purple='\[\033[0;35m\]'
-default='\[\033[0m\]'
+
+black="\[\e[0;30m\]"
+red="\[\e[0;31m\]"
+green="\[\e[0;32m\]"
+yellow="\[\e[0;33m\]"
+blue="\[\e[0;34m\]"
+purple="\[\e[0;35m\]"
+cyan="\[\e[0;36m\]"
+white="\[\e[0;37;1m\]"
+orange="\[\e[0;91m\]"
+
+bold_black="\[\e[30;1m\]"
+bold_red="\[\e[31;1m\]"
+bold_green="\[\e[32;1m\]"
+bold_yellow="\[\e[33;1m\]"
+bold_blue="\[\e[34;1m\]"
+bold_purple="\[\e[35;1m\]"
+bold_cyan="\[\e[36;1m\]"
+bold_white="\[\e[37;1m\]"
+bold_orange="\[\e[91;1m\]"
+
+underline_black="\[\e[30;4m\]"
+underline_red="\[\e[31;4m\]"
+underline_green="\[\e[32;4m\]"
+underline_yellow="\[\e[33;4m\]"
+underline_blue="\[\e[34;4m\]"
+underline_purple="\[\e[35;4m\]"
+underline_cyan="\[\e[36;4m\]"
+underline_white="\[\e[37;4m\]"
+underline_orange="\[\e[91;4m\]"
+
+background_black="\[\e[40m\]"
+background_red="\[\e[41m\]"
+background_green="\[\e[42m\]"
+background_yellow="\[\e[43m\]"
+background_blue="\[\e[44m\]"
+background_purple="\[\e[45m\]"
+background_cyan="\[\e[46m\]"
+background_white="\[\e[47;1m\]"
+background_orange="\[\e[101m\]"
+
+normal="\[\e[0m\]"
+reset_color="\[\e[39m\]"
+
+#export PS1="\n${debian_chroot:+($debian_chroot)}${bold_red}\u@\h ${bold_blue}\w \n${bold_yellow}@xxxx{${bold_white}::::::::::::> ${reset_color}"
+export PS1="\n${bold_cyan}┌─${debian_chroot:+($debian_chroot)}${bold_black}\u@\h ${bold_red}\w \n${bold_cyan}└─▪ ${reset_color}"
+export PS2="${bold_cyan}└─▪ "
 
 export TERM="xterm-256color"
 #export PS1='\n\n`echo "\w"|boxes -d columns`\n\n\u@\h=> ' 

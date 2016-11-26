@@ -27,11 +27,18 @@ font pango:Cantarell 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminology
+#bindsym $mod+Return exec terminology
+bindsym $mod+Return exec terminator
+#bindsym $mod+Return exec urxvt
 
 # rofi popup launcher
 bindsym $mod+space exec rofi -show run
+#bindsym $mod+space exec "rofi -modi combi -combi-modi window,drun -show combi"
 bindsym $mod+semicolon exec rofi -show window
+bindsym ctrl+space exec rofi -modi drun -show drun
+
+# shutter for screen capture
+bindsym $mod+shift+p exec shutter -s
 
 #Management
 bindsym $mod+shift+f exec thunar
@@ -68,18 +75,18 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec palemoon
-bindsym $mod+F3 exec pcmanfm
+#bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
+#bindsym $mod+F2 exec palemoon
+#bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 #bindsym $mod+Shift+F3 exec gksu pcmanfm
 #bindsym $mod+F5 exec terminal -e 'mocp'
 #bindsym $mod+t exec --no-startup-id pkill compton
 #bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 #bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+#bindsym Print exec --no-startup-id i3-scrot
+#bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
+#bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 #bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
@@ -256,6 +263,18 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
+bindsym $mod+shift+m mode "$spotify_system"
+set $spotify_system (p)lay/pause, (n)ext, p(r)evious, (i)nfo
+mode "$spotify_system" {
+  bindsym p exec sp play
+  bindsym n exec sp next
+  bindsym r exec sp prev
+  bindsym i exec spotify_notification
+  # exit system mode: "Enter" or "Escape"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
 mode "resize" {
@@ -290,7 +309,7 @@ exec --no-startup-id parcellite
 exec --no-startup-id pidgin
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id checkgmail -no_cookies 
-exec --no-startup-id /home/kevin/.Conky/startconky.sh 
+#exec --no-startup-id /home/kevin/.Conky/startconky.sh 
 exec --no-startup-id dropbox start 
 #exec --no-startup-id nm-applet
 #exec --no-startup-id pamac-tray
