@@ -12,6 +12,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'vim-airline/vim-airline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ryanoasis/vim-devicons'
 " Plugin 'powerline/powerline'
 
 " All of your Plugins must be added before the following line
@@ -45,6 +47,7 @@ set number
 set ignorecase
 set smartcase
 set mouse="c"
+" set encoding=utf8
 "colorscheme slate
 "colorscheme desert
 "colorscheme molokai
@@ -71,7 +74,11 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " Set open command for nerdtree external opens, aka 'E'
+let g:webdevicons_enable_nerdtree = 1
 let g:nerdtree_open_cmd = 'gnome-open'
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
+let g:NERDTreeGlyphReadOnly = ''
 
 "put filename in status line
 set statusline=%f
