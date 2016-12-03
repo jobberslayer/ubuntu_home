@@ -1,3 +1,1 @@
-*.swp
-.vim/.netrwhist
-.Conky/latest_weather.txt
+.vim/bundle
