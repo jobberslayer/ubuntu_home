@@ -45,7 +45,7 @@ bindsym $mod+shift+p exec shutter -s
 bindsym $mod+shift+f exec thunar
 
 #Skippy osx expose
-bindsym $mod+shift+w exec skippy-xd
+bindsym $mod+w exec skippy-xd
 
 # show i3 cheatsheet
 #bindsym $mod+Shift+i exec exo-open ~/Documents/davechild_i3-window-manager.pdf
