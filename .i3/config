@@ -247,6 +247,15 @@ bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle 
 
+#Move mouse via keyboard
+bindsym $mod+z exec xdotool click 1
+bindsym $mod+c exec xdotool click 2
+bindsym $mod+x exec xdotool click 3
+bindsym $mod+Shift+Ctrl+Right exec xdotool mousemove_relative 10 0
+bindsym $mod+Shift+Ctrl+Left exec xdotool mousemove_relative -- -10 0
+bindsym $mod+Shift+Ctrl+Up exec xdotool mousemove_relative -- 0 -10
+bindsym $mod+Shift+Ctrl+Down exec xdotool mousemove_relative 0 10
+
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
