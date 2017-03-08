@@ -37,6 +37,7 @@ bindsym $mod+space exec rofi -show run
 #bindsym $mod+space exec "rofi -modi combi -combi-modi window,drun -show combi"
 bindsym $mod+semicolon exec rofi -show window
 bindsym ctrl+space exec rofi -modi drun -show drun
+bindsym $mod+ctrl+f exec rofi  -show fb -modi fb:/home/kevin/.rofi/rofi-file-browser.sh
 
 # shutter for screen capture
 bindsym $mod+shift+p exec shutter -s
@@ -325,6 +326,7 @@ exec --no-startup-id checkgmail -no_cookies
 #exec --no-startup-id /home/kevin/.Conky/startconky.sh 
 exec --no-startup-id dropbox start 
 exec --no-startup-id guake 
+exec --no-startup-id remmina -i
 #exec --no-startup-id nm-applet
 #exec --no-startup-id pamac-tray
 #exec --no-startup-id clipit

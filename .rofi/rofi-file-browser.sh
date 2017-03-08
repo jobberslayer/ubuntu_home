@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-EDITOR=xdg-open
+EDITOR=/usr/bin/xdg-open
 
 CUR_DIR=$PWD
 
@@ -21,17 +21,17 @@ fi
 # If argument is no directory.
 if [ ! -d "${CUR_DIR}" ]
 then
-    if [ -x "${CUR_DIR}" ]
-    then
-        coproc ( "${CUR_DIR}" &  > /dev/null 2>&1 )
-        exec 1>&-
-        exit;
-    elif [ -f "${CUR_DIR}" ]
-    then
+    # if [ -x "${CUR_DIR}" ]
+    # then
+    #     coproc ( "${CUR_DIR}" &  > /dev/null 2>&1 )
+    #     exec 1>&-
+    #     exit;
+    # elif [ -f "${CUR_DIR}" ]
+    # then
         coproc ( ${EDITOR} "${CUR_DIR}" & > /dev/null  2>&1 )
         exit;
-    fi
-    exit;
+    # fi
+    # exit;
 fi
 
 # process current dir.
