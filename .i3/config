@@ -257,6 +257,9 @@ mode "$vol_system" {
   bindsym Escape mode "default"
 }
 
+#Calculator
+bindsym XF86Calculator exec gnome-calculator 
+
 #Move mouse via keyboard
 bindsym $mod+z exec xdotool click 1
 bindsym $mod+c exec xdotool click 2
