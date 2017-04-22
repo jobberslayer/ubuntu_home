@@ -28,8 +28,9 @@ font DejaVuSansMonoForPowerline Nerd Font Book 10
 floating_modifier $mod
 
 # start a terminal
+bindsym $mod+Return exec xfce4-terminal
 #bindsym $mod+Return exec terminology
-bindsym $mod+Return exec terminator
+#bindsym $mod+Return exec terminator
 #bindsym $mod+Return exec urxvt
 
 # rofi popup launcher
@@ -196,7 +197,7 @@ bindsym $mod+Shift+7 move container to workspace number 7; workspace 7
 bindsym $mod+Shift+8 move container to workspace number 8; workspace 8
 
 # Open applications on specific workspaces
-assign [class="Pidgin"] 3
+assign [class="Pidgin"] 8
 # assign [class="Pale moon"] 2
 # assign [class="Pcmanfm"] 3
 # assign [class="Skype"] 5
@@ -244,9 +245,17 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 #Volume stuff
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle 
+bindsym $mod+shift+v mode "$vol_system"
+set $vol_system (+)volup, (-)voldown, (0)mute/unmute
+mode "$vol_system" {
+  bindsym equal exec amixer -q set Master 1dB+ unmute
+  bindsym minus exec amixer -q set Master 2dB- unmute
+  bindsym 0 exec amixer -D pulse set Master 1+ toggle 
+  
+  # exit mode: "Enter" or "Escape"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
 
 #Move mouse via keyboard
 bindsym $mod+z exec xdotool click 1
@@ -322,7 +331,8 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id checkgmail -no_cookies 
 #exec --no-startup-id /home/kevin/.Conky/startconky.sh 
 exec --no-startup-id dropbox start 
-exec --no-startup-id remmina -i
+#exec --no-startup-id remmina -i
+exec --no-startup-id guake 
 #exec --no-startup-id nm-applet
 #exec --no-startup-id pamac-tray
 #exec --no-startup-id clipit
