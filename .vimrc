@@ -150,7 +150,7 @@ set foldlevel=1         "this is just what i use
 let g:bufExplorerSortBy='name'
 
 :map <Leader>e :Explore<CR>
-":map <Leader># :s/\(\s*\)/\1#/<CR>
+:map <Leader>csv :s/^/#,/<CR>
 :map <Leader>! :s/#//<CR>
 :map <Leader>cws :%s/\s\+$//
 

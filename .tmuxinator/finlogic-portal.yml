@@ -1,0 +1,13 @@
+project_name: Finlogic Portal
+project_root: ~/workspace/finlogic-portal
+windows:
+  - editor:
+    - vim
+  - term:
+    - jim portal
+    -
+  - remote:
+    - ssh finlogic@work.g4cpro.com
+  - server:
+    - jim portal
+    - rails s

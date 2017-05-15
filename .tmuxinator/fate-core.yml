@@ -1,0 +1,7 @@
+project_name: Fate Core Venture City 
+project_root: ~/Dropbox/FATE
+windows:
+  - terminal:
+    - ./open_screens.sh&
+    - sleep 5
+    - ./open_char_sheets.sh&
