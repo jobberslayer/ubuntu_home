@@ -329,7 +329,7 @@ mode "resize" {
 ## adjustment of i3bar battery reading (only run at the very first login):
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id parcellite
-exec --no-startup-id pidgin
+#exec --no-startup-id pidgin
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id checkgmail -no_cookies 
 #exec --no-startup-id /home/kevin/.Conky/startconky.sh 
@@ -368,10 +368,10 @@ bar {
     #statusline #F9FAF9
 		#separator  #454947
 
-    # border  backgr. text
-		focused_workspace  #F9FAF9 #16A085 #2B2C2B
-		active_workspace   #595B5B #353836 #FDF6E3
-		inactive_workspace #595B5B #353836 #EEE8D5
+                       #border backgr. text
+		focused_workspace  #e8cdc9 #660e00 #FFFFFF
+		active_workspace   #FF0000 #e8cdc9 #000000
+		inactive_workspace #FF0000 #e8cdc9 #000000
 		urgent_workspace   #16A085 #FDF6E3 #E5201D
 	}
 }
@@ -381,10 +381,9 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                 border  backgr. text    indic.  child_border
-client.focused          #808280 #FFFF00 #80FFF9 #FDF6E3
-client.focused          #808280 #006666 #80FFF9 #FDF6E3
-client.focused_inactive #434745 #006666 #16A085 #454948
-client.unfocused        #434745 #434745 #16A085 #454948
+client.focused          #808280 #660E00 #FFFFFF #FDF6E3
+client.focused_inactive #434745 #e8cdc9 #000000 #454948
+client.unfocused        #434745 #e8cdc9 #000000 #454948
 client.urgent           #CB4B16 #FDF6E3 #16A085 #268BD2
 client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
 
@@ -395,8 +394,8 @@ client.background       #2B2C2B
 #############################
 
 # Set inner/outer gaps
-#gaps inner 10
-#gaps outer -4
+gaps inner 10
+gaps outer -10 
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -404,7 +403,7 @@ client.background       #2B2C2B
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-#smart_gaps on
+smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)

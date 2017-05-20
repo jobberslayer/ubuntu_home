@@ -1,0 +1,5 @@
+project_name: BlendItUp Costco
+project_root: ~/workspace/blenditup/domo/commission
+windows:
+  - terminal:
+    - jim domo
