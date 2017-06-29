@@ -3,3 +3,5 @@ project_root: ~/workspace/blenditup/domo/commission
 windows:
   - terminal:
     - jim domo
+  - code:
+    - cd commission

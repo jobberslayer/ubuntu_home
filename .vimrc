@@ -1,4 +1,4 @@
-"vundle config
+"☐vundle config
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -39,7 +39,8 @@ set shiftwidth=2
 set tabstop=2
 set smartindent
 syntax on 
-set wrap!
+"set wrap!
+set nowrap
 set cursorline
 set laststatus=2
 set ruler
@@ -47,6 +48,7 @@ set number
 set ignorecase
 set smartcase
 set mouse="c"
+set scrolloff=10
 " set encoding=utf8
 "colorscheme slate
 "colorscheme desert
@@ -136,6 +138,10 @@ set foldlevel=1         "this is just what i use
 :map <Leader>vimrc :so $MYVIMRC
 :map <Leader>plugin :tabnew ~/.vim<CR>
 
+" quickify using 'a' register
+:map <Leader>y "ay
+:map <Leader>p "ap
+
 " paste from system clipboard
 :map <Leader>pp "*p<CR>
 
@@ -191,6 +197,13 @@ let g:NERDTreeWinPos = "right"
 :map <Leader>cp :put "+<CR>
 :map <Leader>pp :set paste
 :map <Leader>np :set nopaste
+
+"My simple todo system
+" test subject below
+"☐ test
+:map <Leader>done <ESC>0lcw✔<ESC>A /<ESC>"=strftime('%Y-%m-%d %I:%M%p')"<ESC>pA/<ESC>0l
+:map <Leader>redo <ESC>0lcw☐<ESC>V<ESC>:s/\s*\/.*\/$//<CR><ESC>0l
+:map <Leader>task <ESC>i ☐ 
 
 "CTags
 :map <Leader>c :TlistToggle<CR>
@@ -273,3 +286,4 @@ autocmd BufWritePre * call StripTrailingWhitespace()
 
 " make sure slim file type gets set
 autocmd BufNewFile,BufRead *.slim set ft=slim
+

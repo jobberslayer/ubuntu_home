@@ -29,6 +29,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
+bindsym $mod+ctrl Return exec nitrogen --restore 
 #bindsym $mod+Return exec xfce4-terminal
 #bindsym $mod+Return exec terminology
 #bindsym $mod+Return exec terminator
@@ -49,6 +50,9 @@ bindsym $mod+shift+f exec thunar
 
 #Skippy osx expose
 bindsym $mod+shift+w exec skippy-xd
+
+# set screen layout
+bindsym $mod+ctrl+s exec.screenlayout/louisville.sh 
 
 # show i3 cheatsheet
 #bindsym $mod+Shift+i exec exo-open ~/Documents/davechild_i3-window-manager.pdf
