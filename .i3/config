@@ -1,14 +1,19 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# Set mod key (Mod1=<Alt>, Mod4=<Super>)
-set $mod Mod4
+# remap caps lock to use as mod5 
+exec xmodmap -e 'remove lock = Caps_Lock'
+exec xmodmap -e 'remove mod4 = Hyper_L'
+exec xmodmap -e 'keysym Caps_Lock = Hyper_L'
+exec xmodmap -e 'add mod5 = Hyper_L'
+
+set $mod Mod5
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 5
+new_window pixel 3
 new_float normal
 
 # Hide borders
@@ -360,7 +365,12 @@ exec --no-startup-id /usr/bin/compton
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	#status_command i3status
-	status_command i3blocks -c ~/.i3/i3blocks.conf
+  status_command i3blocks -c ~/.i3/i3blocks.conf
+  #status_command /usr/share/powerline/bindings/i3/powerline-i3.py 
+  
+  mode hide
+  modifier Mod5
+
 	#status_command /home/kevin/.rvm/rubies/ruby-2.1.1/bin/ruby /home/kevin/.i3/i3status.rb
   position top
 
@@ -386,6 +396,7 @@ bar {
 		urgent_workspace   #16A085 #FDF6E3 #E5201D
 	}
 }
+
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
