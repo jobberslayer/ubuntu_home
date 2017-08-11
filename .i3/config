@@ -33,11 +33,11 @@ font DejaVuSansMonoForPowerline Nerd Font Book 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+#bindsym $mod+Return exec gnome-terminal
 bindsym $mod+ctrl Return exec nitrogen --restore 
 #bindsym $mod+Return exec xfce4-terminal
 #bindsym $mod+Return exec terminology
-#bindsym $mod+Return exec terminator
+bindsym $mod+Return exec terminator
 #bindsym $mod+Return exec urxvt
 
 # rofi popup launcher
