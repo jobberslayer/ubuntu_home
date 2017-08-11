@@ -57,7 +57,7 @@ colorscheme xoria256
 filetype plugin on
 set textwidth=125
 set colorcolumn=+1
-highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+"highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 "airline config
 let g:airline#extensions#tabline#enabled = 1

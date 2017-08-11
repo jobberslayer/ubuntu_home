@@ -1,0 +1,15 @@
+project_name: Finlogic Portal
+project_root: ~/workspace/rat
+windows:
+  - editor:
+    - vim
+  - term:
+    - rvm use 2.1.1
+    - jim rat
+    -
+  - remote:
+    - ssh finlogic@work.g4cpro.com
+  - server:
+    - rvm use 2.1.1
+    - jim rat
+    - rails s
