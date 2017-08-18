@@ -4,10 +4,12 @@ windows:
   - editor:
     - vim
   - term:
+    - rvm use 2.3.3
     - jim portal
     -
   - remote:
     - ssh finlogic@work.g4cpro.com
   - server:
+    - rvm use 2.3.3
     - jim portal
     - rails s

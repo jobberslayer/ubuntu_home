@@ -2,6 +2,14 @@ project_name: Fate Core Venture City
 project_root: ~/Dropbox/FATE
 windows:
   - terminal:
-    - ./open_screens.sh&
-    - sleep 5
-    - ./open_char_sheets.sh&
+    - /usr/bin/i3 workspace 2
+    - /usr/bin/evince GM\ Screen/*.pdf &
+    - sleep 3
+    - /usr/bin/i3 workspace 3
+    - /usr/bin/evince PDFS/*.pdf & 
+    - sleep 3
+    - /usr/bin/i3 workspace 4
+    - /usr/bin/google-chrome http://fate-srd.com &
+    - sleep 3
+    - /usr/bin/i3 workspace 5
+    - /usr/bin/gedit &

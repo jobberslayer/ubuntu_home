@@ -2,10 +2,10 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # remap caps lock to use as mod5 
-exec xmodmap -e 'remove lock = Caps_Lock'
-exec xmodmap -e 'remove mod4 = Hyper_L'
-exec xmodmap -e 'keysym Caps_Lock = Hyper_L'
-exec xmodmap -e 'add mod5 = Hyper_L'
+exec_always xmodmap -e 'remove lock = Caps_Lock'
+exec_always xmodmap -e 'remove mod4 = Hyper_L'
+exec_always xmodmap -e 'keysym Caps_Lock = Hyper_L'
+exec_always xmodmap -e 'add mod5 = Hyper_L'
 
 set $mod Mod5
 
@@ -38,6 +38,7 @@ bindsym $mod+ctrl Return exec nitrogen --restore
 #bindsym $mod+Return exec xfce4-terminal
 #bindsym $mod+Return exec terminology
 bindsym $mod+Return exec terminator
+bindsym ctrl+mod1+Return exec terminator
 #bindsym $mod+Return exec urxvt
 
 # rofi popup launcher
@@ -57,7 +58,7 @@ bindsym $mod+shift+f exec thunar
 bindsym $mod+shift+w exec skippy-xd
 
 # set screen layout
-bindsym $mod+ctrl+s exec.screenlayout/louisville.sh 
+bindsym $mod+ctrl+s exec .screenlayout/louisville.sh 
 
 # show i3 cheatsheet
 #bindsym $mod+Shift+i exec exo-open ~/Documents/davechild_i3-window-manager.pdf
@@ -249,7 +250,7 @@ for_window [urgent=latest] focus
 bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym Ctrl+Shift+r restart
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
