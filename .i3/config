@@ -1,13 +1,11 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# remap caps lock to use as mod5 
-exec_always xmodmap -e 'remove lock = Caps_Lock'
-exec_always xmodmap -e 'remove mod4 = Hyper_L'
-exec_always xmodmap -e 'keysym Caps_Lock = Hyper_L'
-exec_always xmodmap -e 'add mod5 = Hyper_L'
+# remap caps lock to use as super 
+exec_always setxkbmap -option caps:super
 
-set $mod Mod5
+#set $mod Mod5
+set $mod Mod4
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -55,7 +53,7 @@ bindsym $mod+shift+p exec shutter -s
 bindsym $mod+shift+f exec thunar
 
 #Skippy osx expose
-bindsym $mod+shift+w exec skippy-xd
+bindcode $mod+21 exec skippy-xd
 
 # set screen layout
 bindsym $mod+ctrl+s exec .screenlayout/louisville.sh 
@@ -155,7 +153,7 @@ bindsym $mod+Shift+plus floating toggle
 #bindsym $mod+space focus mode_toggle
 
 # toggle sticky
-bindsym $mod+Shift+s sticky toggle
+bindsym $mod+Ctrl+Shift+s sticky toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -250,10 +248,22 @@ for_window [urgent=latest] focus
 bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym Ctrl+Shift+r restart
+bindsym Ctrl+mod1+r restart
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+#Remmina
+bindsym $mod+shift+r mode "$remmina_sys"
+set $remmina_sys (f)inlogic, (g)unnison
+mode "$remmina_sys" {
+  bindsym f exec remmina -c .remmina/finlogic.remmina, mode "default"
+  bindsym g exec remmina -c .remmina/gunnison.remmina, mode "default"
+  
+  # exit mode: "Enter" or "Escape"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
 
 #Volume stuff
 bindsym $mod+shift+v mode "$vol_system"
@@ -270,6 +280,12 @@ mode "$vol_system" {
 
 #Calculator
 bindsym XF86Calculator exec gnome-calculator 
+
+# Spotify
+exec --no-startup-id --name=spotify -e /usr/bin/spotify
+for_window [instance="spotify"] floating enable;
+for_window [instance="spotify"] move scratchpad; [instance="spotify"] move scratchpad show; move scratchpad;
+bindsym $mod+shift+s [instance="spotify"] scratchpad show, resize set 1200 800, move position center
 
 #Move mouse via keyboard
 bindsym $mod+z exec xdotool click 1
@@ -346,7 +362,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id parcellite
 #exec --no-startup-id pidgin
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id checkgmail -no_cookies 
+#exec --no-startup-id checkgmail -no_cookies 
 #exec --no-startup-id /home/kevin/.Conky/startconky.sh 
 exec --no-startup-id dropbox start 
 #exec --no-startup-id remmina -i
@@ -370,7 +386,7 @@ bar {
   #status_command /usr/share/powerline/bindings/i3/powerline-i3.py 
   
   mode hide
-  modifier Mod5
+  modifier Mod4
 
 	#status_command /home/kevin/.rvm/rubies/ruby-2.1.1/bin/ruby /home/kevin/.i3/i3status.rb
   position top
@@ -430,7 +446,7 @@ smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-#smart_borders on
+smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 # set $mode_gaps Gaps: (o) outer, (i) inner

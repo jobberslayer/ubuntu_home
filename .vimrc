@@ -1,4 +1,4 @@
-"☐vundle config
+"vundle config
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -14,7 +14,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'sjl/badwolf'
+Plugin 'dracula/vim'
 " Plugin 'powerline/powerline'
+
+"BadWolf Theme settings
+let g:badwolf_darkgutter = 1
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -53,7 +60,9 @@ set scrolloff=10
 "colorscheme slate
 "colorscheme desert
 "colorscheme molokai
-colorscheme xoria256
+"colorscheme xoria256
+"colorscheme badwolf
+colorscheme dracula
 filetype plugin on
 set textwidth=125
 set colorcolumn=+1
