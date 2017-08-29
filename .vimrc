@@ -16,6 +16,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'sjl/badwolf'
 Plugin 'dracula/vim'
+Plugin 'PotatoesMaster/i3-vim-syntax'
 " Plugin 'powerline/powerline'
 
 "BadWolf Theme settings
