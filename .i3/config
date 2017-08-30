@@ -292,18 +292,6 @@ mode "$vol_system" {
   bindsym Escape mode "default"
 }
 
-#Calculator
-bindsym XF86Calculator [instance="calculator"] scratchpad show, move position center
-exec --no-startup-id --name=calculator -e gnome-calculator 
-for_window [instance="calculator"] floating enable;
-for_window [instance="calculator"] move scratchpad; [instance="calculator"] move scratchpad show; move scratchpad;
-
-# Spotify
-exec --no-startup-id --name=spotify -e /usr/bin/spotify
-for_window [instance="spotify"] floating enable;
-for_window [instance="spotify"] move scratchpad; [instance="spotify"] move scratchpad show; move scratchpad;
-bindsym $mod+shift+s [instance="spotify"] scratchpad show, resize set 1200 800, move position center
-
 #Move mouse via keyboard
 bindsym $mod+z exec xdotool click 1
 bindsym $mod+shift z exec xdotool mousedown 1
@@ -424,10 +412,14 @@ bar {
 		#separator  #454947
 
                        #border backgr. text
-		focused_workspace  #e8cdc9 #660e00 #FFFFFF
-		active_workspace   #FF0000 #e8cdc9 #000000
-		inactive_workspace #FF0000 #e8cdc9 #000000
-		urgent_workspace   #16A085 #FDF6E3 #E5201D
+		focused_workspace  #CCCCCC #FFFFFF #000000
+		active_workspace   #000000 #888888 #333333
+		inactive_workspace #000000 #888888 #333333
+		urgent_workspace   #FF0000 #FDF6E3 #E5201D
+		# focused_workspace  #e8cdc9 #660e00 #FFFFFF
+		# active_workspace   #FF0000 #e8cdc9 #000000
+		# inactive_workspace #FF0000 #e8cdc9 #000000
+		# urgent_workspace   #16A085 #FDF6E3 #E5201D
 	}
 }
 
@@ -501,3 +493,20 @@ smart_gaps on
 #         bindsym Return mode "default"
 #         bindsym Escape mode "default"
 # }
+
+#Calculator
+for_window [instance="calculator"] floating enable;
+for_window [instance="calculator"] move scratchpad; [instance="calculator"] move scratchpad show; move scratchpad;
+bindsym XF86Calculator [instance="calculator"] scratchpad show, move position center
+
+# Spotify
+for_window [instance="spotify"] floating enable;
+for_window [instance="spotify"] move scratchpad; [instance="spotify"] move scratchpad show; move scratchpad;
+bindsym $mod+shift+s [instance="spotify"] scratchpad show, resize set 1200 800, move position center
+
+# Keep a Ranger open
+for_window [instance="ranger"] floating enable;
+for_window [instance="ranger"] move scratchpad; [instance="ranger"] move scratchpad show; move scratchpad;
+bindsym $mod+shift+a [instance="ranger"] scratchpad show, resize set 1200 800, move position center
+
+exec_always --no-startup-id ~/.i3/scripts/scratch_pad_windows.sh
