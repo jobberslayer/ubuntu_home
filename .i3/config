@@ -144,7 +144,7 @@ bindsym $mod+q split toggle
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+#bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -325,7 +325,7 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+shift+m mode "$spotify_system"
+bindsym $mod+s mode "$spotify_system"
 set $spotify_system <p>  /    <n>   <r>   <i> 
 mode "$spotify_system" {
   bindsym p exec sp play
