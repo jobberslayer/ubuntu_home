@@ -1,4 +1,3 @@
-cmatrix -s
 figlet wkL
 
 black="\[\e[0;30m\]"
