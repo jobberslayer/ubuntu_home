@@ -273,7 +273,7 @@ bindsym $mod+shift+t mode "$tmux"
 set $tmux biu <r>econsile   biu <c>ommissions   <g>unnison credit card   <f>inlogic portal
 mode "$tmux" {
   bindsym r exec terminator -x tmuxinator biu-costco, mode "default"
-  bindsym c exec terminator -x tmuxinator biu-creditcard, mode "default"
+  bindsym c exec terminator -x tmuxinator biu-commissions, mode "default"
   bindsym g exec terminator -x tmuxinator gunnison-credit-card, mode "default"
   bindsym f exec terminator -x tmuxinator finlogic-portal, mode "default"
   
@@ -400,7 +400,7 @@ bar {
   position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
+	tray_output primary
 #	tray_output eDP1
 
 	bindsym button4 nop

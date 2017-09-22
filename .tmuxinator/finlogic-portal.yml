@@ -3,7 +3,11 @@ project_root: ~/workspace/finlogic-portal
 windows:
   - editor:
     - vim
-  - term:
+  - term1:
+    - rvm use 2.3.3
+    - jim portal
+    -
+  - term2:
     - rvm use 2.3.3
     - jim portal
     -
