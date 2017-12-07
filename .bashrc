@@ -73,6 +73,8 @@ alias geekshow='geeknote show'
 alias weather='curl http://wttr.in/'
 alias ls='ls -F'
 
+alias uncap='setxkbmap -option caps:super'
+
 # use command line like vi
 set -o vi
 
