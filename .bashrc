@@ -58,6 +58,8 @@ alias multi-monitors='arandr'
 alias external_ip='wget http://ipinfo.io/ip -qO -'
 alias to_csv='libreoffice --headless --convert-to csv'
 
+alias sleepy-time='xset dpms force off'
+
 alias weather='curl wttr.in'
 
 alias mymontage='rm out.jpg; montage -geometry 1600x1600 *.jpg out.jpg'
@@ -79,3 +81,7 @@ set -o vi
 umask 000
 
 PATH=$PATH:$HOME/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+function findit() {
+  find . -name "*$1*"
+}

@@ -45,6 +45,7 @@ bindcode $mod+shift+60 move position center
 bindsym $mod+space exec rofi -show run
 #bindsym $mod+space exec "rofi -modi combi -combi-modi window,drun -show combi"
 bindsym $mod+semicolon exec rofi -show window
+#bindsym $mod+semicolon exec /home/kevin/bin/quickswitch.rb 
 bindsym ctrl+space exec rofi -modi drun -show drun
 bindsym $mod+ctrl+f exec rofi  -show fb -modi fb:/home/kevin/.rofi/rofi-file-browser.sh
 
@@ -497,7 +498,7 @@ gaps outer 0
 #         bindsym Escape mode "default"
 # }
 
-exec--no-startup-id ~/.i3/scripts/scratch_pad_windows.sh
+#exec--no-startup-id ~/.i3/scripts/scratch_pad_windows.sh
 
 #Calculator
 for_window [instance="calculator"] floating enable;
@@ -517,23 +518,15 @@ for_window [instance="gnome-system-monitor"] resize set 1200 800
 for_window [instance="gnome-system-monitor"] move position center
 for_window [instance="gnome-system-monitor"] move scratchpad 
 
-# Keep a Ranger open
-for_window [title="ranger"] floating enable;
-for_window [instance="ranger"] resize set 1200 800
-for_window [instance="ranger"] move position center
-for_window [instance="ranger"] move scratchpad 
 
 bindcode $mod+48 mode "$scratchpad"
-set $scratchpad <s>   <m>   <r>  
+set $scratchpad <s>   <m>   
 mode "$scratchpad" {
   # Spotify
   bindsym s [instance="spotify"] scratchpad show, resize set 1200 800, move position center
 
   # Gnome System Monitor
   bindsym m [instance="gnome-system-monitor"] scratchpad show, resize set 1200 800, move position center
-
-  # Keep a Ranger open
-  bindsym r [title="ranger"] scratchpad show, resize set 1200 800, move position center
 
   # exit system mode: "Enter" or "Escape"
   bindsym Return mode "default"

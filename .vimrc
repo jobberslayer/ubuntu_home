@@ -162,6 +162,8 @@ set foldlevel=1         "this is just what i use
 :map <Leader>ff :CtrlP<CR>
 :map <Leader>fb :CtrlPBuffer<CR>
 
+:map <Leader>dbl :g/^$/d<CR>
+
 "BufExplorer sorting
 let g:bufExplorerSortBy='name'
 
