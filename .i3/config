@@ -11,7 +11,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 3 
+new_window pixel 5 
 new_float normal
 
 # Hide borders
@@ -78,6 +78,8 @@ bindsym $mod+Shift+q kill
 
 exec --no-startup-id volumeicon
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+# used for usb logictech headset volume control
+exec --no-startup-id pasystray
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
@@ -287,11 +289,12 @@ mode "$tmux" {
 
 #Volume stuff
 bindsym $mod+shift+v mode "$vol_system"
-set $vol_system (+)volup   (-)voldown   (0)mute/unmute
+set $vol_system (+)volup   (-)voldown   (0)mute/unmute (p)avucontrol
 mode "$vol_system" {
   bindsym equal exec amixer -q set Master 1dB+ unmute
   bindsym minus exec amixer -q set Master 2dB- unmute
   bindsym 0 exec amixer -D pulse set Master 1+ toggle 
+  bindsym p exec pavucontrol; mode "default" 
   
   # exit mode: "Enter" or "Escape"
   bindsym Return mode "default"
@@ -328,7 +331,7 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+s mode "$spotify_system"
+bindsym $mod+shift+s mode "$spotify_system"
 set $spotify_system <p>  /    <n>   <r>   <i> 
 mode "$spotify_system" {
   bindsym p exec sp play
@@ -340,29 +343,30 @@ mode "$spotify_system" {
   bindsym Escape mode "default"
 }
 
+# Now done via super+arrowkeys
 # Resize window (you can also use the mouse for that)
-bindsym $mod+r mode "resize"
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 5 px or 5 ppt
-        bindsym k resize grow height 5 px or 5 ppt
-        bindsym j resize shrink height 5 px or 5 ppt
-        bindsym l resize grow width 5 px or 5 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # exit resize mode: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
+# bindsym $mod+r mode "resize"
+# mode "resize" {
+#         # These bindings trigger as soon as you enter the resize mode
+#         # Pressing left will shrink the window’s width.
+#         # Pressing right will grow the window’s width.
+#         # Pressing up will shrink the window’s height.
+#         # Pressing down will grow the window’s height.
+#         bindsym h resize shrink width 5 px or 5 ppt
+#         bindsym k resize grow height 5 px or 5 ppt
+#         bindsym j resize shrink height 5 px or 5 ppt
+#         bindsym l resize grow width 5 px or 5 ppt
+# 
+#         # same bindings, but for the arrow keys
+#         bindsym Left resize shrink width 10 px or 10 ppt
+#         bindsym Down resize grow height 10 px or 10 ppt
+#         bindsym Up resize shrink height 10 px or 10 ppt
+#         bindsym Right resize grow width 10 px or 10 ppt
+# 
+#         # exit resize mode: Enter or Escape
+#         bindsym Return mode "default"
+#         bindsym Escape mode "default"
+# }
 
 # Lock screen
 #bindsym $mod+9 exec --no-startup-id blurlock
@@ -421,7 +425,7 @@ bar {
 		focused_workspace  #CCCCCC #FFFFFF #000000
 		active_workspace   #000000 #888888 #333333
 		inactive_workspace #000000 #888888 #333333
-		urgent_workspace   #2980B9 #F2D7D5 #34495E
+		urgent_workspace   #FF0000 #F2D7D5 #34495E
 		# focused_workspace  #e8cdc9 #660e00 #FFFFFF
 		# active_workspace   #FF0000 #e8cdc9 #000000
 		# inactive_workspace #FF0000 #e8cdc9 #000000
@@ -435,10 +439,10 @@ bindsym ctrl+space bar mode toggle
 
 # Theme colors
 # class                 border  backgr. text    indic.  child_border
-client.focused          #566573 #2980B9 #FFFFFF #FFFFFF
+client.focused          #FFFFFF #6BA462 #FFFFFF #FFFFFF
 client.focused_inactive #000000 #000000 #000000 #000000
 client.unfocused        #000000 #000000 #000000 #000000
-client.urgent           #CB4B16 #FDF6E3 #16A085 #268BD2
+client.urgent           #E27B45 #FDF6E3 #16A085 #268BD2
 client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
 
 client.background       #2B2C2B
@@ -503,35 +507,35 @@ gaps outer 0
 #exec--no-startup-id ~/.i3/scripts/scratch_pad_windows.sh
 
 #Calculator
-for_window [instance="calculator"] floating enable;
-for_window [instance="calculator"] move position center
-for_window [instance="calculator"] move scratchpad; 
-bindsym XF86Calculator [instance="calculator"] scratchpad show, move position center
+# for_window [instance="calculator"] floating enable;
+# for_window [instance="calculator"] move position center
+# for_window [instance="calculator"] move scratchpad; 
+# bindsym XF86Calculator [instance="calculator"] scratchpad show, move position center
 
 # Spotify
-for_window [instance="spotify"] floating enable;
-for_window [instance="spotify"] resize set 1200 800
-for_window [instance="spotify"] move position center
-for_window [instance="spotify"] move scratchpad 
+# for_window [instance="spotify"] floating enable;
+# for_window [instance="spotify"] resize set 1200 800
+# for_window [instance="spotify"] move position center
+# for_window [instance="spotify"] move scratchpad 
 
 # Gnome System Monitor
-for_window [instance="gnome-system-monitor"] floating enable;
-for_window [instance="gnome-system-monitor"] resize set 1200 800
-for_window [instance="gnome-system-monitor"] move position center
-for_window [instance="gnome-system-monitor"] move scratchpad 
+# for_window [instance="gnome-system-monitor"] floating enable;
+# for_window [instance="gnome-system-monitor"] resize set 1200 800
+# for_window [instance="gnome-system-monitor"] move position center
+# for_window [instance="gnome-system-monitor"] move scratchpad 
 
 
-bindcode $mod+48 mode "$scratchpad"
-set $scratchpad <s>   <m>   
-mode "$scratchpad" {
-  # Spotify
-  bindsym s [instance="spotify"] scratchpad show, resize set 1200 800, move position center
-
-  # Gnome System Monitor
-  bindsym m [instance="gnome-system-monitor"] scratchpad show, resize set 1200 800, move position center
-
-  # exit system mode: "Enter" or "Escape"
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-}
-
+# bindcode $mod+48 mode "$scratchpad"
+# set $scratchpad <s>   <m>   
+# mode "$scratchpad" {
+#   # Spotify
+#   bindsym s [instance="spotify"] scratchpad show, resize set 1200 800, move position center
+# 
+#   # Gnome System Monitor
+#   bindsym m [instance="gnome-system-monitor"] scratchpad show, resize set 1200 800, move position center
+# 
+#   # exit system mode: "Enter" or "Escape"
+#   bindsym Return mode "default"
+#   bindsym Escape mode "default"
+# }
+# 
