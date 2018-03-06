@@ -439,9 +439,9 @@ bindsym ctrl+space bar mode toggle
 
 # Theme colors
 # class                 border  backgr. text    indic.  child_border
-client.focused          #FFFFFF #6BA462 #FFFFFF #FFFFFF
-client.focused_inactive #000000 #000000 #000000 #000000
-client.unfocused        #000000 #000000 #000000 #000000
+client.focused          #000000 #7D6608 #FFFFFF #000000
+client.focused_inactive #FFFFFF #000000 #000000 #FFFFFF
+client.unfocused        #FFFFFF #000000 #000000 #000000
 client.urgent           #E27B45 #FDF6E3 #16A085 #268BD2
 client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
 

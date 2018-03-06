@@ -137,6 +137,9 @@ set foldlevel=1         "this is just what i use
 :let mapleader = ";"
 :map <Leader>b :BufExplorer<CR>
 
+" event shop formatting
+:map <Leader>es ddA:<ESC>JJ
+
 " delete all buffers
 :map <Leader>dab :bd *
 
