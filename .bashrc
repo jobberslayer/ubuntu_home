@@ -57,6 +57,7 @@ alias rr='rails runner'
 alias multi-monitors='arandr'
 alias external_ip='wget http://ipinfo.io/ip -qO -'
 alias to_csv='libreoffice --headless --convert-to csv'
+alias fix_caps='setxkbmap -option caps:super'
 
 alias sleepy-time='xset dpms force off'
 
@@ -81,6 +82,8 @@ alias uncap='setxkbmap -option caps:super'
 set -o vi
 
 umask 000
+
+setxkbmap -option caps:super
 
 PATH=$PATH:$HOME/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
 

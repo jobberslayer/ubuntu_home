@@ -25,7 +25,7 @@ hide_edge_borders none
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:Cantarell 10
-#font DejaVuSansMonoForPowerline Nerd Font Book 10 
+font DejaVuSansMonoForPowerline Nerd Font Book 10 
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -35,7 +35,7 @@ floating_modifier $mod
 bindsym $mod+ctrl Return exec nitrogen --restore 
 #bindsym $mod+Return exec xfce4-terminal
 #bindsym $mod+Return exec terminology
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec terminator, mode "default"
 bindsym ctrl+mod1+Return exec terminator
 #bindsym $mod+Return exec urxvt
 
@@ -291,8 +291,8 @@ mode "$tmux" {
 bindsym $mod+shift+v mode "$vol_system"
 set $vol_system (+)volup   (-)voldown   (0)mute/unmute (p)avucontrol
 mode "$vol_system" {
-  bindsym equal exec amixer -q set Master 1dB+ unmute
-  bindsym minus exec amixer -q set Master 2dB- unmute
+  bindsym equal exec amixer -D pulse sset Master 2%+ 
+  bindsym minus exec amixer -D pulse sset Master 2%- 
   bindsym 0 exec amixer -D pulse set Master 1+ toggle 
   bindsym p exec pavucontrol; mode "default" 
   
@@ -408,12 +408,13 @@ bar {
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	tray_output primary
-#	tray_output eDP1
+	#tray_output HDMI1
 
 	bindsym button4 nop
 	bindsym button5 nop
 	#font pango:Cantarell,Icons 10
-	font pango:DejaVuSansMonoForPowerline Nerd Font Book 10
+	#font pango:DejaVuSansMonoForPowerline Nerd Font Book 10
+	font pango:RobotoMono Nerd Font Book 10
 
 	colors {
   	#background $transparent

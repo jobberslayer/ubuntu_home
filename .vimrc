@@ -17,10 +17,12 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'sjl/badwolf'
 Plugin 'dracula/vim'
 Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'rafi/awesome-vim-colorschemes'
+
 " Plugin 'powerline/powerline'
 
 "BadWolf Theme settings
-let g:badwolf_darkgutter = 1
+"let g:badwolf_darkgutter = 1
 
 
 
@@ -58,12 +60,12 @@ set smartcase
 set mouse="c"
 set scrolloff=10
 " set encoding=utf8
-"colorscheme slate
+colorscheme slate
 "colorscheme desert
 "colorscheme molokai
 "colorscheme xoria256
-"colorscheme badwolf
-colorscheme dracula
+"colorscheme termschool
+"colorscheme dracula
 filetype plugin on
 set textwidth=125
 set colorcolumn=+1
@@ -139,6 +141,7 @@ set foldlevel=1         "this is just what i use
 
 " event shop formatting
 :map <Leader>es ddA:<ESC>JJ
+let @e="ddA:JJ"
 
 " delete all buffers
 :map <Leader>dab :bd *

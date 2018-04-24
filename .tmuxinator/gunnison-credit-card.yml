@@ -1,7 +1,7 @@
 project_name: Gunnison Credit Card
 windows:
   - editor:
-      layout: main-vertical
+      layout: 653e,85x54,0,0[85x41,0,0,0,85x12,0,42,1]
       panes:
         - cd ~/workspace/gunnison
         - filemanager: 
