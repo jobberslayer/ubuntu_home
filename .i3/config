@@ -36,7 +36,7 @@ bindsym $mod+ctrl Return exec nitrogen --restore
 #bindsym $mod+Return exec xfce4-terminal
 #bindsym $mod+Return exec terminology
 bindsym $mod+Return exec terminator, mode "default"
-bindsym ctrl+mod1+Return exec terminator
+bindsym ctrl+mod1+Return exec Terminator
 #bindsym $mod+Return exec urxvt
 
 bindcode $mod+shift+60 move position center
@@ -71,6 +71,8 @@ bindsym $mod+Shift+q kill
 
 # launch categorized menu
 #bindsym $mod+z exec --no-startup-id morc_menu
+
+bindcode $mod+49 exec terminator -x tmuxinator widgets
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -307,7 +309,7 @@ bindsym $mod+shift z exec xdotool mousedown 1
 bindsym $mod+c exec xdotool click 2
 bindsym $mod+x exec xdotool click 3
 bindsym $mod+shift+x exec xdotool mouseup 1
-bindsym $mod+Ctrl+Right exec xdotool mousemove_relative 20 0
+biNdsym $mod+Ctrl+Right exec xdotool mousemove_relative 20 0
 bindsym $mod+Ctrl+Left exec xdotool mousemove_relative -- -20 0
 bindsym $mod+Ctrl+Up exec xdotool mousemove_relative -- 0 -20
 bindsym $mod+Ctrl+Down exec xdotool mousemove_relative 0 20

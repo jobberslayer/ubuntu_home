@@ -1,0 +1,9 @@
+project_name: Widgets 
+windows:
+  - ranger:
+    - ranger ~
+  - htop:
+    - htop 
+  - weather:
+    - weather
+
