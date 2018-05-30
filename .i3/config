@@ -40,6 +40,7 @@ bindsym ctrl+mod1+Return exec Terminator
 #bindsym $mod+Return exec urxvt
 
 bindcode $mod+shift+60 move position center
+bindsym $mod+g exec thunar 
 
 # rofi popup launcher
 bindsym $mod+space exec rofi -show run
@@ -265,10 +266,11 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 #Remmina
 bindsym $mod+shift+r mode "$remmina_sys"
-set $remmina_sys <f>inlogic   <g>unnison
+set $remmina_sys <f>inlogic   <g>unnison  fish<b>owl
 mode "$remmina_sys" {
   bindsym f exec remmina -c .remmina/finlogic.remmina, mode "default"
   bindsym g exec remmina -c .remmina/gunnison.remmina, mode "default"
+  bindsym b exec remmina -c .remmina/fishbowl.remmina, mode "default"
   
   # exit mode: "Enter" or "Escape"
   bindsym Return mode "default"
@@ -383,7 +385,7 @@ exec --no-startup-id nitrogen --restore
 #exec --no-startup-id /home/kevin/.Conky/startconky.sh 
 exec --no-startup-id dropbox start 
 #exec --no-startup-id remmina -i
-#exec --no-startup-id guake 
+exec --no-startup-id guake 
 exec --no-startup-id /usr/bin/nm-applet 
 exec --no-startup-id /usr/bin/compton
 #exec --no-startup-id nm-applet

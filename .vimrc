@@ -18,6 +18,8 @@ Plugin 'sjl/badwolf'
 Plugin 'dracula/vim'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'rafi/awesome-vim-colorschemes'
+Plugin 'KeitaNakamura/neodark.vim'
+Plugin 'morhetz/gruvbox'
 
 " Plugin 'powerline/powerline'
 
@@ -60,7 +62,10 @@ set smartcase
 set mouse="c"
 set scrolloff=10
 " set encoding=utf8
-colorscheme slate
+colorscheme gruvbox
+set background=dark
+"colorscheme neodark
+"colorscheme slate
 "colorscheme desert
 "colorscheme molokai
 "colorscheme xoria256
