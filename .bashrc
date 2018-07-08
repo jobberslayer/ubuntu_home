@@ -58,7 +58,7 @@ alias multi-monitors='arandr'
 alias external_ip='wget http://ipinfo.io/ip -qO -'
 alias to_csv='libreoffice --headless --convert-to csv'
 alias fix_caps='setxkbmap -option caps:super'
-alias myupdate='sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upgrade'
+alias myupdate='sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upgrade; need_reboot.sh'
 alias monitor1='glances'
 alias monitor2='saidar -c -d 1'
 

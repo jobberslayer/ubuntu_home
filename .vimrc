@@ -20,6 +20,7 @@ Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'KeitaNakamura/neodark.vim'
 Plugin 'morhetz/gruvbox'
+Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Plugin 'powerline/powerline'
 
