@@ -39,6 +39,7 @@ bindsym $mod+Return exec terminator, mode "default"
 bindsym ctrl+mod1+Return exec Terminator
 #bindsym $mod+Return exec urxvt
 
+# '>'
 bindcode $mod+shift+60 move position center
 bindsym $mod+g exec thunar 
 

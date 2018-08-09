@@ -71,7 +71,7 @@ set background=dark
 "colorscheme molokai
 "colorscheme xoria256
 "colorscheme termschool
-"colorscheme dracula
+colorscheme dracula
 filetype plugin on
 set textwidth=125
 set colorcolumn=+1
