@@ -267,11 +267,14 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 #Remmina
 bindsym $mod+shift+r mode "$remmina_sys"
+#set $remmina_sys <f>inlogic   <g>unnison  fish<b>owl  <n>ew server  new g<u>nnison
 set $remmina_sys <f>inlogic   <g>unnison  fish<b>owl
 mode "$remmina_sys" {
-  bindsym f exec remmina -c .remmina/finlogic.remmina, mode "default"
-  bindsym g exec remmina -c .remmina/gunnison.remmina, mode "default"
+  # bindsym f exec remmina -c .remmina/finlogic.remmina, mode "default"
+  # bindsym g exec remmina -c .remmina/gunnison.remmina, mode "default"
   bindsym b exec remmina -c .remmina/fishbowl.remmina, mode "default"
+  bindsym f exec remmina -c .remmina/NewFinlogicServer.remmina, mode "default"
+  bindsym g exec remmina -c .remmina/NewGunnisonServer.remmina, mode "default"
   
   # exit mode: "Enter" or "Escape"
   bindsym Return mode "default"
@@ -447,8 +450,9 @@ bindsym ctrl+space bar mode toggle
 
 # Theme colors
 # class                 border  backgr. text    indic.  child_border
-client.focused          #000000 #7D6608 #FFFFFF #000000
-client.focused_inactive #FFFFFF #000000 #000000 #FFFFFF
+#client.focused          #000000 #7D6608 #FFFFFF #000000
+client.focused          #FFFFFF #A569BD #000000 #FFFFFF
+client.focused_inactive #000000 #000000 #FFFFFF #000000
 client.unfocused        #FFFFFF #000000 #000000 #000000
 client.urgent           #E27B45 #FDF6E3 #16A085 #268BD2
 client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c

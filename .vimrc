@@ -58,6 +58,7 @@ set cursorline
 set laststatus=2
 set ruler
 set number
+set relativenumber
 set ignorecase
 set smartcase
 set mouse="c"
