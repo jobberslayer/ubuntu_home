@@ -464,8 +464,8 @@ client.background       #2B2C2B
 #############################
 
 # Set inner/outer gaps
-gaps inner 5 
-gaps outer 0
+#gaps inner 0 
+#gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
