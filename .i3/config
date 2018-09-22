@@ -193,8 +193,8 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 
 #navigate workspaces next / previous
-bindsym $mod+shift+Ctrl+Right workspace next
-bindsym $mod+shift+Ctrl+Left workspace prev
+bindcode $mod+60 workspace next
+bindcode $mod+59 workspace prev
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace number 1
