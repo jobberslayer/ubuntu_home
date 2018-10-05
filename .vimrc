@@ -199,6 +199,8 @@ let g:bufExplorerSortBy='name'
 :map <Leader>nt :tabnew<CR>
 :map <Leader>h   :tabp<CR>
 :map <Leader>l  :tabn<CR>
+:map <Leader>fs :tab split<CR>
+:map <Leader>xfs :tabc<CR>
 
 "navigating windows
 :map <c-l> :wincmd l<CR>
