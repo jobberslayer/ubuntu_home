@@ -16,7 +16,8 @@
 
 #------------------------------------------------------------------------
 
-INTERFACE="${BLOCK_INSTANCE:-wlan0}"
+#INTERFACE="${BLOCK_INSTANCE:-wlan0}"
+INTERFACE=`/sbin/iwgetid|awk '{print $1}'`
 
 #------------------------------------------------------------------------
 
@@ -31,7 +32,8 @@ QUALITY=$(grep $INTERFACE /proc/net/wireless | awk '{ print int($3 * 100 / 70) }
 
 #------------------------------------------------------------------------
 
-echo $QUALITY% # full text
+AP=`iwgetid -r`
+echo $QUALITY% $AP # full text
 echo $QUALITY% # short text
 
 # color
