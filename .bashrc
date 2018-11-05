@@ -62,6 +62,8 @@ alias myupdate='sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upg
 alias monitor1='glances'
 alias monitor2='saidar -c -d 1'
 
+alias start-vpn='sudo openvpn --config "$HOME/openvpn/FinLogic OpenVPN/FinLogicProd.ovpn"'
+
 alias sleepy-time='xset dpms force off'
 
 alias weather='curl wttr.in'
@@ -80,6 +82,8 @@ alias weather='curl http://wttr.in/'
 alias ls='ls -F'
 
 alias uncap='setxkbmap -option caps:super'
+
+alias tmux-cheat='cat $HOME/Dropbox/tmux/tmux-cheat-sheet.txt'
 
 # use command line like vi
 set -o vi
