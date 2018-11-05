@@ -237,6 +237,7 @@ for_window [window_role="HTOP"] move postion center
 #for_window [class="nixnote2"] move scratchpad
 for_window [class="conky"] move scratchpad
 for_window [class="Remmina"] floating enable
+for_window [class="System Monitor"] floating enable
 for_window [instance="shutter"] floating enable
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="Calamares"] floating enable border normal
@@ -419,7 +420,7 @@ exec --no-startup-id dropbox start
 #exec --no-startup-id remmina -i
 exec --no-startup-id guake 
 exec --no-startup-id /usr/bin/nm-applet 
-exec --no-startup-id /usr/bin/compton
+#exec --no-startup-id /usr/bin/compton
 #exec --no-startup-id nm-applet
 #exec --no-startup-id pamac-tray
 #exec --no-startup-id clipit
