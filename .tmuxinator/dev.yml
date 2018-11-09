@@ -1,0 +1,8 @@
+project_name: Development 
+windows:
+  - editor:
+      layout: 1030,189x53,0,0[189x41,0,0,0,189x11,0,42,1] 
+      panes:
+        - 
+        - terminal: 
+          - 

@@ -279,27 +279,28 @@ bindsym Ctrl+mod1+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 #Remmina
-bindsym $mod+shift+r mode "$remmina_sys"
-#set $remmina_sys <f>inlogic   <g>unnison  fish<b>owl  <n>ew server  new g<u>nnison
-set $remmina_sys <f>inlogic   <g>unnison  fish<b>owl
-mode "$remmina_sys" {
-  # bindsym f exec remmina -c .remmina/finlogic.remmina, mode "default"
-  # bindsym g exec remmina -c .remmina/gunnison.remmina, mode "default"
-  bindsym b exec remmina -c .remmina/fishbowl.remmina, mode "default"
-  bindsym f exec remmina -c .remmina/NewFinlogicServer.remmina, mode "default"
-  bindsym g exec remmina -c .remmina/NewGunnisonServer.remmina, mode "default"
-  
-  # exit mode: "Enter" or "Escape"
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-}
+# bindsym $mod+shift+r mode "$remmina_sys"
+# #set $remmina_sys <f>inlogic   <g>unnison  fish<b>owl  <n>ew server  new g<u>nnison
+# set $remmina_sys <f>inlogic   <g>unnison  fish<b>owl
+# mode "$remmina_sys" {
+#   # bindsym f exec remmina -c .remmina/finlogic.remmina, mode "default"
+#   # bindsym g exec remmina -c .remmina/gunnison.remmina, mode "default"
+#   bindsym b exec remmina -c .remmina/fishbowl.remmina, mode "default"
+#   bindsym f exec remmina -c .remmina/NewFinlogicServer.remmina, mode "default"
+#   bindsym g exec remmina -c .remmina/NewGunnisonServer.remmina, mode "default"
+#   
+#   # exit mode: "Enter" or "Escape"
+#   bindsym Return mode "default"
+#   bindsym Escape mode "default"
+# }
 
 #Remmina VPN
-bindsym  Ctrl+mod1+v mode "$remmina_vpn_sys"
-set $remmina_vpn_sys VPN Connections <f>inlogic   <g>unnison
+bindsym  $mod+shift+r mode "$remmina_vpn_sys"
+set $remmina_vpn_sys VPN Connections <f>inlogic  <g>unnison  fish <b>owl
 mode "$remmina_vpn_sys" {
   bindsym f exec remmina -c .remmina/NewFinlogicServerVPN.remmina, mode "default"
   bindsym g exec remmina -c .remmina/NewGunnisonServerVPN.remmina, mode "default"
+  bindsym b exec remmina -c .remmina/fishbowl.remmina, mode "default"
   
   # exit mode: "Enter" or "Escape"
   bindsym Return mode "default"
@@ -350,7 +351,7 @@ bindsym $mod+Ctrl+g exec google-chrome --new-window https://work.g4cpro.com
 #bindsym $mod+Shift+t exec ~/bin/tear_off_tab.sh 
 
 # Set shut down, restart and locking features
-bindsym $mod+0 mode "$mode_system"
+bindsym $mod+shift+0 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id lockit.sh, mode "default"

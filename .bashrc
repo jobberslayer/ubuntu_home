@@ -51,7 +51,7 @@ export TERM="xterm-256color"
 #export PS1='\n\n`echo "\w"|boxes -d columns`\n\n\u@\h=> ' 
 
 export VISUAL=vim
-export EDITOR="$VISUAL"]
+export EDITOR="$VISUAL"
 
 alias ps2="ps auxw|grep -v grep|grep"
 alias jim="rvm gemset use"
@@ -64,6 +64,7 @@ alias fix_caps='setxkbmap -option caps:super'
 alias myupdate='sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upgrade; need_reboot.sh'
 alias monitor1='glances'
 alias monitor2='saidar -c -d 1'
+alias dev='tmuxinator dev'
 
 alias start-vpn='sudo openvpn --config "$HOME/openvpn/FinLogic OpenVPN/FinLogicProd.ovpn"'
 
