@@ -65,6 +65,7 @@ alias myupdate='sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upg
 alias monitor1='glances'
 alias monitor2='saidar -c -d 1'
 alias dev='tmuxinator dev'
+alias uncap='xkbset nullify -lock'
 
 alias start-vpn='sudo openvpn --config "$HOME/openvpn/FinLogic OpenVPN/FinLogicProd.ovpn"'
 

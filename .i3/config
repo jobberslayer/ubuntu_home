@@ -11,7 +11,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 5 
+new_window pixel 8
 new_float normal
 
 # Hide borders
@@ -295,7 +295,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # }
 
 #Remmina VPN
-bindsym  $mod+shift+r mode "$remmina_vpn_sys"
+bindsym  $mod+Ctrl+r mode "$remmina_vpn_sys"
 set $remmina_vpn_sys VPN Connections <f>inlogic  <g>unnison  fish <b>owl
 mode "$remmina_vpn_sys" {
   bindsym f exec remmina -c .remmina/NewFinlogicServerVPN.remmina, mode "default"
@@ -308,7 +308,7 @@ mode "$remmina_vpn_sys" {
 }
 
 #tmuxinator starter
-bindsym $mod+shift+t mode "$tmux"
+bindsym $mod+Ctrl+t mode "$tmux"
 set $tmux biu <r>econsile   biu <c>ommissions   <g>unnison credit card   <f>inlogic portal
 mode "$tmux" {
   bindsym r exec terminator -x tmuxinator biu-costco, mode "default"
@@ -322,7 +322,7 @@ mode "$tmux" {
 }
 
 #Volume stuff
-bindsym $mod+shift+v mode "$vol_system"
+bindsym $mod+Ctrl+v mode "$vol_system"
 set $vol_system (+)volup   (-)voldown   (0)mute/unmute (p)avucontrol
 mode "$vol_system" {
   bindsym equal exec amixer -D pulse sset Master 2%+ 
