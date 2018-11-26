@@ -5,8 +5,9 @@
 #exec_always setxkbmap -option caps:super
 exec xmodmap .Xmodmap 
 
-#set $mod Mod5
-set $mod Mod4
+#set $caps Mod5
+set $super Mod4
+set $caps Mod3
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -19,78 +20,78 @@ new_float normal
 hide_edge_borders none
 
 # change borders
-#bindsym $mod+u border none
-#bindsym $mod+y border pixel 1
-#bindsym $mod+n border normal
+#bindsym $caps+u border none
+#bindsym $caps+y border pixel 1
+#bindsym $caps+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:Cantarell 10
 font DejaVuSansMonoForPowerline Nerd Font Book 10 
 
-# Use Mouse+$mod to drag floating windows
-floating_modifier $mod
+# Use Mouse+$caps to drag floating windows
+floating_modifier $caps
 
 # start a terminal
-#bindsym $mod+Return exec gnome-terminal
-bindsym $mod+ctrl Return exec nitrogen --restore 
-#bindsym $mod+Return exec xfce4-terminal
-#bindsym $mod+Return exec terminology
-bindsym $mod+Return exec terminator, mode "default"
+#bindsym $caps+Return exec gnome-terminal
+bindsym $caps+ctrl Return exec nitrogen --restore 
+#bindsym $caps+Return exec xfce4-terminal
+#bindsym $caps+Return exec terminology
+bindsym $caps+Return exec terminator, mode "default"
 bindsym ctrl+mod1+Return exec Terminator
-#bindsym $mod+Return exec urxvt
+#bindsym $caps+Return exec urxvt
 
 # '>'
-bindcode $mod+shift+60 move position center
-bindsym Mod3+f exec thunar 
+bindcode $caps+shift+60 move position center
+bindsym $super+f exec thunar 
 
 # rofi popup launcher
-bindsym $mod+space exec rofi -show run
-#bindsym $mod+space exec "rofi -modi combi -combi-modi window,drun -show combi"
-bindsym $mod+semicolon exec rofi -show window
+bindsym $caps+space exec rofi -show run
+#bindsym $caps+space exec "rofi -modi combi -combi-modi window,drun -show combi"
+bindsym $caps+semicolon exec rofi -show window
 #bindsym ctrl+space exec rofi -modi drun -show drun
-bindsym $mod+ctrl+f exec rofi  -show fb -modi fb:/home/kevin/.rofi/rofi-file-browser.sh
+bindsym $caps+ctrl+f exec rofi  -show fb -modi fb:/home/kevin/.rofi/rofi-file-browser.sh
 
 # shutter for screen capture
-bindsym $mod+shift+p exec shutter -s
+bindsym $caps+shift+p exec shutter -s
 
 #Management
-bindsym $mod+shift+f exec thunar
+bindsym $caps+shift+f exec thunar
 
 # htop
-bindsym $mod+t exec terminator -r HTOP -e htop
+bindsym $caps+t exec terminator -r HTOP -e htop
 
-#Skippy osx expose <$mod + =>
-bindcode $mod+21 exec skippy-xd
+#Skippy osx expose <$caps + =>
+bindcode $caps+21 exec skippy-xd
 
 # set screen layout
-bindsym $mod+ctrl+s exec .screenlayout/louisville.sh 
+bindsym $caps+ctrl+s exec .screenlayout/louisville.sh 
 
 # show i3 cheatsheet
-#bindsym $mod+Shift+i exec exo-open ~/Documents/davechild_i3-window-manager.pdf
+#bindsym $caps+Shift+i exec exo-open ~/Documents/davechild_i3-window-manager.pdf
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $caps+Shift+q kill
 
 # start program launcher
-#bindsym $mod+d exec --no-startup-id dmenu_run
+#bindsym $caps+d exec --no-startup-id dmenu_run
 
 # launch categorized menu
-#bindsym $mod+z exec --no-startup-id morc_menu
+#bindsym $caps+z exec --no-startup-id morc_menu
 
-bindcode $mod+49 exec terminator -x tmuxinator widgets
+bindcode $caps+49 exec terminator -x tmuxinator widgets
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
 exec --no-startup-id volumeicon
-#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+#bindsym $caps+Ctrl+m exec terminal -e 'alsamixer'
 # used for usb logictech headset volume control
 exec --no-startup-id pasystray
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
+#bindsym $caps+Ctrl+m exec pavucontrol
 
 ################################################################################################
 
@@ -99,86 +100,86 @@ exec --no-startup-id pasystray
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-#bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-#bindsym $mod+F2 exec palemoon
-#bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
-#bindsym $mod+Shift+F3 exec gksu pcmanfm
-#bindsym $mod+F5 exec terminal -e 'mocp'
-#bindsym $mod+t exec --no-startup-id pkill compton
-#bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-#bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+#bindsym $caps+Ctrl+b exec terminal -e 'bmenu'
+#bindsym $caps+F2 exec palemoon
+#bindsym $caps+F3 exec pcmanfm
+# bindsym $caps+F3 exec ranger
+#bindsym $caps+Shift+F3 exec gksu pcmanfm
+#bindsym $caps+F5 exec terminal -e 'mocp'
+#bindsym $caps+t exec --no-startup-id pkill compton
+#bindsym $caps+Ctrl+t exec --no-startup-id compton -b
+#bindsym $caps+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 #bindsym Print exec --no-startup-id i3-scrot
-#bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-#bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-#bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
-bindsym Mod3+x --release exec --no-startup-id xkill
+#bindsym $caps+Print --release exec --no-startup-id i3-scrot -w
+#bindsym $caps+Shift+Print --release exec --no-startup-id i3-scrot -s
+#bindsym $caps+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
+bindsym $super+x --release exec --no-startup-id xkill
 
 focus_follows_mouse no
 
 # change focus
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-bindsym $mod+h focus left
+bindsym $caps+j focus down
+bindsym $caps+k focus up
+bindsym $caps+l focus right
+bindsym $caps+h focus left
 
 # resize windows using arrow keys 
-bindsym $mod+Left resize shrink width 5 px or 5 ppt
-bindsym $mod+Down resize shrink height 5 px or 5 ppt
-bindsym $mod+Up resize grow height 5 px or 5 ppt
-bindsym $mod+Right resize grow width 5 px or 5 ppt
+bindsym $caps+Left resize shrink width 5 px or 5 ppt
+bindsym $caps+Down resize shrink height 5 px or 5 ppt
+bindsym $caps+Up resize grow height 5 px or 5 ppt
+bindsym $caps+Right resize grow width 5 px or 5 ppt
 
 # move focused window
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-bindsym $mod+Shift+h move left
+bindsym $caps+Shift+j move down
+bindsym $caps+Shift+k move up
+bindsym $caps+Shift+l move right
+bindsym $caps+Shift+h move left
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $caps+Shift+Left move left
+bindsym $caps+Shift+Down move down
+bindsym $caps+Shift+Up move up
+bindsym $caps+Shift+Right move right
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
-bindsym $mod+b workspace back_and_forth
-bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+bindsym $caps+b workspace back_and_forth
+bindsym $caps+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+o split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
-bindsym $mod+q split toggle
+bindsym $caps+o split h;exec notify-send 'tile horizontally'
+bindsym $caps+v split v;exec notify-send 'tile vertically'
+bindsym $caps+q split toggle
 
 # toggle fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $caps+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $caps+s layout stacking
+bindsym $caps+w layout tabbed
+bindsym $caps+e layout toggle split
 
 # change focus between tiling / floating windows
-#bindsym $mod+space focus mode_toggle
+#bindsym $caps+space focus mode_toggle
 
 # toggle sticky
-bindsym $mod+Mod3+s sticky toggle
+bindsym $caps+$super+s sticky toggle
 
 # focus the parent container
-#bindsym $mod+a focus parent
+#bindsym $caps+a focus parent
 
 # toggle tiling / floating
-#bindsym $mod+Shift+plus floating toggle
-bindsym $mod+i floating toggle
+#bindsym $caps+Shift+plus floating toggle
+bindsym $caps+i floating toggle
 
 # move the currently focused window to the scratchpad
-#bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+m move scratchpad
+#bindsym $caps+Shift+minus move scratchpad
+bindsym $caps+m move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-#bindsym $mod+minus scratchpad show
-bindsym $mod+n scratchpad show
+#bindsym $caps+minus scratchpad show
+bindsym $caps+n scratchpad show
 
 # Workspace names
 set $ws1 1:
@@ -187,38 +188,38 @@ set $ws3 3:
 set $ws3 4:
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
+bindsym $caps+1 workspace 1
+bindsym $caps+2 workspace 2
+bindsym $caps+3 workspace 3
+bindsym $caps+4 workspace 4
+bindsym $caps+5 workspace 5
+bindsym $caps+6 workspace 6
+bindsym $caps+7 workspace 7
+bindsym $caps+8 workspace 8
 
 #navigate workspaces next / previous
-bindcode $mod+60 workspace next
-bindcode $mod+59 workspace prev
+bindcode $caps+60 workspace next
+bindcode $caps+59 workspace prev
 
 # Move focused container to workspace
-bindsym Mod3+Shift+1 move container to workspace number 1
-bindsym Mod3+Shift+2 move container to workspace number 2
-bindsym Mod3+Shift+3 move container to workspace number 3
-bindsym Mod3+Shift+4 move container to workspace number 4
-bindsym Mod3+Shift+5 move container to workspace number 5
-bindsym Mod3+Shift+6 move container to workspace number 6
-bindsym Mod3+Shift+7 move container to workspace number 7
-bindsym Mod3+Shift+8 move container to workspace number 8
+bindsym $super+Shift+1 move container to workspace number 1
+bindsym $super+Shift+2 move container to workspace number 2
+bindsym $super+Shift+3 move container to workspace number 3
+bindsym $super+Shift+4 move container to workspace number 4
+bindsym $super+Shift+5 move container to workspace number 5
+bindsym $super+Shift+6 move container to workspace number 6
+bindsym $super+Shift+7 move container to workspace number 7
+bindsym $super+Shift+8 move container to workspace number 8
 
 # Move to workspace with focused container
-bindsym Mod3+1 move container to workspace number 1; workspace 1
-bindsym Mod3+2 move container to workspace number 2; workspace 2
-bindsym Mod3+3 move container to workspace number 3; workspace 3
-bindsym Mod3+4 move container to workspace number 4; workspace 4
-bindsym Mod3+5 move container to workspace number 5; workspace 5
-bindsym Mod3+6 move container to workspace number 6; workspace 6
-bindsym Mod3+7 move container to workspace number 7; workspace 7
-bindsym Mod3+8 move container to workspace number 8; workspace 8
+bindsym $super+1 move container to workspace number 1; workspace 1
+bindsym $super+2 move container to workspace number 2; workspace 2
+bindsym $super+3 move container to workspace number 3; workspace 3
+bindsym $super+4 move container to workspace number 4; workspace 4
+bindsym $super+5 move container to workspace number 5; workspace 5
+bindsym $super+6 move container to workspace number 6; workspace 6
+bindsym $super+7 move container to workspace number 7; workspace 7
+bindsym $super+8 move container to workspace number 8; workspace 8
 
 # Open applications on specific workspaces
 assign [class="Pidgin"] 8
@@ -271,16 +272,16 @@ for_window [class="Xfburn"] floating enable
 for_window [urgent=latest] focus
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $caps+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym Ctrl+mod1+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $caps+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 #Remmina
-# bindsym $mod+shift+r mode "$remmina_sys"
+# bindsym $caps+shift+r mode "$remmina_sys"
 # #set $remmina_sys <f>inlogic   <g>unnison  fish<b>owl  <n>ew server  new g<u>nnison
 # set $remmina_sys <f>inlogic   <g>unnison  fish<b>owl
 # mode "$remmina_sys" {
@@ -296,7 +297,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # }
 
 #Remmina VPN
-bindsym  Mod3+r mode "$remmina_vpn_sys"
+bindsym  $super+r mode "$remmina_vpn_sys"
 set $remmina_vpn_sys VPN Connections <f>inlogic  <g>unnison  fish <b>owl
 mode "$remmina_vpn_sys" {
   bindsym f exec remmina -c .remmina/NewFinlogicServerVPN.remmina, mode "default"
@@ -309,7 +310,7 @@ mode "$remmina_vpn_sys" {
 }
 
 #tmuxinator starter
-bindsym Mod3+t mode "$tmux"
+bindsym $super+t mode "$tmux"
 set $tmux biu <r>econsile   biu <c>ommissions   <g>unnison credit card   <f>inlogic portal
 mode "$tmux" {
   bindsym r exec terminator -x tmuxinator biu-costco, mode "default"
@@ -323,7 +324,7 @@ mode "$tmux" {
 }
 
 #Volume stuff
-bindsym Mod3+v mode "$vol_system"
+bindsym $super+v mode "$vol_system"
 set $vol_system (+)volup   (-)voldown   (0)mute/unmute (p)avucontrol
 mode "$vol_system" {
   bindsym equal exec amixer -D pulse sset Master 2%+ 
@@ -337,17 +338,17 @@ mode "$vol_system" {
 }
 
 #Move mouse via keyboard
-bindsym $mod+z exec xdotool click 1
-bindsym $mod+shift z exec xdotool mousedown 1
-bindsym $mod+c exec xdotool click 2
-bindsym $mod+x exec xdotool click 3
-bindsym $mod+shift+x exec xdotool mouseup 1
-bindsym $mod+Ctrl+Right exec xdotool mousemove_relative 20 0
-bindsym $mod+Ctrl+Left exec xdotool mousemove_relative -- -20 0
-bindsym $mod+Ctrl+Up exec xdotool mousemove_relative -- 0 -20
-bindsym $mod+Ctrl+Down exec xdotool mousemove_relative 0 20
+bindsym $caps+z exec xdotool click 1
+bindsym $caps+shift z exec xdotool mousedown 1
+bindsym $caps+c exec xdotool click 2
+bindsym $caps+x exec xdotool click 3
+bindsym $caps+shift+x exec xdotool mouseup 1
+bindsym $caps+Ctrl+Right exec xdotool mousemove_relative 20 0
+bindsym $caps+Ctrl+Left exec xdotool mousemove_relative -- -20 0
+bindsym $caps+Ctrl+Up exec xdotool mousemove_relative -- 0 -20
+bindsym $caps+Ctrl+Down exec xdotool mousemove_relative 0 20
 
-bindsym $mod+Ctrl+g exec google-chrome --new-window https://work.g4cpro.com
+bindsym $caps+Ctrl+g exec google-chrome --new-window https://work.g4cpro.com
 
 mode "mouse" {
 	# set your three speeds here
@@ -372,17 +373,17 @@ mode "mouse" {
 
 	# Mouse movement (quicker) -- vim keybindings
 
-	bindsym Mod3+h exec xdotool mousemove_relative -- -$fast 0
-	bindsym Mod3+j exec xdotool mousemove_relative 0 $fast
-	bindsym Mod3+k exec xdotool mousemove_relative -- 0 -$fast
-	bindsym Mod3+l exec xdotool mousemove_relative $fast 0
+	bindsym $super+h exec xdotool mousemove_relative -- -$fast 0
+	bindsym $super+j exec xdotool mousemove_relative 0 $fast
+	bindsym $super+k exec xdotool mousemove_relative -- 0 -$fast
+	bindsym $super+l exec xdotool mousemove_relative $fast 0
 
 	# Mouse movement (quicker) -- arrow keys
 
-	bindsym Mod3+Left exec xdotool mousemove_relative -- -$fast 0
-	bindsym Mod3+Down exec xdotool mousemove_relative 0 $fast
-	bindsym Mod3+Up exec xdotool mousemove_relative -- 0 -$fast
-	bindsym Mod3+Right exec xdotool mousemove_relative $fast 0
+	bindsym $super+Left exec xdotool mousemove_relative -- -$fast 0
+	bindsym $super+Down exec xdotool mousemove_relative 0 $fast
+	bindsym $super+Up exec xdotool mousemove_relative -- 0 -$fast
+	bindsym $super+Right exec xdotool mousemove_relative $fast 0
 
 	# Mouse movement (fast) -- vim keybindings
 
@@ -436,15 +437,15 @@ mode "mouse" {
   bindsym Escape mode "default"
 }
 
-bindsym Mod3+m mode "mouse"
+bindsym $super+m mode "mouse"
 bindcode 135 mode "mouse"
 
-#bindsym $mod+Shift+t exec ~/bin/tear_off_tab.sh 
+#bindsym $caps+Shift+t exec ~/bin/tear_off_tab.sh 
 
 # Set shut down, restart and locking features
-bindsym Mod3+0 mode "$mode_system"
-set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
-mode "$mode_system" {
+bindsym $super+0 mode "$capse_system"
+set $capse_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+mode "$capse_system" {
     bindsym l exec --no-startup-id lockit.sh, mode "default"
     # bindsym l exec --no-startup-id xset dpms force suspend && i3exit lock, mode "default"
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
@@ -459,7 +460,7 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym Mod3+s mode "$spotify_system"
+bindsym $super+s mode "$spotify_system"
 set $spotify_system <p>  /    <n>   <r>   <i> 
 mode "$spotify_system" {
   bindsym p exec sp play
@@ -473,7 +474,7 @@ mode "$spotify_system" {
 
 # Now done via super+arrowkeys
 # Resize window (you can also use the mouse for that)
-# bindsym $mod+r mode "resize"
+# bindsym $caps+r mode "resize"
 # mode "resize" {
 #         # These bindings trigger as soon as you enter the resize mode
 #         # Pressing left will shrink the window’s width.
@@ -497,7 +498,7 @@ mode "$spotify_system" {
 # }
 
 # Lock screen
-#bindsym $mod+9 exec --no-startup-id blurlock
+#bindsym $caps+9 exec --no-startup-id blurlock
 
 # Autostart applications
 ## adjustment of i3bar battery reading (only run at the very first login):
@@ -530,7 +531,7 @@ bar {
   #status_command /usr/share/powerline/bindings/i3/powerline-i3.py 
   
   mode hide
-  modifier Mod4
+  modifier $caps
 
 	#status_command /home/kevin/.rvm/rubies/ruby-2.1.1/bin/ruby /home/kevin/.i3/i3status.rb
   position top
@@ -599,19 +600,19 @@ client.background       #2B2C2B
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 #smart_borders on
 
-# Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
-# set $mode_gaps Gaps: (o) outer, (i) inner
-# set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-# set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-# bindsym $mod+Shift+g mode "$mode_gaps"
+# Press $caps+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
+# set $capse_gaps Gaps: (o) outer, (i) inner
+# set $capse_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+# set $capse_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+# bindsym $caps+Shift+g mode "$capse_gaps"
 # 
-# mode "$mode_gaps" {
-#         bindsym o      mode "$mode_gaps_outer"
-#         bindsym i      mode "$mode_gaps_inner"
+# mode "$capse_gaps" {
+#         bindsym o      mode "$capse_gaps_outer"
+#         bindsym i      mode "$capse_gaps_inner"
 #         bindsym Return mode "default"
 #         bindsym Escape mode "default"
 # }
-# mode "$mode_gaps_inner" {
+# mode "$capse_gaps_inner" {
 #         bindsym plus  gaps inner current plus 5
 #         bindsym minus gaps inner current minus 5
 #         bindsym 0     gaps inner current set 0
@@ -623,7 +624,7 @@ client.background       #2B2C2B
 #         bindsym Return mode "default"
 #         bindsym Escape mode "default"
 # }
-# mode "$mode_gaps_outer" {
+# mode "$capse_gaps_outer" {
 #         bindsym plus  gaps outer current plus 5
 #         bindsym minus gaps outer current minus 5
 #         bindsym 0     gaps outer current set 0
@@ -657,7 +658,7 @@ client.background       #2B2C2B
 # for_window [instance="gnome-system-monitor"] move scratchpad 
 
 
-# bindcode $mod+48 mode "$scratchpad"
+# bindcode $caps+48 mode "$scratchpad"
 # set $scratchpad <s>   <m>   
 # mode "$scratchpad" {
 #   # Spotify
