@@ -1,4 +1,19 @@
 # #!/usr/bin/ruby
+
+snippet csv
+	CSV.foreach(${1:file}, ${2:header: true}) do |row|
+	end
+
+snippet optparse
+	options = {}
+	OptionParser.new do |opt|
+		opt.on('--file FILE', 'explain') { |o| options[:year] = o }
+	end.parse!
+
+snippet normal_hdr
+	require 'csv'
+	require 'optparse'
+	
 snippet #!
 	#!/usr/bin/ruby
 

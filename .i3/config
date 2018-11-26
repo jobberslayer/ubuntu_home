@@ -11,7 +11,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 5 
+new_window pixel 8
 new_float normal
 
 # Hide borders
@@ -84,7 +84,7 @@ bindcode $mod+49 exec terminator -x tmuxinator widgets
 ################################################################################################
 
 exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # used for usb logictech headset volume control
 exec --no-startup-id pasystray
 #exec --no-startup-id pulseaudio
@@ -229,8 +229,12 @@ assign [class="Pidgin"] 8
 for_window [window_role="HTOP"] floating enable
 for_window [window_role="HTOP"] resize set width 1000
 for_window [window_role="HTOP"] resize set height 600
-for_window [window_role="HTOP"] resize set height 600
 for_window [window_role="HTOP"] move postion center 
+#for_window [class="nixnote2"] floating enable
+#for_window [class="nixnote2"] resize set height 600
+#for_window [class="nixnote2"] resize set width 1400
+#for_window [class="nixnote2"] move postion center 
+#for_window [class="nixnote2"] move scratchpad
 for_window [class="conky"] move scratchpad
 for_window [class="Remmina"] floating enable
 for_window [class="System Monitor"] floating enable
@@ -275,15 +279,28 @@ bindsym Ctrl+mod1+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 #Remmina
-bindsym $mod+shift+r mode "$remmina_sys"
-#set $remmina_sys <f>inlogic   <g>unnison  fish<b>owl  <n>ew server  new g<u>nnison
-set $remmina_sys <f>inlogic   <g>unnison  fish<b>owl
-mode "$remmina_sys" {
-  # bindsym f exec remmina -c .remmina/finlogic.remmina, mode "default"
-  # bindsym g exec remmina -c .remmina/gunnison.remmina, mode "default"
+# bindsym $mod+shift+r mode "$remmina_sys"
+# #set $remmina_sys <f>inlogic   <g>unnison  fish<b>owl  <n>ew server  new g<u>nnison
+# set $remmina_sys <f>inlogic   <g>unnison  fish<b>owl
+# mode "$remmina_sys" {
+#   # bindsym f exec remmina -c .remmina/finlogic.remmina, mode "default"
+#   # bindsym g exec remmina -c .remmina/gunnison.remmina, mode "default"
+#   bindsym b exec remmina -c .remmina/fishbowl.remmina, mode "default"
+#   bindsym f exec remmina -c .remmina/NewFinlogicServer.remmina, mode "default"
+#   bindsym g exec remmina -c .remmina/NewGunnisonServer.remmina, mode "default"
+#   
+#   # exit mode: "Enter" or "Escape"
+#   bindsym Return mode "default"
+#   bindsym Escape mode "default"
+# }
+
+#Remmina VPN
+bindsym  $mod+Ctrl+r mode "$remmina_vpn_sys"
+set $remmina_vpn_sys VPN Connections <f>inlogic  <g>unnison  fish <b>owl
+mode "$remmina_vpn_sys" {
+  bindsym f exec remmina -c .remmina/NewFinlogicServerVPN.remmina, mode "default"
+  bindsym g exec remmina -c .remmina/NewGunnisonServerVPN.remmina, mode "default"
   bindsym b exec remmina -c .remmina/fishbowl.remmina, mode "default"
-  bindsym f exec remmina -c .remmina/NewFinlogicServer.remmina, mode "default"
-  bindsym g exec remmina -c .remmina/NewGunnisonServer.remmina, mode "default"
   
   # exit mode: "Enter" or "Escape"
   bindsym Return mode "default"
@@ -291,7 +308,7 @@ mode "$remmina_sys" {
 }
 
 #tmuxinator starter
-bindsym $mod+shift+t mode "$tmux"
+bindsym $mod+Ctrl+t mode "$tmux"
 set $tmux biu <r>econsile   biu <c>ommissions   <g>unnison credit card   <f>inlogic portal
 mode "$tmux" {
   bindsym r exec terminator -x tmuxinator biu-costco, mode "default"
@@ -305,7 +322,7 @@ mode "$tmux" {
 }
 
 #Volume stuff
-bindsym $mod+shift+v mode "$vol_system"
+bindsym $mod+Ctrl+v mode "$vol_system"
 set $vol_system (+)volup   (-)voldown   (0)mute/unmute (p)avucontrol
 mode "$vol_system" {
   bindsym equal exec amixer -D pulse sset Master 2%+ 
@@ -331,10 +348,100 @@ bindsym $mod+Ctrl+Down exec xdotool mousemove_relative 0 20
 
 bindsym $mod+Ctrl+g exec google-chrome --new-window https://work.g4cpro.com
 
+mode "mouse" {
+	# set your three speeds here
+
+	set $slow 1
+	set $quick 10
+	set $fast 200
+
+	# Mouse movement (slow/fine-tuned) -- vim keybindings
+
+	bindsym h exec xdotool mousemove_relative -- -$quick 0
+	bindsym j exec xdotool mousemove_relative 0 $quick
+	bindsym k exec xdotool mousemove_relative -- 0 -$quick
+	bindsym l exec xdotool mousemove_relative $quick 0
+
+	# Mouse movement (slow/fine-tuned) -- arrow keys
+
+	bindsym Left exec xdotool mousemove_relative -- -$quick 0
+	bindsym Down exec xdotool mousemove_relative 0 $quick
+	bindsym Up exec xdotool mousemove_relative -- 0 -$quick
+	bindsym Right exec xdotool mousemove_relative $quick 0
+
+	# Mouse movement (quicker) -- vim keybindings
+
+	bindsym Shift+h exec xdotool mousemove_relative -- -$fast 0
+	bindsym Shift+j exec xdotool mousemove_relative 0 $fast
+	bindsym Shift+k exec xdotool mousemove_relative -- 0 -$fast
+	bindsym Shift+l exec xdotool mousemove_relative $fast 0
+
+	# Mouse movement (quicker) -- arrow keys
+
+	bindsym Shift+Left exec xdotool mousemove_relative -- -$fast 0
+	bindsym Shift+Down exec xdotool mousemove_relative 0 $fast
+	bindsym Shift+Up exec xdotool mousemove_relative -- 0 -$fast
+	bindsym Shift+Right exec xdotool mousemove_relative $fast 0
+
+	# Mouse movement (fast) -- vim keybindings
+
+	bindsym Ctrl+h exec xdotool mousemove_relative -- -$slow 0
+	bindsym Ctrl+j exec xdotool mousemove_relative 0 $slow
+	bindsym Ctrl+k exec xdotool mousemove_relative -- 0 -$slow
+	bindsym Ctrl+l exec xdotool mousemove_relative $slow 0
+
+	# Mouse movement (fast) -- arrow keys
+
+	bindsym Ctrl+Left exec xdotool mousemove_relative -- -$slow 0
+	bindsym Ctrl+Down exec xdotool mousemove_relative 0 $slow
+	bindsym Ctrl+Up exec xdotool mousemove_relative -- 0 -$slow
+	bindsym Ctrl+Right exec xdotool mousemove_relative $slow 0
+
+	# Mouse movement (special down-right)
+	
+	bindsym m exec xdotool mousemove_relative 10 10
+
+	# Left Click
+	bindsym f exec xdotool click 1
+
+	# Middle Click
+	bindsym d exec xdotool click 2
+
+	# Right Click
+	bindsym s exec xdotool click 3
+
+	# Left Click-and-drag
+	bindsym Shift+f exec xdotool mousedown 1
+
+	# Middle Click-and-drag 
+	bindsym Shift+d exec xdotool mousedown 2
+
+	# Right Click-and-drag
+	bindsym Shift+s exec xdotool mousedown 3
+
+	# Left Drag release
+	bindsym Ctrl+f exec xdotool mouseup 1
+
+	# Middle Drag release
+	bindsym Ctrl+d exec xdotool mouseup 2
+
+	# Right Drag release
+	bindsym Ctrl+s exec xdotool mouseup 3
+
+
+	# return to normal keybindings -- IMPORTANT!!
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+#bindsym $mod+Ctrl+m mode "mouse"
+bindcode 135 mode "mouse"
+
 #bindsym $mod+Shift+t exec ~/bin/tear_off_tab.sh 
 
 # Set shut down, restart and locking features
-bindsym $mod+0 mode "$mode_system"
+bindsym $mod+Ctrl+0 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id lockit.sh, mode "default"
