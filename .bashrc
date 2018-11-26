@@ -51,7 +51,7 @@ export TERM="xterm-256color"
 #export PS1='\n\n`echo "\w"|boxes -d columns`\n\n\u@\h=> ' 
 
 export VISUAL=vim
-export EDITOR="$VISUAL"]
+export EDITOR="$VISUAL"
 
 alias ps2="ps auxw|grep -v grep|grep"
 alias jim="rvm gemset use"
