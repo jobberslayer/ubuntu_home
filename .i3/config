@@ -2,7 +2,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # remap caps lock to use as super 
-exec_always setxkbmap -option caps:super
+#exec_always setxkbmap -option caps:super
+exec xmodmap .Xmodmap 
 
 #set $mod Mod5
 set $mod Mod4
@@ -322,7 +323,8 @@ mode "$tmux" {
 }
 
 #Volume stuff
-bindsym $mod+Ctrl+v mode "$vol_system"
+#bindsym $mod+Ctrl+v mode "$vol_system"
+bindsym Mod3+v mode "$vol_system"
 set $vol_system (+)volup   (-)voldown   (0)mute/unmute (p)avucontrol
 mode "$vol_system" {
   bindsym equal exec amixer -D pulse sset Master 2%+ 
