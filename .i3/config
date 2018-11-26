@@ -372,31 +372,31 @@ mode "mouse" {
 
 	# Mouse movement (quicker) -- vim keybindings
 
-	bindsym Shift+h exec xdotool mousemove_relative -- -$fast 0
-	bindsym Shift+j exec xdotool mousemove_relative 0 $fast
-	bindsym Shift+k exec xdotool mousemove_relative -- 0 -$fast
-	bindsym Shift+l exec xdotool mousemove_relative $fast 0
+	bindsym Mod3+h exec xdotool mousemove_relative -- -$fast 0
+	bindsym Mod3+j exec xdotool mousemove_relative 0 $fast
+	bindsym Mod3+k exec xdotool mousemove_relative -- 0 -$fast
+	bindsym Mod3+l exec xdotool mousemove_relative $fast 0
 
 	# Mouse movement (quicker) -- arrow keys
 
-	bindsym Shift+Left exec xdotool mousemove_relative -- -$fast 0
-	bindsym Shift+Down exec xdotool mousemove_relative 0 $fast
-	bindsym Shift+Up exec xdotool mousemove_relative -- 0 -$fast
-	bindsym Shift+Right exec xdotool mousemove_relative $fast 0
+	bindsym Mod3+Left exec xdotool mousemove_relative -- -$fast 0
+	bindsym Mod3+Down exec xdotool mousemove_relative 0 $fast
+	bindsym Mod3+Up exec xdotool mousemove_relative -- 0 -$fast
+	bindsym Mod3+Right exec xdotool mousemove_relative $fast 0
 
 	# Mouse movement (fast) -- vim keybindings
 
-	bindsym Ctrl+h exec xdotool mousemove_relative -- -$slow 0
-	bindsym Ctrl+j exec xdotool mousemove_relative 0 $slow
-	bindsym Ctrl+k exec xdotool mousemove_relative -- 0 -$slow
-	bindsym Ctrl+l exec xdotool mousemove_relative $slow 0
+	bindsym Shift+h exec xdotool mousemove_relative -- -$slow 0
+	bindsym Shift+j exec xdotool mousemove_relative 0 $slow
+	bindsym Shift+k exec xdotool mousemove_relative -- 0 -$slow
+	bindsym Shift+l exec xdotool mousemove_relative $slow 0
 
 	# Mouse movement (fast) -- arrow keys
 
-	bindsym Ctrl+Left exec xdotool mousemove_relative -- -$slow 0
-	bindsym Ctrl+Down exec xdotool mousemove_relative 0 $slow
-	bindsym Ctrl+Up exec xdotool mousemove_relative -- 0 -$slow
-	bindsym Ctrl+Right exec xdotool mousemove_relative $slow 0
+	bindsym Shift+Left exec xdotool mousemove_relative -- -$slow 0
+	bindsym Shift+Down exec xdotool mousemove_relative 0 $slow
+	bindsym Shift+Up exec xdotool mousemove_relative -- 0 -$slow
+	bindsym Shift+Right exec xdotool mousemove_relative $slow 0
 
 	# Mouse movement (special down-right)
 	
