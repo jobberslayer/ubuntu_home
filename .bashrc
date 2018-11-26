@@ -95,7 +95,7 @@ set -o vi
 
 umask 000
 
-setxkbmap -option caps:super
+#setxkbmap -option caps:super
 
 PATH=$PATH:$HOME/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
