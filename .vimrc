@@ -4,6 +4,9 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+" Setting up fzf - Fuzzy Find installed from git clone
+set rtp+=~/.fzf
+
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -22,6 +25,7 @@ Plugin 'KeitaNakamura/neodark.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'slim-template/vim-slim'
+
 
 " Plugin 'powerline/powerline'
 
@@ -172,9 +176,12 @@ let @e="ddA:JJ"
 "GUndo
 :map <Leader>u :GundoToggle<CR>
 
+" Replaced by FZF
 "CtrlP - fuzzy file search
-:map <Leader>ff :CtrlP<CR>
-:map <Leader>fb :CtrlPBuffer<CR>
+":map <Leader>ff :CtrlP<CR>
+":map <Leader>fb :CtrlPBuffer<CR>
+
+:map <Leader>ff :FZF<CR>
 
 :map <Leader>dbl :g/^$/d<CR>
 
