@@ -1,0 +1,88 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+  title_font = Monoid Nerd Font Mono Light Semi-Condensed 12
+  title_transmit_fg_color = "#e1d3d3"
+  title_use_system_font = False
+[keybindings]
+  copy = <Primary>c
+  cycle_next = None
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_next = <Alt>l
+  go_prev = <Shift><Alt>Tab
+  go_up = <Alt>k
+  next_tab = <Alt>Tab
+  paste = <Primary><Shift>v
+  prev_tab = <Shift><Alt>Tab
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+  [[IDE]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = d9f25a6f-0fde-466a-86b0-9fa0ead765aa
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 1920:0
+      size = 1904, 1064
+      title = kevin@latitude:~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 826
+      ratio = 0.779981114259
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 1574
+      ratio = 0.828857293312
+      type = HPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 950
+      ratio = 0.500263296472
+      type = HPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = d9f25a6f-0fde-466a-86b0-9fa0ead765aa
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = f09d5588-9b1c-4dac-96ad-8f367bc5c496
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 91bc1ff6-239d-4ca4-866d-9094f36307d0
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 94d31eeb-bbb1-42c3-abca-bafe589eabd7
+[plugins]
+[profiles]
+  [[default]]
+    copy_on_selection = True
+    cursor_color = "#ffffff"
+    font = DejaVuSansMono Nerd Font Mono 12
+    foreground_color = "#ffffff"
+    login_shell = True
+    show_titlebar = False
+    use_system_font = False
