@@ -102,3 +102,5 @@ PATH=$PATH:$HOME/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
 function findit() {
   find . -name "*$1*"
 }
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
