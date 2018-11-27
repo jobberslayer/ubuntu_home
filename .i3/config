@@ -460,6 +460,15 @@ mode "$capse_system" {
     bindsym Escape mode "default"
 }
 
+# terminator layouts
+bindsym $super+Return mode "$terminator_layouts"
+set $terminator_layouts (i)DE
+mode "$terminator_layouts" {
+  bindsym i exec terminator -l IDE, mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
 bindsym $super+s mode "$spotify_system"
 set $spotify_system <p>  /    <n>   <r>   <i> 
 mode "$spotify_system" {
