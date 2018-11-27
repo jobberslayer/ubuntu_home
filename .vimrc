@@ -21,6 +21,7 @@ Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'KeitaNakamura/neodark.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
+Plugin 'slim-template/vim-slim'
 
 " Plugin 'powerline/powerline'
 
