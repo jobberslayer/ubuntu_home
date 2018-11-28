@@ -24,23 +24,44 @@
     [[[window0]]]
       parent = ""
       type = Window
-  [[Gunnison]]
+  [[BIU]]
     [[[child0]]]
       fullscreen = False
-      last_active_term = aceba021-cdcc-445d-a541-a8da1b90569d
+      last_active_term = b07cba07-978d-4f9e-b39e-b656abb43060
       last_active_window = True
       maximised = False
       order = 0
       parent = ""
-      position = 0:0
-      size = 667, 752
+      position = 1920:0
+      size = 944, 1064
+      title = kevin@latitude:~
+      type = Window
+    [[[terminal1]]]
+      command = rvm gemset use domo;bash
+      directory = /home/kevin/workspace/blenditup/domo
+      order = 0
+      parent = child0
+      profile = default
+      type = Terminal
+      uuid = b07cba07-978d-4f9e-b39e-b656abb43060
+  [[Gunnison]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 6f4bdb67-3214-4b65-9d21-295a42a61c70
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 2560:0
+      size = 624, 1064
       title = kevin@kevin-Satellite:~
       type = Window
     [[[child1]]]
+      directory = /home/kevin/workspace/gunnison
       order = 0
       parent = child0
-      position = 374
-      ratio = 0.500669344043
+      position = 720
+      ratio = 0.679886685552
       type = VPaned
     [[[terminal2]]]
       command = ""
@@ -117,8 +138,12 @@
   [[default]]
     copy_on_selection = True
     cursor_color = "#ffffff"
-    font = DejaVuSansMonoForPowerline Nerd Font 12
+    font = DejaVu Sans Mono for Powerline 12
     foreground_color = "#ffffff"
     login_shell = True
     show_titlebar = False
     use_system_font = False
+  [[NoExit]]
+    cursor_color = "#aaaaaa"
+    exit_action = hold
+    use_custom_command = True

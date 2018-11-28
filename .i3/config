@@ -462,10 +462,11 @@ mode "$capse_system" {
 
 # terminator layouts
 bindsym $super+Return mode "$terminator_layouts"
-set $terminator_layouts (i)DE (g)unnison
+set $terminator_layouts (i)DE (g)unnison (b)lendItUp
 mode "$terminator_layouts" {
   bindsym i exec terminator -l IDE, mode "default"
   bindsym g exec terminator -l Gunnison, mode "default"
+  bindsym b exec terminator -l BIU, mode "default"
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
