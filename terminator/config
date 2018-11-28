@@ -24,6 +24,40 @@
     [[[window0]]]
       parent = ""
       type = Window
+  [[Gunnison]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = aceba021-cdcc-445d-a541-a8da1b90569d
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 0:0
+      size = 667, 752
+      title = kevin@kevin-Satellite:~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 374
+      ratio = 0.500669344043
+      type = VPaned
+    [[[terminal2]]]
+      command = ""
+      directory = /home/kevin/workspace/gunnison
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 6f4bdb67-3214-4b65-9d21-295a42a61c70
+    [[[terminal3]]]
+      command = /usr/bin/ranger
+      directory = /home/kevin/Remote Share/clients/gunnison
+      order = 1
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = aceba021-cdcc-445d-a541-a8da1b90569d
   [[IDE]]
     [[[child0]]]
       fullscreen = False
@@ -83,7 +117,7 @@
   [[default]]
     copy_on_selection = True
     cursor_color = "#ffffff"
-    font = DejaVuSansMonoForPowerline Nerd Font 14
+    font = DejaVuSansMonoForPowerline Nerd Font 12
     foreground_color = "#ffffff"
     login_shell = True
     show_titlebar = False
