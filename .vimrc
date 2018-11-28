@@ -159,6 +159,8 @@ let @e="ddA:JJ"
 
 " delete all buffers
 :map <Leader>dab :bd *
+" use fzf Buffers command
+:map <Leader>b :Buffers<CR>
 
 " alternative to saving file while in command mode
 :map <Leader>w :w<CR>
@@ -211,6 +213,7 @@ let g:bufExplorerSortBy='name'
 :map <Leader>l  :tabn<CR>
 :map <Leader>fs :tab split<CR>
 :map <Leader>xfs :tabc<CR>
+:map <leader>ts :Windows<CR>
 
 "navigating windows
 :map <c-l> :wincmd l<CR>
