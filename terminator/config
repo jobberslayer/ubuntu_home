@@ -14,6 +14,7 @@
   next_tab = <Alt>Tab
   paste = <Primary><Shift>v
   prev_tab = <Shift><Alt>Tab
+  toggle_zoom = <Alt>z
 [layouts]
   [[default]]
     [[[child1]]]

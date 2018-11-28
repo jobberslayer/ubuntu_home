@@ -5,7 +5,7 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 " Setting up fzf - Fuzzy Find installed from git clone
-set rtp+=~/.fzf
+"set rtp+=~/.fzf/plugin
 
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -25,6 +25,8 @@ Plugin 'KeitaNakamura/neodark.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'slim-template/vim-slim'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 
 
 " Plugin 'powerline/powerline'
