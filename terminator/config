@@ -1,4 +1,5 @@
 [global_config]
+  broadcast_default = off
   suppress_multiple_term_dialog = True
   title_font = Monoid Nerd Font Mono Light Semi-Condensed 12
   title_transmit_fg_color = "#e1d3d3"
@@ -82,7 +83,7 @@
   [[default]]
     copy_on_selection = True
     cursor_color = "#ffffff"
-    font = DejaVuSansMono Nerd Font Mono 12
+    font = DejaVuSansMonoForPowerline Nerd Font 14
     foreground_color = "#ffffff"
     login_shell = True
     show_titlebar = False
