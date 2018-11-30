@@ -18,6 +18,8 @@ Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
 Plug 'w0rp/ale'
 Plug '907th/vim-auto-save'
+Plug 'dracula/vim'
+Plug 'slim-template/vim-slim'
 
 "" fuzzy finder
 
@@ -158,11 +160,15 @@ nnoremap <c-down> :resize -5<CR>
 
 nnoremap <Leader>H :nohl<CR>
 
+" custom comment for gunnison credit card csv file
+nnoremap <Leader>csv :s/^/#,/<CR>
+
 " edit/reload .vimrc
 nnoremap <Leader>con :vsplit $MYVIMRC<CR>
 nnoremap <Leader>vimrc :so $MYVIMRC
 
 "My simple todo system
+"Be sure to be at beginning of line when marking done or redo
 " test subject below
 "☐ test
 nnoremap <Leader>done <ESC>0lcw✔<ESC>A /<ESC>"=strftime('%Y-%m-%d %I:%M%p')"<ESC>pA/<ESC>0l
@@ -190,9 +196,36 @@ let g:lightline = { 'colorscheme': 'iceberg' }
 
 "" colorscheme
 
+"colorscheme dracula
 colorscheme iceberg
 
 highlight Normal      ctermbg=none
 highlight NonText     ctermbg=none
 highlight EndOfBuffer ctermbg=none
 highlight VertSplit   cterm=none ctermfg=240 ctermbg=240
+
+" Command List for FZF
+" Files [PATH]  Files (similar to :FZF)
+" GFiles [OPTS] Git files (git ls-files)
+" GFiles? Git files (git status)
+" Buffers Open buffers
+" Colors  Color schemes
+" Ag [PATTERN]  ag search result (ALT-A to select all, ALT-D to deselect all)
+" Rg [PATTERN]  rg search result (ALT-A to select all, ALT-D to deselect all)
+" Lines [QUERY] Lines in loaded buffers
+" BLines [QUERY]  Lines in the current buffer
+" Tags [QUERY]  Tags in the project (ctags -R)
+" BTags [QUERY] Tags in the current buffer
+" Marks Marks
+" Windows Windows
+" Locate PATTERN  locate command output
+" History v:oldfiles and open buffers
+" History:  Command history
+" History/  Search history
+" Snippets  Snippets (UltiSnips)
+" Commits Git commits (requires fugitive.vim)
+" BCommits  Git commits for the current buffer
+" Commands  Commands
+" Maps  Normal mode mappings
+" Helptags  Help tags 1
+" Filetypes File types
