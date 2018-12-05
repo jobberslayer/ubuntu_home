@@ -37,7 +37,7 @@ Plug 'cocopon/iceberg.vim'
 
 call plug#end()
 
-" Reminders
+" Remnders
 " Comment uses 'gc'
 
 " pure vim
@@ -155,6 +155,9 @@ nnoremap <c-right> :vertical resize +5<CR>
 nnoremap <c-left> :vertical resize -5<CR>
 nnoremap <c-up> :resize +5<CR>
 nnoremap <c-down> :resize -5<CR>
+
+"" Termainal config
+tnoremap <c-\> <C-\><C-n>
 
 "" Misc
 
