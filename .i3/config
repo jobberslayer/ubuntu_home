@@ -1,9 +1,9 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# remap caps lock to use as super 
+# remap caps lock to use as super
 #exec_always setxkbmap -option caps:super
-exec xmodmap .Xmodmap 
+exec xmodmap .Xmodmap
 
 #set $caps Mod5
 set $super Mod4
@@ -27,14 +27,14 @@ hide_edge_borders none
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:Cantarell 10
-font DejaVuSansMonoForPowerline Nerd Font Book 10 
+font DejaVuSansMonoForPowerline Nerd Font Book 10
 
 # Use Mouse+$caps to drag floating windows
 floating_modifier $caps
 
 # start a terminal
 #bindsym $caps+Return exec gnome-terminal
-bindsym $caps+ctrl Return exec nitrogen --restore 
+bindsym $caps+ctrl Return exec nitrogen --restore
 #bindsym $caps+Return exec xfce4-terminal
 #bindsym $caps+Return exec terminology
 bindsym $caps+Return exec terminator, mode "default"
@@ -43,7 +43,7 @@ bindsym ctrl+mod1+Return exec Terminator
 
 # '>'
 bindcode $caps+shift+60 move position center
-bindsym $super+f exec thunar 
+bindsym $super+f exec thunar
 
 # rofi popup launcher
 bindsym $caps+space exec rofi -show run
@@ -65,7 +65,7 @@ bindsym $caps+t exec terminator -r HTOP -e htop
 bindcode $caps+21 exec skippy-xd
 
 # set screen layout
-bindsym $caps+ctrl+s exec .screenlayout/louisville.sh 
+bindsym $caps+ctrl+s exec .screenlayout/louisville.sh
 
 # show i3 cheatsheet
 #bindsym $caps+Shift+i exec exo-open ~/Documents/davechild_i3-window-manager.pdf
@@ -123,7 +123,7 @@ bindsym $caps+k focus up
 bindsym $caps+l focus right
 bindsym $caps+h focus left
 
-# resize windows using arrow keys 
+# resize windows using arrow keys
 bindsym $caps+Left resize shrink width 5 px or 5 ppt
 bindsym $caps+Down resize shrink height 5 px or 5 ppt
 bindsym $caps+Up resize grow height 5 px or 5 ppt
@@ -231,11 +231,11 @@ assign [class="Pidgin"] 8
 for_window [window_role="HTOP"] floating enable
 for_window [window_role="HTOP"] resize set width 1000
 for_window [window_role="HTOP"] resize set height 600
-for_window [window_role="HTOP"] move postion center 
+for_window [window_role="HTOP"] move postion center
 #for_window [class="nixnote2"] floating enable
 #for_window [class="nixnote2"] resize set height 600
 #for_window [class="nixnote2"] resize set width 1400
-#for_window [class="nixnote2"] move postion center 
+#for_window [class="nixnote2"] move postion center
 #for_window [class="nixnote2"] move scratchpad
 for_window [class="conky"] move scratchpad
 for_window [class="Remmina"] floating enable
@@ -290,7 +290,7 @@ bindsym $caps+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortc
 #   bindsym b exec remmina -c .remmina/fishbowl.remmina, mode "default"
 #   bindsym f exec remmina -c .remmina/NewFinlogicServer.remmina, mode "default"
 #   bindsym g exec remmina -c .remmina/NewGunnisonServer.remmina, mode "default"
-#   
+#
 #   # exit mode: "Enter" or "Escape"
 #   bindsym Return mode "default"
 #   bindsym Escape mode "default"
@@ -301,12 +301,12 @@ bindsym  $super+r mode "$remmina_vpn_sys"
 set $remmina_vpn_sys VPN Connections <f>inlogic  <g>unnison  fish <b>owl
 mode "$remmina_vpn_sys" {
   bindsym f exec remmina -c .remmina/NewFinlogicServerVPN.remmina, mode "default"
-  bindsym g exec remmina -c .remmina/NewGunnisonServerVPN.remmina, mode "default"
-  bindsym b exec remmina -c .remmina/fishbowl.remmina, mode "default"
-  
-  # exit mode: "Enter" or "Escape"
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+    bindsym g exec remmina -c .remmina/NewGunnisonServerVPN.remmina, mode "default"
+    bindsym b exec remmina -c .remmina/fishbowl.remmina, mode "default"
+
+# exit mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 #tmuxinator starter
@@ -314,31 +314,31 @@ bindsym $super+t mode "$tmux"
 set $tmux biu <r>econsile   biu <c>ommissions   <g>unnison credit card   <f>inlogic portal
 mode "$tmux" {
   bindsym r exec terminator -x tmuxinator biu-costco, mode "default"
-  bindsym c exec terminator -x tmuxinator biu-commissions, mode "default"
-  bindsym g exec terminator -x tmuxinator gunnison-credit-card, mode "default"
-  bindsym f exec terminator -x tmuxinator finlogic-portal, mode "default"
-  
-  # exit mode: "Enter" or "Escape"
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+    bindsym c exec terminator -x tmuxinator biu-commissions, mode "default"
+    bindsym g exec terminator -x tmuxinator gunnison-credit-card, mode "default"
+    bindsym f exec terminator -x tmuxinator finlogic-portal, mode "default"
+
+# exit mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 #Volume stuff
 bindsym $super+v mode "$vol_system"
 set $vol_system (+)volup   (-)voldown   (0)mute/unmute (p)avucontrol
 mode "$vol_system" {
-  bindsym equal exec amixer -D pulse sset Master 2%+ 
-  bindsym minus exec amixer -D pulse sset Master 2%- 
-  bindsym 0 exec amixer -D pulse set Master 1+ toggle 
-  bindsym p exec pavucontrol; mode "default" 
+  bindsym equal exec amixer -D pulse sset Master 2%+
+    bindsym minus exec amixer -D pulse sset Master 2%-
+    bindsym 0 exec amixer -D pulse set Master 1+ toggle
+    bindsym p exec pavucontrol; mode "default"
 
-  bindsym k exec amixer -D pulse sset Master 2%+ 
-  bindsym j exec amixer -D pulse sset Master 2%- 
-  bindsym h exec amixer -D pulse set Master 1+ toggle 
-  
-  # exit mode: "Enter" or "Escape"
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+    bindsym k exec amixer -D pulse sset Master 2%+
+    bindsym j exec amixer -D pulse sset Master 2%-
+    bindsym h exec amixer -D pulse set Master 1+ toggle
+
+# exit mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 #Move mouse via keyboard
@@ -355,103 +355,103 @@ bindsym $caps+Ctrl+Down exec xdotool mousemove_relative 0 20
 bindsym $caps+Ctrl+g exec google-chrome --new-window https://work.g4cpro.com
 
 mode "mouse" {
-	# set your three speeds here
+# set your three speeds here
 
-	set $slow 1
-	set $quick 10
-	set $fast 200
+  set $slow 1
+    set $quick 10
+    set $fast 200
 
-	# Mouse movement (slow/fine-tuned) -- vim keybindings
+# Mouse movement (slow/fine-tuned) -- vim keybindings
 
-	bindsym h exec xdotool mousemove_relative -- -$quick 0
-	bindsym j exec xdotool mousemove_relative 0 $quick
-	bindsym k exec xdotool mousemove_relative -- 0 -$quick
-	bindsym l exec xdotool mousemove_relative $quick 0
+    bindsym h exec xdotool mousemove_relative -- -$quick 0
+    bindsym j exec xdotool mousemove_relative 0 $quick
+    bindsym k exec xdotool mousemove_relative -- 0 -$quick
+    bindsym l exec xdotool mousemove_relative $quick 0
 
-	# Mouse movement (slow/fine-tuned) -- arrow keys
+# Mouse movement (slow/fine-tuned) -- arrow keys
 
-	bindsym Left exec xdotool mousemove_relative -- -$quick 0
-	bindsym Down exec xdotool mousemove_relative 0 $quick
-	bindsym Up exec xdotool mousemove_relative -- 0 -$quick
-	bindsym Right exec xdotool mousemove_relative $quick 0
+    bindsym Left exec xdotool mousemove_relative -- -$quick 0
+    bindsym Down exec xdotool mousemove_relative 0 $quick
+    bindsym Up exec xdotool mousemove_relative -- 0 -$quick
+    bindsym Right exec xdotool mousemove_relative $quick 0
 
-	# Mouse movement (quicker) -- vim keybindings
+# Mouse movement (quicker) -- vim keybindings
 
-	bindsym $super+h exec xdotool mousemove_relative -- -$fast 0
-	bindsym $super+j exec xdotool mousemove_relative 0 $fast
-	bindsym $super+k exec xdotool mousemove_relative -- 0 -$fast
-	bindsym $super+l exec xdotool mousemove_relative $fast 0
+    bindsym $super+h exec xdotool mousemove_relative -- -$fast 0
+    bindsym $super+j exec xdotool mousemove_relative 0 $fast
+    bindsym $super+k exec xdotool mousemove_relative -- 0 -$fast
+    bindsym $super+l exec xdotool mousemove_relative $fast 0
 
-	# Mouse movement (quicker) -- arrow keys
+# Mouse movement (quicker) -- arrow keys
 
-	bindsym $super+Left exec xdotool mousemove_relative -- -$fast 0
-	bindsym $super+Down exec xdotool mousemove_relative 0 $fast
-	bindsym $super+Up exec xdotool mousemove_relative -- 0 -$fast
-	bindsym $super+Right exec xdotool mousemove_relative $fast 0
+    bindsym $super+Left exec xdotool mousemove_relative -- -$fast 0
+    bindsym $super+Down exec xdotool mousemove_relative 0 $fast
+    bindsym $super+Up exec xdotool mousemove_relative -- 0 -$fast
+    bindsym $super+Right exec xdotool mousemove_relative $fast 0
 
-	# Mouse movement (fast) -- vim keybindings
+# Mouse movement (fast) -- vim keybindings
 
-	bindsym Shift+h exec xdotool mousemove_relative -- -$slow 0
-	bindsym Shift+j exec xdotool mousemove_relative 0 $slow
-	bindsym Shift+k exec xdotool mousemove_relative -- 0 -$slow
-	bindsym Shift+l exec xdotool mousemove_relative $slow 0
+    bindsym Shift+h exec xdotool mousemove_relative -- -$slow 0
+    bindsym Shift+j exec xdotool mousemove_relative 0 $slow
+    bindsym Shift+k exec xdotool mousemove_relative -- 0 -$slow
+    bindsym Shift+l exec xdotool mousemove_relative $slow 0
 
-	# Mouse movement (fast) -- arrow keys
+# Mouse movement (fast) -- arrow keys
 
-	bindsym Shift+Left exec xdotool mousemove_relative -- -$slow 0
-	bindsym Shift+Down exec xdotool mousemove_relative 0 $slow
-	bindsym Shift+Up exec xdotool mousemove_relative -- 0 -$slow
-	bindsym Shift+Right exec xdotool mousemove_relative $slow 0
+    bindsym Shift+Left exec xdotool mousemove_relative -- -$slow 0
+    bindsym Shift+Down exec xdotool mousemove_relative 0 $slow
+    bindsym Shift+Up exec xdotool mousemove_relative -- 0 -$slow
+    bindsym Shift+Right exec xdotool mousemove_relative $slow 0
 
-	# Mouse movement (special down-right)
-	
-	bindsym m exec xdotool mousemove_relative 10 10
+# Mouse movement (special down-right)
 
-	# Left Click
-	bindsym f exec xdotool click 1
+    bindsym m exec xdotool mousemove_relative 10 10
 
-	# Middle Click
-	bindsym d exec xdotool click 2
+# Left Click
+    bindsym f exec xdotool click 1
 
-	# Right Click
-	bindsym s exec xdotool click 3
+# Middle Click
+    bindsym d exec xdotool click 2
 
-	# Left Click-and-drag
-	bindsym Shift+f exec xdotool mousedown 1
+# Right Click
+    bindsym s exec xdotool click 3
 
-	# Middle Click-and-drag 
-	bindsym Shift+d exec xdotool mousedown 2
+# Left Click-and-drag
+    bindsym Shift+f exec xdotool mousedown 1
 
-	# Right Click-and-drag
-	bindsym Shift+s exec xdotool mousedown 3
+# Middle Click-and-drag
+    bindsym Shift+d exec xdotool mousedown 2
 
-	# Left Drag release
-	bindsym Ctrl+f exec xdotool mouseup 1
+# Right Click-and-drag
+    bindsym Shift+s exec xdotool mousedown 3
 
-	# Middle Drag release
-	bindsym Ctrl+d exec xdotool mouseup 2
+# Left Drag release
+    bindsym Ctrl+f exec xdotool mouseup 1
 
-	# Right Drag release
-	bindsym Ctrl+s exec xdotool mouseup 3
+# Middle Drag release
+    bindsym Ctrl+d exec xdotool mouseup 2
+
+# Right Drag release
+    bindsym Ctrl+s exec xdotool mouseup 3
 
 
-	# return to normal keybindings -- IMPORTANT!!
+# return to normal keybindings -- IMPORTANT!!
 
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 bindsym $super+m mode "mouse"
 bindcode 135 mode "mouse"
 
-#bindsym $caps+Shift+t exec ~/bin/tear_off_tab.sh 
+#bindsym $caps+Shift+t exec ~/bin/tear_off_tab.sh
 
 # Set shut down, restart and locking features
 bindsym $super+0 mode "$capse_system"
 set $capse_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$capse_system" {
-    bindsym l exec --no-startup-id lockit.sh, mode "default"
-    # bindsym l exec --no-startup-id xset dpms force suspend && i3exit lock, mode "default"
+  bindsym l exec --no-startup-id lockit.sh, mode "default"
+# bindsym l exec --no-startup-id xset dpms force suspend && i3exit lock, mode "default"
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
     bindsym u exec --no-startup-id i3exit switch_user, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
@@ -459,7 +459,7 @@ mode "$capse_system" {
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
     bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
 
-    # exit system mode: "Enter" or "Escape"
+# exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
@@ -469,22 +469,25 @@ bindsym $super+Return mode "$terminator_layouts"
 set $terminator_layouts (i)DE (g)unnison (b)lendItUp
 mode "$terminator_layouts" {
   bindsym i exec terminator -l IDE, mode "default"
-  bindsym g exec terminator -l Gunnison, mode "default"
-  bindsym b exec terminator -l BIU, mode "default"
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+    bindsym g exec terminator -l Gunnison, mode "default"
+    bindsym b exec terminator -l BIU, mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 bindsym $super+s mode "$spotify_system"
 set $spotify_system <p>  /    <n>   <r>   <i> 
 mode "$spotify_system" {
   bindsym p exec sp play
-  bindsym n exec sp next
-  bindsym r exec sp prev
-  bindsym i exec spotify_notification
-  # exit system mode: "Enter" or "Escape"
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+    bindsym n exec sp next
+    bindsym r exec sp prev
+    bindsym i exec spotify_notification
+
+    bindsym k exec sp next
+    bindsym j exec sp prev
+# exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 # Now done via super+arrowkeys
@@ -500,13 +503,13 @@ mode "$spotify_system" {
 #         bindsym k resize grow height 5 px or 5 ppt
 #         bindsym j resize shrink height 5 px or 5 ppt
 #         bindsym l resize grow width 5 px or 5 ppt
-# 
+#
 #         # same bindings, but for the arrow keys
 #         bindsym Left resize shrink width 10 px or 10 ppt
 #         bindsym Down resize grow height 10 px or 10 ppt
 #         bindsym Up resize shrink height 10 px or 10 ppt
 #         bindsym Right resize grow width 10 px or 10 ppt
-# 
+#
 #         # exit resize mode: Enter or Escape
 #         bindsym Return mode "default"
 #         bindsym Escape mode "default"
@@ -518,16 +521,16 @@ mode "$spotify_system" {
 # Autostart applications
 ## adjustment of i3bar battery reading (only run at the very first login):
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id update-notifier 
+exec --no-startup-id update-notifier
 exec --no-startup-id parcellite
 #exec --no-startup-id pidgin
 exec --no-startup-id nitrogen --restore
-#exec --no-startup-id checkgmail -no_cookies 
-#exec --no-startup-id /home/kevin/.Conky/startconky.sh 
-exec --no-startup-id dropbox start 
+#exec --no-startup-id checkgmail -no_cookies
+#exec --no-startup-id /home/kevin/.Conky/startconky.sh
+exec --no-startup-id dropbox start
 #exec --no-startup-id remmina -i
-exec --no-startup-id guake 
-exec --no-startup-id /usr/bin/nm-applet 
+exec --no-startup-id guake
+exec --no-startup-id /usr/bin/nm-applet
 #exec --no-startup-id /usr/bin/compton
 #exec --no-startup-id nm-applet
 #exec --no-startup-id pamac-tray
@@ -541,43 +544,43 @@ exec --no-startup-id /usr/bin/nm-applet
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	#status_command i3status
+#status_command i3status
   status_command i3blocks -c ~/.i3/i3blocks.conf
-  #status_command /usr/share/powerline/bindings/i3/powerline-i3.py 
-  
-  mode hide
-  modifier $caps
+#status_command /usr/share/powerline/bindings/i3/powerline-i3.py
 
-	#status_command /home/kevin/.rvm/rubies/ruby-2.1.1/bin/ruby /home/kevin/.i3/i3status.rb
-  position top
+    mode hide
+    modifier $caps
+
+#status_command /home/kevin/.rvm/rubies/ruby-2.1.1/bin/ruby /home/kevin/.i3/i3status.rb
+    position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-	#tray_output primary
-	#tray_output HDMI1
-	#tray_output none
+#tray_output primary
+#tray_output HDMI1
+#tray_output none
 
-	bindsym button4 nop
-	bindsym button5 nop
-	#font pango:Cantarell,Icons 10
-	#font pango:DejaVuSansMonoForPowerline Nerd Font Book 10
-	font pango:RobotoMono Nerd Font Book 12
+    bindsym button4 nop
+    bindsym button5 nop
+#font pango:Cantarell,Icons 10
+#font pango:DejaVuSansMonoForPowerline Nerd Font Book 10
+    font pango:RobotoMono Nerd Font Book 12
 
-	colors {
-  	#background $transparent
-		background #2B2C2B
-    #statusline #F9FAF9
-		#separator  #454947
+    colors {
+#background $transparent
+      background #2B2C2B
+#statusline #F9FAF9
+#separator  #454947
 
-                       #border backgr. text
-		focused_workspace  #CCCCCC #FFFFFF #000000
-		active_workspace   #000000 #888888 #333333
-		inactive_workspace #000000 #888888 #333333
-		urgent_workspace   #FF0000 #F2D7D5 #34495E
-		# focused_workspace  #e8cdc9 #660e00 #FFFFFF
-		# active_workspace   #FF0000 #e8cdc9 #000000
-		# inactive_workspace #FF0000 #e8cdc9 #000000
-		# urgent_workspace   #16A085 #FDF6E3 #E5201D
-	}
+#border backgr. text
+	focused_workspace  #CCCCCC #FFFFFF #000000
+	active_workspace   #000000 #888888 #333333
+	inactive_workspace #000000 #888888 #333333
+	urgent_workspace   #FF0000 #F2D7D5 #34495E
+# focused_workspace  #e8cdc9 #660e00 #FFFFFF
+# active_workspace   #FF0000 #e8cdc9 #000000
+# inactive_workspace #FF0000 #e8cdc9 #000000
+# urgent_workspace   #16A085 #FDF6E3 #E5201D
+    }
 }
 
 
@@ -600,7 +603,7 @@ client.background       #2B2C2B
 #############################
 
 # Set inner/outer gaps
-#gaps inner 0 
+#gaps inner 0
 #gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
@@ -611,7 +614,7 @@ client.background       #2B2C2B
 # Smart gaps (gaps used if only more than one container on the workspace)
 #smart_gaps on
 
-# Smart borders (draw borders around container only if it is not the only container on this workspace) 
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 #smart_borders on
 
@@ -620,7 +623,7 @@ client.background       #2B2C2B
 # set $capse_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 # set $capse_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
 # bindsym $caps+Shift+g mode "$capse_gaps"
-# 
+#
 # mode "$capse_gaps" {
 #         bindsym o      mode "$capse_gaps_outer"
 #         bindsym i      mode "$capse_gaps_inner"
@@ -631,11 +634,11 @@ client.background       #2B2C2B
 #         bindsym plus  gaps inner current plus 5
 #         bindsym minus gaps inner current minus 5
 #         bindsym 0     gaps inner current set 0
-# 
+#
 #         bindsym Shift+plus  gaps inner all plus 5
 #         bindsym Shift+minus gaps inner all minus 5
 #         bindsym Shift+0     gaps inner all set 0
-# 
+#
 #         bindsym Return mode "default"
 #         bindsym Escape mode "default"
 # }
@@ -643,11 +646,11 @@ client.background       #2B2C2B
 #         bindsym plus  gaps outer current plus 5
 #         bindsym minus gaps outer current minus 5
 #         bindsym 0     gaps outer current set 0
-# 
+#
 #         bindsym Shift+plus  gaps outer all plus 5
 #         bindsym Shift+minus gaps outer all minus 5
 #         bindsym Shift+0     gaps outer all set 0
-# 
+#
 #         bindsym Return mode "default"
 #         bindsym Escape mode "default"
 # }
@@ -657,33 +660,33 @@ client.background       #2B2C2B
 #Calculator
 # for_window [instance="calculator"] floating enable;
 # for_window [instance="calculator"] move position center
-# for_window [instance="calculator"] move scratchpad; 
+# for_window [instance="calculator"] move scratchpad;
 # bindsym XF86Calculator [instance="calculator"] scratchpad show, move position center
 
 # Spotify
 # for_window [instance="spotify"] floating enable;
 # for_window [instance="spotify"] resize set 1200 800
 # for_window [instance="spotify"] move position center
-# for_window [instance="spotify"] move scratchpad 
+# for_window [instance="spotify"] move scratchpad
 
 # Gnome System Monitor
 # for_window [instance="gnome-system-monitor"] floating enable;
 # for_window [instance="gnome-system-monitor"] resize set 1200 800
 # for_window [instance="gnome-system-monitor"] move position center
-# for_window [instance="gnome-system-monitor"] move scratchpad 
+# for_window [instance="gnome-system-monitor"] move scratchpad
 
 
 # bindcode $caps+48 mode "$scratchpad"
-# set $scratchpad <s>   <m>   
+# set $scratchpad <s>   <m> 
 # mode "$scratchpad" {
 #   # Spotify
 #   bindsym s [instance="spotify"] scratchpad show, resize set 1200 800, move position center
-# 
+#
 #   # Gnome System Monitor
 #   bindsym m [instance="gnome-system-monitor"] scratchpad show, resize set 1200 800, move position center
-# 
+#
 #   # exit system mode: "Enter" or "Escape"
 #   bindsym Return mode "default"
 #   bindsym Escape mode "default"
 # }
-# 
+#
