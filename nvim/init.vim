@@ -166,6 +166,9 @@ nnoremap <Leader>H :nohl<CR>
 " custom comment for gunnison credit card csv file
 nnoremap <Leader>csv :s/^/#,/<CR>
 
+"Commenting
+:map <Leader># <c-_><c-_>
+
 " edit/reload .vimrc
 nnoremap <Leader>con :vsplit $MYVIMRC<CR>
 nnoremap <Leader>vimrc :so $MYVIMRC
