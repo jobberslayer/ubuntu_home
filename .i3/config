@@ -337,6 +337,9 @@ mode "$vol_system" {
     bindsym k exec amixer -D pulse sset Master 2%+
     bindsym j exec amixer -D pulse sset Master 2%-
     bindsym h exec amixer -D pulse set Master 1+ toggle
+    
+    bindcode 123 exec amixer -D pulse sset Master 2%+
+    bindcode 122 exec amixer -D pulse sset Master 2%-
 
 # exit mode: "Enter" or "Escape"
     bindsym Return mode "default"
