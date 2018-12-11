@@ -345,6 +345,8 @@ mode "$vol_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+bindcode 123 exec amixer -D pulse sset Master 2%+
+bindcode 122 exec amixer -D pulse sset Master 2%-
 
 #Move mouse via keyboard
 bindsym $caps+z exec xdotool click 1
