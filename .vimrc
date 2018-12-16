@@ -32,11 +32,18 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'powerline/powerline'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'ervandew/supertab'
+"Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'mattn/emmet-vim'
+
+"Deoplete
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+let g:deoplete#enable_at_startup = 1
+"/Deoplete
 
 " Plugin 'powerline/powerline
 
