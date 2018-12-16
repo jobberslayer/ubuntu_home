@@ -27,9 +27,18 @@ Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'slim-template/vim-slim'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'powerline/powerline'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-surround'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'mattn/emmet-vim'
 
-
-" Plugin 'powerline/powerline'
+" Plugin 'powerline/powerline
 
 "BadWolf Theme settings
 "let g:badwolf_darkgutter = 1
@@ -71,7 +80,7 @@ set smartcase
 set mouse="c"
 set scrolloff=10
 " set encoding=utf8
-colorscheme gruvbox
+"colorscheme gruvbox
 set background=dark
 "colorscheme neodark
 "colorscheme slate
@@ -109,7 +118,7 @@ let g:NERDTreeDirArrowCollapsible = ''
 let g:NERDTreeGlyphReadOnly = ''
 
 "put filename in status line
-set statusline=%f
+"set statusline=%f
 
 "REMINDER NOTES
 " gv - rehighlight the last visual select
@@ -166,7 +175,7 @@ let @e="ddA:JJ"
 :map <Leader>w :w<CR>
 
 "edit/reload .vimrc
-:map <Leader>config :tabnew $MYVIMRC<CR>
+:map <Leader>con :vsplit $MYVIMRC<CR>
 :map <Leader>vimrc :so $MYVIMRC
 :map <Leader>plugin :tabnew ~/.vim<CR>
 
@@ -185,7 +194,7 @@ let @e="ddA:JJ"
 ":map <Leader>ff :CtrlP<CR>
 ":map <Leader>fb :CtrlPBuffer<CR>
 
-:map <Leader>ff :FZF<CR>
+:map <Leader>f :FZF<CR>
 
 :map <Leader>dbl :g/^$/d<CR>
 
@@ -249,10 +258,10 @@ let g:NERDTreeWinPos = "right"
 :map <Leader>c :TlistToggle<CR>
 
 "syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-set statusline+=%=\ %(%l,%c%V%)\ %P
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"set statusline+=%=\ %(%l,%c%V%)\ %P
 :map <Leader>err :Error<CR>:wincmd j<CR>
 
 nnoremap <C-W>O :call MaximizeToggle()<CR>
