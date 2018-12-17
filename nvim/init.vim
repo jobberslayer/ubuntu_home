@@ -21,6 +21,13 @@ Plug '907th/vim-auto-save'
 Plug 'dracula/vim'
 Plug 'slim-template/vim-slim'
 
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+
+" Optional:
+Plug 'honza/vim-snippets'
+
 "" fuzzy finder
 
 Plug 'junegunn/fzf', { 'do': './install --bin' }
@@ -30,12 +37,6 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'SirVer/ultisnips'
-
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<tab>"
-"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
 
 "" color
 

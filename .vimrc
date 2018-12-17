@@ -87,8 +87,11 @@ set smartcase
 set mouse="c"
 set scrolloff=10
 " set encoding=utf8
+
+" important so don't get grayish background, but black
+au ColorScheme * hi Normal ctermbg=None
 "colorscheme gruvbox
-set background=dark
+"set background=dark
 "colorscheme neodark
 "colorscheme slate
 "colorscheme desert
@@ -99,7 +102,7 @@ colorscheme dracula
 filetype plugin on
 set textwidth=125
 set colorcolumn=+1
-"highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 "airline config
 let g:airline#extensions#tabline#enabled = 1
