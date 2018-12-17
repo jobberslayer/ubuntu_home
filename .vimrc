@@ -1,3 +1,51 @@
+"REMINDER NOTES
+" gv - rehighlight the last visual select
+"SNIPMATE - type shortcut work then press tab
+"SURROUND - select using V or C-v and then hit S and what you want to surround
+"           with. cst<tagname> to change tags cs'" to change ' to ", etc. Same
+"           with dst for deleting tags and ds' for deleteing ' for example.
+"EASYMOTION - ;;w (or \\w on some machines?) then the letter you want to jump to
+"Zen/Emmet - Ctrl + y and Comma
+"BufExplorer - ;be or ;b (set up below) current window, ;bs - hsplit, ;bv - vsplit
+"Commentary - comment out using gcc
+"Folding
+" zM - fold everything
+" zm - fold next level
+" zR - unfold everything
+" zr - unfold next level
+"Use Ctrl-v then hit a modifier sequence when trying to map one.
+" clean up whitespace :StripWhitespace
+"
+"Maximize current split - ;m
+"
+"Explore reminders
+"% to create a new file
+" Command	List for FZF
+" Files [PATH]	Files (similar to :FZF)
+" GFiles [OPTS]	Git files (git ls-files)
+" GFiles?	Git files (git status)
+" Buffers	Open buffers
+" Colors	Color schemes
+" Ag [PATTERN]	ag search result (ALT-A to select all, ALT-D to deselect all)
+" Rg [PATTERN]	rg search result (ALT-A to select all, ALT-D to deselect all)
+" Lines [QUERY]	Lines in loaded buffers
+" BLines [QUERY]	Lines in the current buffer
+" Tags [QUERY]	Tags in the project (ctags -R)
+" BTags [QUERY]	Tags in the current buffer
+" Marks	Marks
+" Windows	Windows
+" Locate PATTERN	locate command output
+" History	v:oldfiles and open buffers
+" History:	Command history
+" History/	Search history
+" Snippets	Snippets (UltiSnips)
+" Commits	Git commits (requires fugitive.vim)
+" BCommits	Git commits for the current buffer
+" Commands	Commands
+" Maps	Normal mode mappings
+" Helptags	Help tags 1
+" Filetypes	File types
+
 "vundle config
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -32,11 +80,16 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'powerline/powerline'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'easymotion/vim-easymotion'
-"Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'sjl/gundo.vim'
+Plugin 'szw/vim-maximizer'
+Plugin 'tpope/vim-rails'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'ChesleyTan/wordCount.vim'
 
 "Deoplete
 Plugin 'Shougo/deoplete.nvim'
@@ -49,8 +102,6 @@ let g:deoplete#enable_at_startup = 1
 
 "BadWolf Theme settings
 "let g:badwolf_darkgutter = 1
-
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -74,7 +125,7 @@ set softtabstop=0
 set shiftwidth=2
 set tabstop=2
 set smartindent
-syntax on 
+syntax on
 "set wrap!
 set nowrap
 set cursorline
@@ -104,6 +155,15 @@ set textwidth=125
 set colorcolumn=+1
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
+set fillchars=vert:┃
+set fillchars+=fold:―
+
+set statusline=
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+set statusline+=%=\ %(%l,%c%V%)\ %P
+
 "airline config
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -130,29 +190,17 @@ let g:NERDTreeGlyphReadOnly = ''
 "put filename in status line
 "set statusline=%f
 
-"REMINDER NOTES
-" gv - rehighlight the last visual select
-"SNIPMATE - type shortcut work then press tab
-"SURROUND - select using V or C-v and then hit S and what you want to surround
-"           with. cst<tagname> to change tags cs'" to change ' to ", etc. Same
-"           with dst for deleting tags and ds' for deleteing ' for example.
-"EASYMOTION - ;;w (or \\w on some machines?) then the letter you want to jump to 
-"Zen/Emmet - Ctrl + y and Comma
-"BufExplorer - ;be or ;b (set up below) current window, ;bs - hsplit, ;bv - vsplit
-"CtrlP - ctrl-p and then F5 to refresh
-"Use Ctrl-v then hit a modifier sequence when trying to map one.
-"Reindent the whole file. Do in normal mode. gg=G
-"
-"Maximize current split - ;m
-"
-"Explore reminders
-"% to create a new file
+" split command creates split below current buffer
+set splitbelow
 
 "folding settings
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
+
+" better whitespace plugin
+highlight ExtraWhitespace ctermbg=red
 
 "set nocompatible
 "filetype on
@@ -166,15 +214,10 @@ set foldlevel=1         "this is just what i use
 
 " save file while in insert mode and return to insert mode immediately
 :imap ;w <ESC>:w<CR>a
-" save file while in insert mode and leave in command mode 
+" save file while in insert mode and leave in command mode
 :imap ;ww <ESC>:w<CR>
 
 :let mapleader = ";"
-:map <Leader>b :BufExplorer<CR>
-
-" event shop formatting
-:map <Leader>es ddA:<ESC>JJ
-let @e="ddA:JJ"
 
 " delete all buffers
 :map <Leader>dab :bd *
@@ -184,10 +227,13 @@ let @e="ddA:JJ"
 " alternative to saving file while in command mode
 :map <Leader>w :w<CR>
 
+" Fix indentation
+:map <Leader>ind gg=G
+
 "edit/reload .vimrc
 :map <Leader>con :vsplit $MYVIMRC<CR>
 :map <Leader>vimrc :so $MYVIMRC
-:map <Leader>plugin :tabnew ~/.vim<CR>
+:map <Leader>snips :vsplit ~/.vim/snippets<CR>
 
 " quickify using 'a' register
 :map <Leader>y "ay
@@ -196,35 +242,26 @@ let @e="ddA:JJ"
 " paste from system clipboard
 :map <Leader>pp "*p<CR>
 
+"terminal
+:map <Leader>x :bo split<CR>:terminal ++curwin /bin/bash --login<CR>
+
 "GUndo
+if has('python3')
+  let g:gundo_prefer_python3 = 1
+endif
 :map <Leader>u :GundoToggle<CR>
 
-" Replaced by FZF
-"CtrlP - fuzzy file search
-":map <Leader>ff :CtrlP<CR>
-":map <Leader>fb :CtrlPBuffer<CR>
-
+"Fuzzy Find - fzf
 :map <Leader>f :FZF<CR>
 
 :map <Leader>dbl :g/^$/d<CR>
 
-"BufExplorer sorting
-let g:bufExplorerSortBy='name'
-
 :map <Leader>e :Explore<CR>
 :map <Leader>csv :s/^/#,/<CR>
-:map <Leader>! :s/#//<CR>
 :map <Leader>cws :%s/\s\+$//
 
-" Conque Shell
-:map <Leader>shell :ConqueTermSplit bash
-:map <Leader>shelltab :ConqueTermTab bash
-
 "Commenting
-:map <Leader># <c-_><c-_>
-
-"reload snippets after a change to one
-:map <Leader>resnip :call ReloadAllSnippets()
+:map <Leader># gcc
 
 "tabs
 :map <Leader>nt :tabnew<CR>
@@ -234,13 +271,19 @@ let g:bufExplorerSortBy='name'
 :map <Leader>xfs :tabc<CR>
 :map <leader>ts :Windows<CR>
 
-"navigating windows
+"navigating windows, tmap for terminal mappings
 :map <c-l> :wincmd l<CR>
+:tmap <c-l> <c-w>l
 :map <c-h> :wincmd h<CR>
+:tmap <c-h> <c-w>h
 :map <c-k> :wincmd k<CR>
+:tmap <c-k> <c-w>k
 :map <c-j> :wincmd j<CR>
+:tmap <c-j> <c-w>j
+" take terminal out of insert mode
+:tmap <Leader>e <c-\><c-n>
 
-"resize windows
+"resize windowi
 :map <c-right> :vertical resize +5<CR>
 :map <c-left> :vertical resize -5<CR>
 :map <c-up> :resize +5<CR>
@@ -262,112 +305,27 @@ let g:NERDTreeWinPos = "right"
 "☐ test
 :map <Leader>done <ESC>0lcw✔<ESC>A /<ESC>"=strftime('%Y-%m-%d %I:%M%p')"<ESC>pA/<ESC>0l
 :map <Leader>redo <ESC>0lcw☐<ESC>V<ESC>:s/\s*\/.*\/$//<CR><ESC>0l
-:map <Leader>task <ESC>i ☐ 
+:map <Leader>task <ESC>i ☐
 
 "CTags
 :map <Leader>c :TlistToggle<CR>
 
-"syntastic
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"set statusline+=%=\ %(%l,%c%V%)\ %P
-:map <Leader>err :Error<CR>:wincmd j<CR>
-
-nnoremap <C-W>O :call MaximizeToggle()<CR>
-nnoremap <C-W>o :call MaximizeToggle()<CR>
-nnoremap <C-W><C-O> :call MaximizeToggle()<CR>
-
-function! MaximizeToggle()
-  if exists("s:maximize_session")
-    exec "source " . s:maximize_session
-    call delete(s:maximize_session)
-    unlet s:maximize_session
-    let &hidden=s:maximize_hidden_save
-    unlet s:maximize_hidden_save
-  else
-    let s:maximize_hidden_save = &hidden
-    let s:maximize_session = tempname()
-    set hidden
-    exec "mksession! " . s:maximize_session
-    only
-  endif
-endfunction
-
-:map <Leader>m o
+:map <Leader>m :MaximizerToggle<CR>
 
 "rails.vim
-:map <Leader>z :RV<CR>
+" go to related file
 :map <Leader>r :R<CR>
+" go to related file in vsplit
+:map <Leader>z :RV<CR>
 
-" Retore cursor position, window position, and last search after running a                                                                                                                                  
-" command.                                                                                                                    
-fun! Preserve(command)                                                                                                        
-  " Save the last search.                                                                                                     
-  let search = @/                                                                                                             
-                                                                                                                              
-  " Save the current cursor position.                                                                                         
-  let cursor_position = getpos('.')                                                                                           
-                                                                                                                              
-  " Save the current window position.                                                                                         
-  normal! H                                                                                                                   
-  let window_position = getpos('.')                                                                                           
-  call setpos('.', cursor_position)                                                                                           
-                                                                                                                              
-  " Execute the command.                                                                                                      
-  execute a:command                                                                                                           
-                                                                                                                              
-  " Restore the last search.                                                                                                  
-  let @/ = search                                                                                                             
-                                                                                                                                 
-  " Restore the previous window position.                                                                                        
-  call setpos('.', window_position)                                                                                              
-  normal! zt                                                                                                                     
-                                                                                                                                 
-  " Restore the previous cursor position.                                                                                        
-  call setpos('.', cursor_position)                                                                                              
-endfun                                                                                                                           
-                                                                                                                                 
-fun! StripTrailingWhitespace()                                                                                                   
-  if &ft =~ 'ruby\|javascript\|perl'                                                                                             
-    %s/\s\+$//e                                                                                                                  
-  endif                                                                                                                          
-endfun                                                                                                                           
-                                                                                                                                 
-fun! FixIndentation()                                                                                                            
-  if &ft =~ 'ruby\|javascript\|perl'                                                                                             
-    call Preserve('normal gg=G')                                                                                                 
-  endif                                                                                                                          
-endfun                                                                                                                           
-                                                                                                                                 
-autocmd BufWritePre * call StripTrailingWhitespace()                                                                             
-"autocmd BufWritePre * call FixIndentation()
+fun! StripTrailingWhitespace()
+  if &ft =~ 'ruby\|javascript\|perl'
+    %s/\s\+$//e
+  endif
+endfun
+
+autocmd BufWritePre * call StripTrailingWhitespace()
 
 " make sure slim file type gets set
 autocmd BufNewFile,BufRead *.slim set ft=slim
 
-" Command	List for FZF
-" Files [PATH]	Files (similar to :FZF)
-" GFiles [OPTS]	Git files (git ls-files)
-" GFiles?	Git files (git status)
-" Buffers	Open buffers
-" Colors	Color schemes
-" Ag [PATTERN]	ag search result (ALT-A to select all, ALT-D to deselect all)
-" Rg [PATTERN]	rg search result (ALT-A to select all, ALT-D to deselect all)
-" Lines [QUERY]	Lines in loaded buffers
-" BLines [QUERY]	Lines in the current buffer
-" Tags [QUERY]	Tags in the project (ctags -R)
-" BTags [QUERY]	Tags in the current buffer
-" Marks	Marks
-" Windows	Windows
-" Locate PATTERN	locate command output
-" History	v:oldfiles and open buffers
-" History:	Command history
-" History/	Search history
-" Snippets	Snippets (UltiSnips)
-" Commits	Git commits (requires fugitive.vim)
-" BCommits	Git commits for the current buffer
-" Commands	Commands
-" Maps	Normal mode mappings
-" Helptags	Help tags 1
-" Filetypes	File types
