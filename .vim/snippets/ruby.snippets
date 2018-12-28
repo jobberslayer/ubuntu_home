@@ -1,5 +1,12 @@
 # #!/usr/bin/ruby
 
+snippet vendor
+	{
+		fname: '${1}',
+		lname: '${2}',
+		email: '${3}',
+	},
+endsnippet
 snippet csv
 	CSV.foreach(${1:file}, ${2:header: true}) do |row|
 		${3}
@@ -17,7 +24,7 @@ snippet normal_hdr
 	require 'csv'
 	require 'optparse'
 endsnippet
-	
+
 snippet #!
 	#!/usr/bin/ruby
 endsnippet

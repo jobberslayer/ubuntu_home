@@ -1,10 +1,17 @@
 "REMINDER NOTES
+" multiple cursors - select and hit c-n
+"                    c-x to skip a match
+"                    c-p previous
+" highlight text and hit * to search forward or # to serach back, then use n
+" clear highlight ;a
 " gv - rehighlight the last visual select
 "SNIPMATE - type shortcut work then press tab
 "SURROUND - select using V or C-v and then hit S and what you want to surround
 "           with. cst<tagname> to change tags cs'" to change ' to ", etc. Same
 "           with dst for deleting tags and ds' for deleteing ' for example.
-"EASYMOTION - ;;w (or \\w on some machines?) then the letter you want to jump to
+"EASYMOTION - ;;w then the letter you want to jump to
+"             ;;f then search letter then letter to jump, much cleaner
+"             ;s mapping to ;;f
 "Zen/Emmet - Ctrl + y and Comma
 "BufExplorer - ;be or ;b (set up below) current window, ;bs - hsplit, ;bv - vsplit
 "Commentary - comment out using gcc
@@ -15,6 +22,10 @@
 " zr - unfold next level
 "Use Ctrl-v then hit a modifier sequence when trying to map one.
 " clean up whitespace :StripWhitespace
+"
+" EasyAlign
+" ;ea align stuff with =
+" :EasyAlign /->/ for a perl hash for example
 "
 "Maximize current split - ;m
 "
@@ -90,6 +101,10 @@ Plugin 'szw/vim-maximizer'
 Plugin 'tpope/vim-rails'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'ChesleyTan/wordCount.vim'
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'junegunn/vim-easy-align'
 
 "Deoplete
 Plugin 'Shougo/deoplete.nvim'
@@ -119,6 +134,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+:let mapleader = ";"
+
 "install vim-gtk so we get clipboard support please
 set expandtab
 set softtabstop=0
@@ -137,7 +154,7 @@ set ignorecase
 set smartcase
 set mouse="c"
 set scrolloff=10
-" set encoding=utf8
+set encoding=utf8
 
 " important so don't get grayish background, but black
 au ColorScheme * hi Normal ctermbg=None
@@ -153,7 +170,6 @@ colorscheme dracula
 filetype plugin on
 set textwidth=125
 set colorcolumn=+1
-highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 set fillchars=vert:┃
 set fillchars+=fold:―
@@ -163,6 +179,22 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set statusline+=%=\ %(%l,%c%V%)\ %P
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" search highlighting
+set hlsearch
+hi Search cterm=NONE ctermfg=black ctermbg=yellow
+:map <Leader>a :noh<CR>
+
+" CursorLine
+hi CursorLine cterm=None ctermbg=Black
+
+" override scheme and set comment color
+hi Comment ctermfg=DarkGrey
 
 "airline config
 let g:airline#extensions#tabline#enabled = 1
@@ -217,7 +249,8 @@ highlight ExtraWhitespace ctermbg=red
 " save file while in insert mode and leave in command mode
 :imap ;ww <ESC>:w<CR>
 
-:let mapleader = ";"
+" replace all after using * search
+:map <Leader>rep :%s///g<left><left>
 
 " delete all buffers
 :map <Leader>dab :bd *
@@ -232,7 +265,7 @@ highlight ExtraWhitespace ctermbg=red
 
 "edit/reload .vimrc
 :map <Leader>con :vsplit $MYVIMRC<CR>
-:map <Leader>vimrc :so $MYVIMRC
+:map <Leader>vim :so $MYVIMRC
 :map <Leader>snips :vsplit ~/.vim/snippets<CR>
 
 " quickify using 'a' register
@@ -259,6 +292,13 @@ endif
 :map <Leader>e :Explore<CR>
 :map <Leader>csv :s/^/#,/<CR>
 :map <Leader>cws :%s/\s\+$//
+
+" Easy Align on =
+:map <Leader>ea :EasyAlign =<CR>
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 "Commenting
 :map <Leader># gcc
