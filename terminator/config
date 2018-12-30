@@ -37,7 +37,7 @@
       title = kevin@latitude:~
       type = Window
     [[[terminal1]]]
-      command = rvm gemset use domo;bash
+      command = rvm use 2.3.3; rvm gemset use domo;bash
       directory = /home/kevin/workspace/blenditup/domo
       order = 0
       parent = child0

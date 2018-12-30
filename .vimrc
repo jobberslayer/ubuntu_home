@@ -11,7 +11,6 @@
 "           with dst for deleting tags and ds' for deleteing ' for example.
 "EASYMOTION - ;;w then the letter you want to jump to
 "             ;;f then search letter then letter to jump, much cleaner
-"             ;s mapping to ;;f
 "Zen/Emmet - Ctrl + y and Comma
 "BufExplorer - ;be or ;b (set up below) current window, ;bs - hsplit, ;bv - vsplit
 "Commentary - comment out using gcc
@@ -105,6 +104,9 @@ Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'machakann/vim-highlightedyank'
+Plugin 'markonm/traces.vim'
+Plugin 'taglist.vim'
 
 "Deoplete
 Plugin 'Shougo/deoplete.nvim'
