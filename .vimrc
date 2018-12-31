@@ -188,9 +188,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " search highlighting
-set hlsearch
+set nohlsearch
 hi Search cterm=NONE ctermfg=black ctermbg=yellow
-:map <Leader>a :noh<CR>
+:map <Leader>a :noh<CR><esc>
 
 " CursorLine
 hi CursorLine cterm=None ctermbg=Black
@@ -252,7 +252,7 @@ highlight ExtraWhitespace ctermbg=red
 :imap ;ww <ESC>:w<CR>
 
 " replace all after using * search
-:map <Leader>rep :%s///g<left><left>
+:map <Leader>rep :%s/
 
 " delete all buffers
 :map <Leader>dab :bd *
@@ -261,6 +261,34 @@ highlight ExtraWhitespace ctermbg=red
 
 " alternative to saving file while in command mode
 :map <Leader>w :w<CR>
+
+" select paragraph how i want it to work
+:map <Leader>hi V}kk
+
+" don't like hitting these combos
+:map <Leader>hw viw
+:map <Leader>hq vi"
+:map <Leader>ht vi'
+:map <Leader>hb vi[
+:map <Leader>ha vi(
+:map <Leader>dq di"
+:map <Leader>dt di'
+:map <Leader>db di[
+:map <Leader>da di(
+:map <Leader>sb S]
+:map <Leader>sa S)
+:map <Leader>sq S"
+:map <Leader>st S'
+
+"Support motions for surround I like
+" hit space when your choice is selected
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+:imap ;; <esc>mpgi
+:imap ;q <esc>v`plS"<c-o>a
+:imap ;t <esc>v`plS'<c-o>a
+:imap ;b <esc>v`plS]<c-o>a
+:imap ;p <esc>v`plS)<c-o>a
 
 " Fix indentation
 :map <Leader>ind gg=G
