@@ -282,8 +282,8 @@ highlight ExtraWhitespace ctermbg=red
 
 "Support motions for surround I like
 " hit space when your choice is selected
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 :imap ;; <esc>mpgi
 :imap ;q <esc>v`plS"<c-o>a
 :imap ;t <esc>v`plS'<c-o>a
