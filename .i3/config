@@ -579,8 +579,8 @@ bar {
 #separator  #454947
 
 #border backgr. text
-	focused_workspace  #CCCCCC #FFFFFF #000000
-	active_workspace   #000000 #888888 #333333
+	focused_workspace  #000000 #A569BD #000000
+	active_workspace   #FFFF00 #888888 #333333
 	inactive_workspace #000000 #888888 #333333
 	urgent_workspace   #FF0000 #F2D7D5 #34495E
 # focused_workspace  #e8cdc9 #660e00 #FFFFFF
