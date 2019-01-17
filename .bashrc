@@ -45,13 +45,16 @@ reset_color="\[\e[39m\]"
 
 #export PS1="\n${debian_chroot:+($debian_chroot)}${bold_red}\u@\h ${bold_blue}\w \n${bold_yellow}@xxxx{${bold_white}::::::::::::> ${reset_color}"
 export PS1="\n${bold_green}┌─${debian_chroot:+($debian_chroot)}${bold_black}\u@\h ${bold_red}\w \n${bold_green}└─  ${reset_color}"
-export PS2="${bold_green}└─  ${reset_color}"
+export PS2="${bold_green}└─ ${reset_color}"
 
 export TERM="xterm-256color"
 #export PS1='\n\n`echo "\w"|boxes -d columns`\n\n\u@\h=> ' 
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+set editing-mode vi
+set keymap vi-command
 
 alias ps2="ps auxw|grep -v grep|grep"
 alias jim="rvm gemset use"

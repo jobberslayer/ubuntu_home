@@ -15,6 +15,7 @@
 "BufExplorer - ;be or ;b (set up below) current window, ;bs - hsplit, ;bv - vsplit
 "Commentary - comment out using gcc
 "Folding
+" za - normal fold/unfold
 " zM - fold everything
 " zm - fold next level
 " zR - unfold everything
@@ -25,6 +26,8 @@
 " EasyAlign
 " ;ea align stuff with =
 " :EasyAlign /->/ for a perl hash for example
+"
+" Entering unicode for NERDFONTS. While in insert mode hit ctrl+v u and then the 4 char code.
 "
 "Maximize current split - ;m
 "
@@ -107,6 +110,8 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'markonm/traces.vim'
 Plugin 'taglist.vim'
+Plugin 'xuhdev/vim-latex-live-preview'
+Plugin 'lervag/vimtex'
 
 "Deoplete
 Plugin 'Shougo/deoplete.nvim'
@@ -399,3 +404,6 @@ autocmd BufWritePre * call StripTrailingWhitespace()
 " make sure slim file type gets set
 autocmd BufNewFile,BufRead *.slim set ft=slim
 
+" set up custom latex settings
+let g:tex_flavor = "latex"
+autocmd Filetype tex source ~/.vim/custom/latex.vim
