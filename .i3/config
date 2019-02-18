@@ -579,10 +579,10 @@ bar {
 #separator  #454947
 
 #border backgr. text
-	focused_workspace  #000000 #A569BD #000000
-	active_workspace   #FFFF00 #888888 #333333
-	inactive_workspace #000000 #888888 #333333
-	urgent_workspace   #FF0000 #F2D7D5 #34495E
+	focused_workspace  #000000 #2980B9 #000000
+	active_workspace   #000000 #CCCCCC #000000
+	inactive_workspace #000000 #CCCCCC #000000
+	urgent_workspace   #FF0000 #F2D7D5 #FF0000
 # focused_workspace  #e8cdc9 #660e00 #FFFFFF
 # active_workspace   #FF0000 #e8cdc9 #000000
 # inactive_workspace #FF0000 #e8cdc9 #000000
@@ -597,8 +597,8 @@ bindsym ctrl+space bar mode toggle
 # Theme colors
 # class                 border  backgr. text    indic.  child_border
 #client.focused          #000000 #7D6608 #FFFFFF #000000
-client.focused          #FFFFFF #A569BD #000000 #FFFFFF
-client.focused_inactive #000000 #000000 #FFFFFF #000000
+client.focused          #FFFFFF #2980B9 #000000 #FFFFFF
+client.focused_inactive #000000 #CCCCCC #FFFFFF #000000
 client.unfocused        #FFFFFF #000000 #000000 #000000
 client.urgent           #E27B45 #FDF6E3 #16A085 #268BD2
 client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c

@@ -112,6 +112,7 @@ Plugin 'markonm/traces.vim'
 Plugin 'taglist.vim'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'lervag/vimtex'
+Plugin 'vimwiki/vimwiki'
 
 "Deoplete
 Plugin 'Shougo/deoplete.nvim'
@@ -130,7 +131,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+" filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -248,6 +249,8 @@ highlight ExtraWhitespace ctermbg=red
 " alternative to hitting escape key
 :imap jj <Esc>
 
+:imap l; <Esc>A
+
 " insert a line above and stay in insert mode
 :imap ;o O
 
@@ -297,6 +300,9 @@ highlight ExtraWhitespace ctermbg=red
 
 " Fix indentation
 :map <Leader>ind gg=G
+
+" add lines to end
+:map <Leader><space> :s/$/  /
 
 "edit/reload .vimrc
 :map <Leader>con :vsplit $MYVIMRC<CR>

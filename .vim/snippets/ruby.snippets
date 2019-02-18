@@ -8,7 +8,7 @@ snippet vendor
 	},
 endsnippet
 snippet csv
-	CSV.foreach(${1:file}, ${2:header: true}) do |row|
+	CSV.foreach(${1:options[:file]}, headers:${2: true}) do |row|
 		${3}
 	end
 endsnippet
@@ -16,11 +16,11 @@ endsnippet
 snippet optparse
 	options = {}
 	OptionParser.new do |opt|
-		opt.on('--file FILE', 'explain') { |o| options[:year] = o }
+		opt.on('--file FILE', 'explain') { |o| options[:file] = o }
 	end.parse!
 endsnippet
 
-snippet normal_hdr
+snippet normal_header
 	require 'csv'
 	require 'optparse'
 endsnippet

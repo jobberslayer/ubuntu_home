@@ -4,7 +4,7 @@ map k gk
 " formatting text
 setlocal textwidth=100
 setlocal linebreak
-setlocal formatoptions=1
+setlocal formatoptions+=t
 setlocal noexpandtab
 setlocal wrap
 setlocal linebreak
