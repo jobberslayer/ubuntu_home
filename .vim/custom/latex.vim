@@ -15,6 +15,7 @@ setlocal noautoindent
 setlocal nocindent
 setlocal nosmartindent
 setlocal indentexpr=
+" z= to get spelling suggestions
 setlocal spell
 setlocal foldmethod=marker
 setlocal foldmarker=(fold),(end)

@@ -113,6 +113,7 @@ Plugin 'taglist.vim'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'lervag/vimtex'
 Plugin 'vimwiki/vimwiki'
+Plugin 'ron89/thesaurus_query.vim'
 
 "Deoplete
 Plugin 'Shougo/deoplete.nvim'
@@ -393,6 +394,9 @@ let g:NERDTreeWinPos = "right"
 
 :map <Leader>m :MaximizerToggle<CR>
 
+" Thesaurus
+nnoremap <Leader>th :ThesaurusQueryReplaceCurrentWord<CR>
+
 "rails.vim
 " go to related file
 :map <Leader>r :R<CR>
@@ -412,4 +416,12 @@ autocmd BufNewFile,BufRead *.slim set ft=slim
 
 " set up custom latex settings
 let g:tex_flavor = "latex"
+autocmd Filetype tex source ~/.vim/custom/latex.vim
+"
+" set up custom markdown settings
+let g:tex_flavor = "markdown"
+autocmd Filetype tex source ~/.vim/custom/latex.vim
+"
+" set up custom markdown settings
+let g:tex_flavor = "eruby"
 autocmd Filetype tex source ~/.vim/custom/latex.vim
