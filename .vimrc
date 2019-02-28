@@ -419,9 +419,9 @@ let g:tex_flavor = "latex"
 autocmd Filetype tex source ~/.vim/custom/latex.vim
 "
 " set up custom markdown settings
-let g:tex_flavor = "markdown"
-autocmd Filetype tex source ~/.vim/custom/latex.vim
+"let g:tex_flavor = "markdown"
+autocmd Filetype markdown source ~/.vim/custom/latex.vim
 "
 " set up custom markdown settings
-let g:tex_flavor = "eruby"
-autocmd Filetype tex source ~/.vim/custom/latex.vim
+"let g:tex_flavor = "eruby"
+autocmd Filetype eruby source ~/.vim/custom/latex.vim
