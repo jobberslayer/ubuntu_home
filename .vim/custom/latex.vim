@@ -2,7 +2,7 @@
 map j gj
 map k gk
 " formatting text
-setlocal textwidth=100
+setlocal textwidth=0
 setlocal linebreak
 setlocal formatoptions+=t
 setlocal noexpandtab
