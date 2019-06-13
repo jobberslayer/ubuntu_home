@@ -20,7 +20,15 @@
 " zm - fold next level
 " zR - unfold everything
 " zr - unfold next level
-"Use Ctrl-v then hit a modifier sequence when trying to map one.
+"
+" Spell check
+" z= - get suggestions
+" ]s – Find the misspelled word after the cursor (Forward search) while you making a README file for your project
+" [s – Find the misspelled word before the cursor (Backward search)
+" ]S (Note the capital “S”) – Similar to “]s” but only stop at bad words, not at rare words or words for another region.
+" [S – Similar to “[s” but search backwards.
+"
+" Use Ctrl-v then hit a modifier sequence when trying to map one.
 " clean up whitespace :StripWhitespace
 "
 " EasyAlign

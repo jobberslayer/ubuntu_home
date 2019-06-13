@@ -68,7 +68,8 @@ alias myupdate='sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upg
 alias monitor1='glances'
 alias monitor2='saidar -c -d 1'
 alias dev='tmuxinator dev'
-alias uncap='xkbset nullify -lock'
+alias uncap='xdotool key Caps_Lock'
+alias cap_remap='setxkbmap -model pc104 -layout us; xmodmap ~/.Xmodmap'
 alias myless='less -M +Gg'
 
 alias start-vpn='sudo openvpn --config "$HOME/openvpn/FinLogic OpenVPN/FinLogicProd.ovpn"'
@@ -89,8 +90,6 @@ alias geekshow='geeknote show'
 
 alias weather='curl http://wttr.in/'
 alias ls='ls -F'
-
-alias uncap='setxkbmap -option caps:super'
 
 alias tmux-cheat='cat $HOME/Dropbox/tmux/tmux-cheat-sheet.txt'
 
