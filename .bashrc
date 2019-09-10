@@ -1,4 +1,5 @@
-figlet wkL
+# breaks scp
+#figlet wkL
 
 black="\[\e[0;30m\]"
 red="\[\e[0;31m\]"
@@ -92,6 +93,9 @@ alias weather='curl http://wttr.in/'
 alias ls='ls -F'
 
 alias tmux-cheat='cat $HOME/Dropbox/tmux/tmux-cheat-sheet.txt'
+
+alias screens-louisville='arandr ~/.screenlayout/louisville.sh'
+alias screens-georgia='arandr ~/.screenlayout/georgia.sh'
 
 # use command line like vi
 set -o vi
