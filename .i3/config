@@ -5,7 +5,7 @@
 #exec_always setxkbmap -option caps:super
 exec xmodmap .Xmodmap
 
-#set $caps Mod5
+set $menu Mod5 
 set $super Mod4
 set $caps Mod3
 
@@ -44,7 +44,8 @@ bindsym $caps+ctrl Return exec nitrogen --restore
 #bindsym $caps+Return exec xfce4-terminal
 #bindsym $caps+Return exec terminology
 bindsym $caps+Return exec terminator, mode "default"
-bindsym ctrl+mod1+Return exec Terminator
+bindsym ctrl+mod1+Return exec terminator
+bindsym $menu+Return exec terminator
 #bindsym $caps+Return exec urxvt
 
 # '>'
@@ -492,7 +493,7 @@ mode "mouse" {
 }
 
 bindsym $super+m mode "mouse"
-bindcode 135 mode "mouse"
+#bindcode 135 mode "mouse"
 
 #bindsym $caps+Shift+t exec ~/bin/tear_off_tab.sh
 
