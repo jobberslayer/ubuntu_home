@@ -5,7 +5,7 @@
 #exec_always setxkbmap -option caps:super
 exec xmodmap .Xmodmap
 
-set $menu Mod5 
+set $menu Mod5
 set $super Mod4
 set $caps Mod3
 
