@@ -51,3 +51,5 @@ URxvt.color14 : #55FFFF
 ! white
 URxvt.color7  : #AAAAAA
 URxvt.color15 : #FFFFFF
+
+Xcursor.size: 64
