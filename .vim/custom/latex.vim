@@ -19,6 +19,8 @@ setlocal indentexpr=
 setlocal spell
 setlocal foldmethod=marker
 setlocal foldmarker=(fold),(end)
+setlocal nonumber
+setlocal norelativenumber
 syntax spell toplevel
 " get rid of naggy warning. can not find a work around 
 " but doesn't seem to affect anything
