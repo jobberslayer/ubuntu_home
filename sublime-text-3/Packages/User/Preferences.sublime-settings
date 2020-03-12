@@ -1,0 +1,14 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
+	"dictionary": "Packages/Language - English/en_US.dic",
+	"font_size": 12,
+	"ignored_packages":
+	[
+	],
+	"show_encoding": true,
+	"spell_check": false,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"vintage_ctrl_keys": true,
+	"vintage_start_in_command_mode": true,
+}

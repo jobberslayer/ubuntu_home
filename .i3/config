@@ -3,7 +3,7 @@
 
 # remap caps lock to use as super
 #exec_always setxkbmap -option caps:super
-exec xmodmap .Xmodmap
+#exec xmodmap .Xmodmap
 
 set $menu Mod5
 set $super Mod4
@@ -203,6 +203,16 @@ bindsym $caps+5 workspace 5
 bindsym $caps+6 workspace 6
 bindsym $caps+7 workspace 7
 bindsym $caps+8 workspace 8
+
+# switch to workspace - alt hotkey
+bindsym $menu+1 workspace 1
+bindsym $menu+2 workspace 2
+bindsym $menu+3 workspace 3
+bindsym $menu+4 workspace 4
+bindsym $menu+5 workspace 5
+bindsym $menu+6 workspace 6
+bindsym $menu+7 workspace 7
+bindsym $menu+8 workspace 8
 
 #navigate workspaces next / previous
 bindcode $caps+60 workspace next
@@ -636,7 +646,6 @@ bar {
 # urgent_workspace   #16A085 #FDF6E3 #E5201D
     }
 }
-
 
 # hide/unhide i3status bar
 bindsym ctrl+space bar mode toggle

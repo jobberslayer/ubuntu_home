@@ -26,6 +26,9 @@ syntax spell toplevel
 " but doesn't seem to affect anything
 let g:syntastic_quiet_messages = { 'regex': 'Delete this space' }
 
+" do not want word complete. slows things down in a big file.
+call deoplete#disable()
+
 "set thesaurus+=/home/test/.vim/thesaurus/mthesaur.txt
 
 " complete+=s makes autocompletion search the thesaurus
