@@ -3,7 +3,7 @@
 	[
 	],
 	"last_version": 3211,
-	"last_window_id": 17,
+	"last_window_id": 20,
 	"log_indexing": false,
 	"settings":
 	{
@@ -135,12 +135,12 @@
 						":w - Save"
 					],
 					[
-						":q",
-						"Set Syntax: SQL"
-					],
-					[
 						"install",
 						"Package Control: Install Package"
+					],
+					[
+						":q",
+						"Set Syntax: SQL"
 					]
 				],
 				"width": 444.0
@@ -422,7 +422,7 @@
 					"file": "/home/kevin/Dropbox/finlogic/workspace/writing/moo/iron-or-gold/cleric.md",
 					"settings":
 					{
-						"buffer_size": 663968,
+						"buffer_size": 676974,
 						"encoding": "UTF-8",
 						"line_ending": "Unix"
 					}
@@ -444,8 +444,40 @@
 						":w - Save"
 					],
 					[
+						"inst",
+						"Package Control: Install Package"
+					],
+					[
+						"remov",
+						"Package Control: Remove Package"
+					],
+					[
+						"pack",
+						"Package Control: Install Package"
+					],
+					[
+						":e",
+						":e - Revert"
+					],
+					[
+						"Package Control: ",
+						"Package Control: Remove Package"
+					],
+					[
 						":q",
 						"Set Syntax: SQL"
+					],
+					[
+						":",
+						":$ - EOF"
+					],
+					[
+						":W",
+						":w - Save"
+					],
+					[
+						"instll",
+						"Package Control: Install Package"
 					],
 					[
 						"install",
@@ -473,6 +505,12 @@
 			},
 			"file_history":
 			[
+				"/home/kevin/ubuntu_home/sublime-text-3/Packages/KeyboardSpellCheck/Default (Linux).sublime-keymap",
+				"/home/kevin/ubuntu_home/sublime-text-3/Packages/User/KeyboardSpellCheck.sublime-settings",
+				"/home/kevin/ubuntu_home/sublime-text-3/Packages/User/Package Control.sublime-settings",
+				"/home/kevin/ubuntu_home/sublime-text-3/Packages/KeyboardSpellCheck/KeyboardSpellCheck.sublime-settings",
+				"/home/kevin/Dropbox/finlogic/workspace/writing/moo/iron-or-gold/cleric.md",
+				"/home/kevin/Dropbox/finlogic/workspace/writing/sojourn-dnd/polio-mario.md",
 				"/home/kevin/Dropbox/finlogic/workspace/blenditup/domo/bill_dot_com_06262019_v01.csv",
 				"/home/kevin/Dropbox/writing/anniversary/20years.txt",
 				"/home/kevin/test.rb",
@@ -524,6 +562,18 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"love",
+					"Supper",
+					"baring",
+					"berth",
+					"birth",
+					"mouth",
+					"help",
+					"asked for help",
+					"sheriff",
+					"\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\",
+					"\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ ",
+					"\",",
 					"%s",
 					"270",
 					"discount",
@@ -546,6 +596,8 @@
 				"regex": true,
 				"replace_history":
 				[
+					"\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ ",
+					"\"",
 					" f.puts"
 				],
 				"reverse": false,
@@ -566,25 +618,34 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 663968,
+								"buffer_size": 676974,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										117189,
-										117078
+										201851,
+										201851
 									]
 								],
 								"settings":
 								{
+									"WordCount":
+									{
+										"changes": 24,
+										"count": 127098,
+										"modified": false,
+										"selection": false,
+										"status": -1,
+										"syntax": "plain text"
+									},
 									"git_savvy.repo_path": "/home/kevin/Dropbox/finlogic/workspace/writing/moo",
-									"spell_check": false,
+									"spell_check": true,
 									"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 								},
 								"translation.x": 0.0,
-								"translation.y": 41534.0,
+								"translation.y": 73650.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
@@ -633,7 +694,7 @@
 			"project": "",
 			"replace":
 			{
-				"height": 70.0
+				"height": 72.0
 			},
 			"save_all_on_build": true,
 			"select_file":

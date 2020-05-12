@@ -8,8 +8,12 @@
 		"CSV",
 		"Gist",
 		"GitSavvy",
+		"Google Spell Check",
+		"KeyboardSpellCheck",
+		"MouseEventListener",
 		"Package Control",
 		"Ruby Slim",
-		"ScrollOffset"
+		"ScrollOffset",
+		"WordCount"
 	]
 }

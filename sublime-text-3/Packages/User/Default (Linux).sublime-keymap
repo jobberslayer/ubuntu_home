@@ -9,9 +9,12 @@
 },
 { "keys": [";", "w"], "command": "save" },
 { "keys": [";", "t"], "command": "toggle_side_bar"},
-{ "keys": ["ctrl+shift+right"], "command": "next_view" },
-{ "keys": ["ctrl+shift+left"], "command": "prev_view" },
+{ "keys": ["ctrl+alt+right"], "command": "next_view" },
+{ "keys": ["ctrl+alt+left"], "command": "prev_view" },
 { "keys": ["ctrl+alt+s"], "command": "toggle_setting", 
     "args": {"setting": "spell_check"} 
+},
+{ "keys": ["ctrl+alt+l"], "command": "toggle_setting", 
+    "args": {"setting": "line_numbers"} 
 },
 ]

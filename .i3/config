@@ -5,18 +5,21 @@
 #exec_always setxkbmap -option caps:super
 #exec xmodmap .Xmodmap
 
-set $menu Mod5
 set $super Mod4
+set $menu Mod5
 set $caps Mod3
 
+# set $menu Mod3
+# set $caps Mod5
+
 bindsym $super+x exec xmodmap ~/.Xmodmap
-bindsym $super+ctrl+x exec setxkbmap -model pc105 -layout us -option grp:alt_shift_toggle 
+# bindsym $super+ctrl+x exec setxkbmap -model pc105 -layout us -option grp:alt_shift_toggle 
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 3
+new_window pixel 9
 new_float normal
 
 # Hide borders
@@ -24,8 +27,9 @@ hide_edge_borders none
 
 #change borders
 bindsym $super+1 border none
-bindsym $super+2 border pixel 2
-bindsym $super+3 border normal
+bindsym $super+2 border pixel 3
+bindsym $super+3 border pixel 9
+bindsym $super+4 border normal
 
 #find cursor
 bindsym $super+c exec /home/kevin/bin/find-cursor
@@ -654,9 +658,11 @@ bindsym ctrl+space bar mode toggle
 # class                 border  backgr. text    indic.  child_border
 #client.focused          #000000 #7D6608 #FFFFFF #000000
 #client.focused          #FFFFFF #2980B9 #000000 #FFFFFF
-client.focused          #FFFFFF #1E8449 #000000 #FFFFFF
-client.focused_inactive #000000 #CCCCCC #FFFFFF #000000
-client.unfocused        #FFFFFF #000000 #FFFFFF #000000
+#client.focused          #FFFFFF #1E8449 #000000 #FFFFFF
+client.focused          #000000 #228C22 #FFFFFF #000000
+client.focused_inactive #FFFFFF #8B0000 #FFFFFF #000000
+client.unfocused        #FFFFFF #8B0000 #FFFFFF #000000
+#client.unfocused        #FFFFFF #000000 #FFFFFF #000000
 client.urgent           #E27B45 #FDF6E3 #16A085 #268BD2
 client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
 

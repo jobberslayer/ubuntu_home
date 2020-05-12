@@ -72,6 +72,7 @@ alias dev='tmuxinator dev'
 alias uncap='xdotool key Caps_Lock'
 alias cap_remap='setxkbmap -model pc104 -layout us; xmodmap ~/.Xmodmap'
 alias myless='less -M +Gg'
+alias ll='ls -lah'
 
 alias start-vpn='sudo openvpn --config "$HOME/openvpn/FinLogic OpenVPN/FinLogicProd.ovpn"'
 
@@ -96,6 +97,8 @@ alias tmux-cheat='cat $HOME/Dropbox/tmux/tmux-cheat-sheet.txt'
 
 alias screens-louisville='arandr ~/.screenlayout/louisville.sh'
 alias screens-georgia='arandr ~/.screenlayout/georgia.sh'
+
+alias xcomp='xcompmgr -c -l0 -t0 -r0 -o.00'
 
 # use command line like vi
 set -o vi
