@@ -19,7 +19,7 @@ bindsym $super+x exec xmodmap ~/.Xmodmap
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 9
+new_window pixel 6
 new_float normal
 
 # Hide borders
@@ -133,6 +133,11 @@ bindsym $caps+j focus down
 bindsym $caps+k focus up
 bindsym $caps+l focus right
 bindsym $caps+h focus left
+
+bindsym KP_Down focus down
+bindsym KP_Up focus up
+bindsym KP_Right focus right
+bindsym KP_Left focus left
 
 # resize windows using arrow keys
 bindsym $caps+Left resize shrink width 5 px or 5 ppt
