@@ -48,6 +48,7 @@ bindsym $caps+ctrl Return exec nitrogen --restore
 #bindsym $caps+Return exec xfce4-terminal
 #bindsym $caps+Return exec terminology
 bindsym $caps+Return exec terminator, mode "default"
+bindcode 166 exec terminator, mode "default"
 bindsym ctrl+mod1+Return exec terminator
 bindsym $menu+Return exec terminator
 #bindsym $caps+Return exec urxvt
@@ -364,11 +365,12 @@ bindsym $caps+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortc
 #Remmina VPN
 bindsym  $super+r mode "$remmina_vpn_sys"
 #set $remmina_vpn_sys VPN Connections <f>inlogic  <g>unnison  fish <b>owl
-set $remmina_vpn_sys VPN Connections <f>inlogic   fish <b>owl
+set $remmina_vpn_sys VPN Connections <f>inlogic   fish <b>owl  (c)fofnx
 mode "$remmina_vpn_sys" {
   bindsym f exec remmina -c .remmina/NewFinlogicServerVPN.remmina, mode "default"
   #bindsym g exec remmina -c .remmina/NewGunnisonServerVPN.remmina, mode "default"
   bindsym b exec remmina -c .remmina/fishbowl.remmina, mode "default"
+  bindsym c exec remmina -c .remmina/CFOfxn.remmina, mode "default"
 
 # exit mode: "Enter" or "Escape"
     bindsym Return mode "default"
