@@ -83,6 +83,8 @@ alias weather='curl wttr.in'
 
 alias mymontage='rm out.jpg; montage -geometry 1600x1600 *.jpg out.jpg'
 
+alias mybattery='acpi -V|grep -i battery'
+
 alias myopen='xdg-open'
 alias make_excel='unoconv --format xls'
 alias reload_xresources='xrdb -load ~/.Xresources'
