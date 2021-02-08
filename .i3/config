@@ -13,6 +13,7 @@ set $caps Mod3
 # set $caps Mod5
 
 bindsym $super+x exec xmodmap ~/.Xmodmap
+
 # bindsym $super+ctrl+x exec setxkbmap -model pc105 -layout us -option grp:alt_shift_toggle 
 
 # set default desktop layout (default is tiling)
@@ -519,6 +520,16 @@ bindsym $super+m mode "mouse"
 #bindcode 135 mode "mouse"
 
 #bindsym $caps+Shift+t exec ~/bin/tear_off_tab.sh
+
+bindsym $super+9 mode "$tools_menu"
+set $tools_menu (f)iles (m)agnus
+mode "$tools_menu" {
+  bindsym f exec --no-startup-id thunar, mode "default"
+  bindsym m exec --no-startup-id magnus, mode "default"
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
 
 # Set shut down, restart and locking features
 bindsym $super+0 mode "$capse_system"

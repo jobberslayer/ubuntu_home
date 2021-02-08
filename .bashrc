@@ -79,8 +79,6 @@ alias start-vpn='sudo openvpn --config "$HOME/openvpn/FinLogic OpenVPN/FinLogicP
 
 alias sleepy-time='xset dpms force off'
 
-alias weather='curl wttr.in'
-
 alias mymontage='rm out.jpg; montage -geometry 1600x1600 *.jpg out.jpg'
 
 alias mybattery='acpi -V|grep -i battery'
@@ -93,7 +91,7 @@ alias geekfind='geeknote find --search'
 function geekedit() { geeknote edit '$@' ;}
 alias geekshow='geeknote show'
 
-alias weather='curl http://wttr.in/'
+alias weather='curl http://wttr.in?u'
 alias ls='ls -F'
 
 alias tmux-cheat='cat $HOME/Dropbox/tmux/tmux-cheat-sheet.txt'
