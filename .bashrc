@@ -74,6 +74,7 @@ alias cap_remap='setxkbmap -model pc104 -layout us; xmodmap ~/.Xmodmap'
 alias myless='less -M +Gg'
 alias ll='ls -lah'
 alias tts-card='montage -tile 10x7 -geometry 366x510 output/* out.jpg'
+alias mycal='cal -A 1'
 
 alias start-vpn='sudo openvpn --config "$HOME/openvpn/FinLogic OpenVPN/FinLogicProd.ovpn"'
 
