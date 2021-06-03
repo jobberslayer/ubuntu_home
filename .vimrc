@@ -172,6 +172,7 @@ set smartcase
 set mouse="c"
 set scrolloff=10
 set encoding=utf8
+set showcmd
 
 " important so don't get grayish background, but black
 au ColorScheme * hi Normal ctermbg=None
@@ -389,6 +390,7 @@ let g:NERDTreeWinPos = "right"
 :map <Leader>cp :put "+<CR>
 :map <Leader>pp :set paste
 :map <Leader>np :set nopaste
+:map <Leader>cc cw<C-r>0<ESC>
 
 "My simple todo system
 " test subject below
