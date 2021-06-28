@@ -1,13 +1,16 @@
 {
 	"folder_history":
 	[
+		"/home/kevin/Dropbox/finlogic/workspace/kappa-kappa-gamma"
 	],
-	"last_version": 3211,
-	"last_window_id": 20,
+	"last_version": 4107,
+	"last_window_id": 21,
 	"log_indexing": false,
 	"settings":
 	{
-		"new_window_height": 1062.0,
+		"new_window_full_screen": false,
+		"new_window_height": 1056.0,
+		"new_window_maximized": false,
 		"new_window_settings":
 		{
 			"auto_complete":
@@ -131,16 +134,56 @@
 				"selected_items":
 				[
 					[
+						":",
+						":0 - BOF"
+					],
+					[
+						":e",
+						":$ - EOF"
+					],
+					[
+						":e .",
+						"git: compare against ..."
+					],
+					[
+						"e .",
+						"git: compare against ..."
+					],
+					[
 						":w",
 						":w - Save"
 					],
 					[
-						"install",
+						"inst",
 						"Package Control: Install Package"
+					],
+					[
+						"remov",
+						"Package Control: Remove Package"
+					],
+					[
+						"pack",
+						"Package Control: Install Package"
+					],
+					[
+						"Package Control: ",
+						"Package Control: Remove Package"
 					],
 					[
 						":q",
 						"Set Syntax: SQL"
+					],
+					[
+						":W",
+						":w - Save"
+					],
+					[
+						"instll",
+						"Package Control: Install Package"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
 					]
 				],
 				"width": 444.0
@@ -164,6 +207,12 @@
 			},
 			"file_history":
 			[
+				"/home/kevin/Dropbox/finlogic/workspace/writing/moo/iron-or-gold/cleric.md",
+				"/home/kevin/ubuntu_home/sublime-text-3/Packages/KeyboardSpellCheck/Default (Linux).sublime-keymap",
+				"/home/kevin/ubuntu_home/sublime-text-3/Packages/User/KeyboardSpellCheck.sublime-settings",
+				"/home/kevin/ubuntu_home/sublime-text-3/Packages/User/Package Control.sublime-settings",
+				"/home/kevin/ubuntu_home/sublime-text-3/Packages/KeyboardSpellCheck/KeyboardSpellCheck.sublime-settings",
+				"/home/kevin/Dropbox/finlogic/workspace/writing/sojourn-dnd/polio-mario.md",
 				"/home/kevin/Dropbox/finlogic/workspace/blenditup/domo/bill_dot_com_06262019_v01.csv",
 				"/home/kevin/Dropbox/writing/anniversary/20years.txt",
 				"/home/kevin/test.rb",
@@ -215,6 +264,18 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"love",
+					"Supper",
+					"baring",
+					"berth",
+					"birth",
+					"mouth",
+					"help",
+					"asked for help",
+					"sheriff",
+					"\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\",
+					"\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ ",
+					"\",",
 					"%s",
 					"270",
 					"discount",
@@ -237,17 +298,21 @@
 				"regex": true,
 				"replace_history":
 				[
+					"\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ ",
+					"\"",
 					" f.puts"
 				],
 				"reverse": false,
+				"scrollbar_highlights": true,
 				"show_context": true,
 				"use_buffer2": true,
+				"use_gitignore": true,
 				"whole_word": false,
 				"wrap": true
 			},
 			"incremental_find":
 			{
-				"height": 40.0
+				"height": 28.0
 			},
 			"input":
 			{
@@ -261,7 +326,7 @@
 			"pinned_build_system": "",
 			"replace":
 			{
-				"height": 70.0
+				"height": 52.0
 			},
 			"save_all_on_build": true,
 			"select_file":
@@ -301,7 +366,7 @@
 			{
 			}
 		},
-		"new_window_width": 941.0
+		"new_window_width": 935.0
 	},
 	"windows":
 	[
@@ -419,13 +484,15 @@
 			"buffers":
 			[
 				{
-					"file": "/home/kevin/Dropbox/finlogic/workspace/writing/moo/iron-or-gold/cleric.md",
+					"file": "/home/kevin/workspace/kappa-kappa-gamma/gp_to_xl.rb",
 					"settings":
 					{
-						"buffer_size": 676974,
-						"encoding": "UTF-8",
+						"buffer_size": 21685,
 						"line_ending": "Unix"
-					}
+					},
+					"undo_stack":
+					[
+					]
 				}
 			],
 			"build_system": "",
@@ -439,6 +506,22 @@
 				"last_filter": "",
 				"selected_items":
 				[
+					[
+						":",
+						":0 - BOF"
+					],
+					[
+						":e",
+						":$ - EOF"
+					],
+					[
+						":e .",
+						"git: compare against ..."
+					],
+					[
+						"e .",
+						"git: compare against ..."
+					],
 					[
 						":w",
 						":w - Save"
@@ -456,20 +539,12 @@
 						"Package Control: Install Package"
 					],
 					[
-						":e",
-						":e - Revert"
-					],
-					[
 						"Package Control: ",
 						"Package Control: Remove Package"
 					],
 					[
 						":q",
 						"Set Syntax: SQL"
-					],
-					[
-						":",
-						":$ - EOF"
 					],
 					[
 						":W",
@@ -505,11 +580,11 @@
 			},
 			"file_history":
 			[
+				"/home/kevin/Dropbox/finlogic/workspace/writing/moo/iron-or-gold/cleric.md",
 				"/home/kevin/ubuntu_home/sublime-text-3/Packages/KeyboardSpellCheck/Default (Linux).sublime-keymap",
 				"/home/kevin/ubuntu_home/sublime-text-3/Packages/User/KeyboardSpellCheck.sublime-settings",
 				"/home/kevin/ubuntu_home/sublime-text-3/Packages/User/Package Control.sublime-settings",
 				"/home/kevin/ubuntu_home/sublime-text-3/Packages/KeyboardSpellCheck/KeyboardSpellCheck.sublime-settings",
-				"/home/kevin/Dropbox/finlogic/workspace/writing/moo/iron-or-gold/cleric.md",
 				"/home/kevin/Dropbox/finlogic/workspace/writing/sojourn-dnd/polio-mario.md",
 				"/home/kevin/Dropbox/finlogic/workspace/blenditup/domo/bill_dot_com_06262019_v01.csv",
 				"/home/kevin/Dropbox/writing/anniversary/20years.txt",
@@ -601,54 +676,57 @@
 					" f.puts"
 				],
 				"reverse": false,
+				"scrollbar_highlights": true,
 				"show_context": true,
 				"use_buffer2": true,
+				"use_gitignore": true,
 				"whole_word": false,
 				"wrap": true
 			},
 			"groups":
 			[
 				{
-					"selected": 0,
 					"sheets":
 					[
 						{
 							"buffer": 0,
-							"file": "/home/kevin/Dropbox/finlogic/workspace/writing/moo/iron-or-gold/cleric.md",
+							"file": "/home/kevin/workspace/kappa-kappa-gamma/gp_to_xl.rb",
+							"selected": true,
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 676974,
+								"buffer_size": 21685,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										201851,
-										201851
+										19103,
+										19103
 									]
 								],
 								"settings":
 								{
 									"WordCount":
 									{
-										"changes": 24,
-										"count": 127098,
+										"changes": 0,
+										"count": 0,
 										"modified": false,
 										"selection": false,
 										"status": -1,
 										"syntax": "plain text"
 									},
-									"git_savvy.repo_path": "/home/kevin/Dropbox/finlogic/workspace/writing/moo",
-									"spell_check": true,
-									"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+									"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
-								"translation.y": 73650.0,
+								"translation.y": 5612.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
+							"stack_multiselect": false,
 							"type": "text"
 						}
 					]
@@ -656,7 +734,7 @@
 			],
 			"incremental_find":
 			{
-				"height": 40.0
+				"height": 28.0
 			},
 			"input":
 			{
@@ -690,11 +768,11 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,0,0,0,0,1926,6,2867,1068,5206,1080",
+			"position": "1,0,0,0,0,2887,6,3822,1062,5206,1080,0",
 			"project": "",
 			"replace":
 			{
-				"height": 72.0
+				"height": 52.0
 			},
 			"save_all_on_build": true,
 			"select_file":
