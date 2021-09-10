@@ -45,7 +45,7 @@ normal="\[\e[0m\]"
 reset_color="\[\e[39m\]"
 
 #export PS1="\n${debian_chroot:+($debian_chroot)}${bold_red}\u@\h ${bold_blue}\w \n${bold_yellow}@xxxx{${bold_white}::::::::::::> ${reset_color}"
-export PS1="\n${bold_green}┌─${debian_chroot:+($debian_chroot)}${bold_black}\u@\h ${bold_red}\w \n${bold_green}└─  ${reset_color}"
+export PS1="\n${bold_green}┌─${debian_chroot:+($debian_chroot)}${bold_blue}\u@\h ${bold_red}\w \n${bold_green}└─  ${reset_color}"
 export PS2="${bold_green}└─ ${reset_color}"
 
 export TERM="xterm-256color"

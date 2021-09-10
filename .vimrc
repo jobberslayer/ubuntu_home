@@ -153,6 +153,9 @@ filetype plugin indent on    " required
 
 :let mapleader = ";"
 
+" Snipmate has a deprecated mode now. :h SnipMate-deprecate
+let g:snipMate = { 'snippet_version' : 1 }
+
 "install vim-gtk so we get clipboard support please
 set expandtab
 set softtabstop=0

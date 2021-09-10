@@ -1,50 +1,48 @@
 [global_config]
   broadcast_default = off
-  suppress_multiple_term_dialog = True
-  title_font = Monoid Nerd Font Mono Light Semi-Condensed 12
   title_transmit_fg_color = "#e1d3d3"
+  suppress_multiple_term_dialog = True
   title_use_system_font = False
+  title_font = Monoid Nerd Font Mono Light Semi-Condensed 12
 [keybindings]
-  copy = <Primary>c
   cycle_next = None
-  go_down = <Alt>j
-  go_left = <Alt>h
-  go_next = <Alt>l
+  go_next = <Alt>Tab
   go_prev = <Shift><Alt>Tab
   go_up = <Alt>k
-  next_tab = <Alt>Tab
+  go_down = <Alt>j
+  go_left = <Alt>h
+  copy = <Primary>c
   paste = <Primary><Shift>v
-  prev_tab = <Shift><Alt>Tab
   toggle_zoom = <Alt>z
+  next_tab = <Alt>Tab
+  prev_tab = <Shift><Alt>Tab
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    background_darkness = 0.93
+    background_type = transparent
+    cursor_color = "#ffffff"
+    font = DejaVuSansMono Nerd Font 12
+    foreground_color = "#839496"
+    show_titlebar = False
+    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    login_shell = True
+    use_system_font = False
+    copy_on_selection = True
+  [[NoExit]]
+    cursor_color = "#aaaaaa"
+    exit_action = hold
+    use_custom_command = True
 [layouts]
   [[default]]
     [[[child1]]]
       parent = window0
       type = Terminal
+      directory = ""
     [[[window0]]]
       parent = ""
       type = Window
   [[BIU]]
-    [[[child0]]]
-      fullscreen = False
-      last_active_term = b07cba07-978d-4f9e-b39e-b656abb43060
-      last_active_window = True
-      maximised = False
-      order = 0
-      parent = ""
-      position = 1920:0
-      size = 944, 1064
-      title = kevin@latitude:~
-      type = Window
-    [[[terminal1]]]
-      command = rvm use 2.3.3; rvm gemset use domo;bash
-      directory = /home/kevin/workspace/blenditup/domo
-      order = 0
-      parent = child0
-      profile = default
-      type = Terminal
-      uuid = b07cba07-978d-4f9e-b39e-b656abb43060
-  [[Gunnison]]
     [[[child0]]]
       fullscreen = False
       last_active_term = 6f4bdb67-3214-4b65-9d21-295a42a61c70
@@ -134,19 +132,3 @@
       type = Terminal
       uuid = 94d31eeb-bbb1-42c3-abca-bafe589eabd7
 [plugins]
-[profiles]
-  [[default]]
-    background_color = "#002b36"
-    background_darkness = 0.93
-    background_type = transparent
-    copy_on_selection = True
-    cursor_color = "#ffffff"
-    font = DejaVuSansMono Nerd Font 12
-    foreground_color = "#839496"
-    login_shell = True
-    show_titlebar = False
-    use_system_font = False
-  [[NoExit]]
-    cursor_color = "#aaaaaa"
-    exit_action = hold
-    use_custom_command = True
