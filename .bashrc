@@ -44,6 +44,8 @@ background_orange="\[\e[101m\]"
 normal="\[\e[0m\]"
 reset_color="\[\e[39m\]"
 
+. /usr/share/autojump/autojump.sh
+
 #export PS1="\n${debian_chroot:+($debian_chroot)}${bold_red}\u@\h ${bold_blue}\w \n${bold_yellow}@xxxx{${bold_white}::::::::::::> ${reset_color}"
 export PS1="\n${bold_green}┌─${debian_chroot:+($debian_chroot)}${bold_blue}\u@\h ${bold_red}\w \n${bold_green}└─  ${reset_color}"
 export PS2="${bold_green}└─ ${reset_color}"
@@ -72,10 +74,18 @@ alias dev='tmuxinator dev'
 alias uncap='xdotool key Caps_Lock'
 alias cap_remap='setxkbmap -model pc104 -layout us; xmodmap ~/.Xmodmap'
 alias myless='less -M +Gg'
-alias ll='ls -lah'
+alias ls='lsd -FA'
+alias ll='ls -lAh|batcat'
 alias tts-card='montage -tile 10x7 -geometry 366x510 output/* out.jpg'
 alias mycal='cal -A 1'
 alias mygittoken='xclip -sel c < ~/Dropbox/.git-token'
+
+alias mymap='xmodmap ~/ubuntu_home/.Xmodmap_popos'
+
+alias mysystem='neofetch'
+alias myfiles='gdu'
+alias mytop='bpytop'
+alias myspeed='speedtest'
 
 alias start-vpn='sudo openvpn --config "$HOME/openvpn/FinLogic OpenVPN/FinLogicProd.ovpn"'
 
@@ -94,7 +104,6 @@ function geekedit() { geeknote edit '$@' ;}
 alias geekshow='geeknote show'
 
 alias weather='curl http://wttr.in?u'
-alias ls='ls -F'
 
 alias tmux-cheat='cat $HOME/Dropbox/tmux/tmux-cheat-sheet.txt'
 
