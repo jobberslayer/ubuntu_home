@@ -46,6 +46,7 @@ reset_color="\[\e[39m\]"
 
 . /usr/share/autojump/autojump.sh
 
+
 #export PS1="\n${debian_chroot:+($debian_chroot)}${bold_red}\u@\h ${bold_blue}\w \n${bold_yellow}@xxxx{${bold_white}::::::::::::> ${reset_color}"
 export PS1="\n${bold_green}┌─${debian_chroot:+($debian_chroot)}${bold_blue}\u@\h ${bold_red}\w \n${bold_green}└─  ${reset_color}"
 export PS2="${bold_green}└─ ${reset_color}"
@@ -59,7 +60,22 @@ export EDITOR="$VISUAL"
 set editing-mode vi
 set keymap vi-command
 
-alias ps2="ps auxw|grep -v grep|grep"
+#setup dynamic terminal title
+settitle () {
+    echo -ne "\033]0;$1\007"
+}
+
+#trap 'settitle "$BASH_COMMAND"' DEBUG
+trap 'echo $BASH_COMMAND |awk '\''!/\007/ {printf "\033]0;%s\007", $0}'\' DEBUG
+PROMPT_COMMAND='echo -ne "\033]0;Kevin wuz here!\007"'
+
+#/setup dynamic terminal title
+
+#alias ps2="ps auxw|grep -v grep|grep"
+ps2() {
+  ps auxw|grep -v grep|grep $1|batcat
+}
+
 alias jim="rvm gemset use"
 alias remap="xmodmap /home/kevin/bin/caplock_to_escape.xmodmap"
 alias rr='rails runner'
@@ -126,3 +142,4 @@ function findit() {
 }
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
