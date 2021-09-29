@@ -65,9 +65,9 @@ settitle () {
     echo -ne "\033]0;$1\007"
 }
 
-#trap 'settitle "$BASH_COMMAND"' DEBUG
 trap 'echo $BASH_COMMAND |awk '\''!/\007/ {printf "\033]0;%s\007", $0}'\' DEBUG
-PROMPT_COMMAND='echo -ne "\033]0;Kevin wuz here!\007"'
+#PROMPT_COMMAND='echo -ne "\033]0;Kevin wuz here!\007"'
+PROMPT_COMMAND='echo -ne "\033]0;`pwd`\007"'
 
 #/setup dynamic terminal title
 
