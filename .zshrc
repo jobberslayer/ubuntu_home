@@ -54,14 +54,14 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 #alias ps2="ps auxw|grep -v grep|grep"
 alias ls='lsd -FA'
-alias ll='ls -lAh|batcat -l Nix'
+alias ll='ls -lAh|batcat -l Sass'
 
 myps() {
-  ps auxw|grep -v grep|grep $1|batcat -l Nix
+  ps auxw|grep -v grep|grep $1|batcat -l Sass
 }
 
 myapt_search() {
-  sudo apt search $1|batcat -l Nix
+  sudo apt search $1|batcat -l Sass
 }
 
 alias myapt_install="sudo apt install"
