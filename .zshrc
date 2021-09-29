@@ -8,6 +8,7 @@ export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_HIDE_IF_PWD_IGNORED=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 
+
 autoload -Uz promptinit
 setopt PROMPT_SUBST
 
@@ -17,6 +18,15 @@ PS2="%F{yellow}└─ %f "
 export RPROMPT='%F{black}%K{white} %D{%L:%M %m/%d} %k%f $(__git_ps1 "(%s)")'
 
 setopt histignorealldups sharehistory
+
+#setup dynamic terminal title
+function precmd () {
+    echo -ne "\033]0;`pwd`\007"
+}
+
+function preexec () {
+    printf "\033]0;%s\007" "$1"
+}
 
 # Use vi keybinding 
 bindkey -v
