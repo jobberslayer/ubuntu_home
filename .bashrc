@@ -74,6 +74,9 @@ PROMPT_COMMAND='echo -ne "\033]0;`pwd`\007"'
 # ALIASES
 
 #alias ps2="ps auxw|grep -v grep|grep"
+alias ls='lsd -FA'
+alias ll='ls -lAh|batcat'
+
 myps() {
   ps auxw|grep -v grep|grep $1|batcat
 }
@@ -81,11 +84,8 @@ myps() {
 alias myjim="rvm gemset use"
 alias myexternal_ip='wget http://ipinfo.io/ip -qO -'
 alias myto_csv='libreoffice --headless --convert-to csv'
-alias fix_caps='setxkbmap -option caps:super'
 alias myupdate='sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upgrade; need_reboot.sh'
 alias myless='less -M +Gg'
-alias ls='lsd -FA'
-alias ll='ls -lAh|batcat'
 alias mycal='cal -A 1'
 alias mygittoken='xclip -sel c < ~/Dropbox/.git-token'
 
@@ -113,12 +113,12 @@ alias mytmux-cheat='cat $HOME/Dropbox/tmux/tmux-cheat-sheet.txt'
 
 alias xcomp='xcompmgr -c -l0 -t0 -r0 -o.00'
 
+# /ALIASES
+
 # use command line like vi
 set -o vi
 
 umask 000
-
-#setxkbmap -option caps:super
 
 PATH=$PATH:$HOME/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
