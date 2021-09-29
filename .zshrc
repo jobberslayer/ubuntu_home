@@ -14,7 +14,7 @@ setopt PROMPT_SUBST
 PS1=$'\n''%F{yellow}┌─%f%F{cyan}%n@%m%b%f%F{magenta}[zsh]%f %~'$'\n''%F{yellow}└─%f  '
 PS2="%F{yellow}└─ %f "
 
-export RPROMPT='$(__git_ps1 "(%s)") %F{black}%K{yellow}%D{%L:%M %m/%d}%k%f'
+export RPROMPT='%F{black}%K{white} %D{%L:%M %m/%d} %k%f $(__git_ps1 "(%s)")'
 
 setopt histignorealldups sharehistory
 
