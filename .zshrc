@@ -1,10 +1,20 @@
 # Set up the prompt
+#
+source ~/.git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUPSTREAM="auto"
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_HIDE_IF_PWD_IGNORED=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
 
-#autoload -Uz promptinit
-PS1=$'\n''%F{yellow}%B┌─%b%f%F{cyan}%n@%m%b%f%F{magenta}[zsh]%f %~'$'\n''%F{yellow}└─%f  '
-PS2="%F{yellow}└─ %f  "
-#promptinit
-#prompt adam1
+autoload -Uz promptinit
+setopt PROMPT_SUBST
+
+PS1=$'\n''%F{yellow}┌─%f%F{cyan}%n@%m%b%f%F{magenta}[zsh]%f %~'$'\n''%F{yellow}└─%f  '
+PS2="%F{yellow}└─ %f "
+
+export RPROMPT='$(__git_ps1 "(%s)") %F{black}%K{yellow}%D{%L:%M %m/%d}%k%f'
 
 setopt histignorealldups sharehistory
 
@@ -40,42 +50,56 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-# functions / aliases
+# ALIASES
+
+#alias ps2="ps auxw|grep -v grep|grep"
+alias ls='lsd -FA'
+alias ll='ls -lAh|batcat -l Nix'
+
 myps() {
-  ps auxw|grep -v grep|grep $1|batcat
+  ps auxw|grep -v grep|grep $1|batcat -l Nix
 }
+
+myapt_search() {
+  sudo apt search $1|batcat -l Nix
+}
+
+alias myapt_install="sudo apt install"
+
 alias myjim="rvm gemset use"
 alias myexternal_ip='wget http://ipinfo.io/ip -qO -'
 alias myto_csv='libreoffice --headless --convert-to csv'
 alias myupdate='sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upgrade; need_reboot.sh'
 alias myless='less -M +Gg'
-alias ls='lsd -FA'
-alias ll='ls -lAh|batcat'
 alias mycal='cal -A 1'
 alias mygittoken='xclip -sel c < ~/Dropbox/.git-token'
 
 alias mymap='xmodmap ~/ubuntu_home/.Xmodmap_popos'
 
+alias myclock='figlet -c `date`'
 alias mysystem='neofetch'
 alias myfiles='gdu'
 alias mytop='bpytop'
 alias myspeed='speedtest'
 
-alias start-vpn='sudo openvpn --config "$HOME/openvpn/FinLogic OpenVPN/FinLogicProd.ovpn"'
+alias mystart-vpn='sudo openvpn --config "$HOME/openvpn/FinLogic OpenVPN/FinLogicProd.ovpn"'
 
-alias sleepy-time='xset dpms force off'
+alias mysleepy-time='xset dpms force off'
 
 alias mymontage='rm out.jpg; montage -geometry 1600x1600 *.jpg out.jpg'
 
 alias mybattery='acpi -V|grep -i battery'
 
 alias myopen='xdg-open'
-alias make_excel='unoconv --format xls'
-alias reload_xresources='xrdb -load ~/.Xresources'
+alias mymake_excel='unoconv --format xls'
 
-alias weather='curl "http://wttr.in?u"'
+alias myweather='curl http://wttr.in?u'
 
-alias tmux-cheat='cat $HOME/Dropbox/tmux/tmux-cheat-sheet.txt'
+alias mytmux-cheat='cat $HOME/Dropbox/tmux/tmux-cheat-sheet.txt'
+
+alias xcomp='xcompmgr -c -l0 -t0 -r0 -o.00'
+
+# /ALIASES
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

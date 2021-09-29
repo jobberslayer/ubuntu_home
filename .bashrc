@@ -75,11 +75,17 @@ PROMPT_COMMAND='echo -ne "\033]0;`pwd`\007"'
 
 #alias ps2="ps auxw|grep -v grep|grep"
 alias ls='lsd -FA'
-alias ll='ls -lAh|batcat'
+alias ll='ls -lAh|batcat -l Nix'
 
 myps() {
-  ps auxw|grep -v grep|grep $1|batcat
+  ps auxw|grep -v grep|grep $1|batcat -l Nix
 }
+
+myapt_search() {
+  sudo apt search $1|batcat -l Nix
+}
+
+alias myapt_install="sudo apt install"
 
 alias myjim="rvm gemset use"
 alias myexternal_ip='wget http://ipinfo.io/ip -qO -'
@@ -91,6 +97,7 @@ alias mygittoken='xclip -sel c < ~/Dropbox/.git-token'
 
 alias mymap='xmodmap ~/ubuntu_home/.Xmodmap_popos'
 
+alias myclock='figlet -c `date`'
 alias mysystem='neofetch'
 alias myfiles='gdu'
 alias mytop='bpytop'
@@ -112,6 +119,7 @@ alias myweather='curl http://wttr.in?u'
 alias mytmux-cheat='cat $HOME/Dropbox/tmux/tmux-cheat-sheet.txt'
 
 alias xcomp='xcompmgr -c -l0 -t0 -r0 -o.00'
+
 
 # /ALIASES
 
