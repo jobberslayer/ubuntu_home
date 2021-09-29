@@ -71,28 +71,21 @@ PROMPT_COMMAND='echo -ne "\033]0;`pwd`\007"'
 
 #/setup dynamic terminal title
 
+# ALIASES
+
 #alias ps2="ps auxw|grep -v grep|grep"
-ps2() {
+myps() {
   ps auxw|grep -v grep|grep $1|batcat
 }
 
-alias jim="rvm gemset use"
-alias remap="xmodmap /home/kevin/bin/caplock_to_escape.xmodmap"
-alias rr='rails runner'
-alias multi-monitors='arandr'
-alias external_ip='wget http://ipinfo.io/ip -qO -'
-alias to_csv='libreoffice --headless --convert-to csv'
+alias myjim="rvm gemset use"
+alias myexternal_ip='wget http://ipinfo.io/ip -qO -'
+alias myto_csv='libreoffice --headless --convert-to csv'
 alias fix_caps='setxkbmap -option caps:super'
 alias myupdate='sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upgrade; need_reboot.sh'
-alias monitor1='glances'
-alias monitor2='saidar -c -d 1'
-alias dev='tmuxinator dev'
-alias uncap='xdotool key Caps_Lock'
-alias cap_remap='setxkbmap -model pc104 -layout us; xmodmap ~/.Xmodmap'
 alias myless='less -M +Gg'
 alias ls='lsd -FA'
 alias ll='ls -lAh|batcat'
-alias tts-card='montage -tile 10x7 -geometry 366x510 output/* out.jpg'
 alias mycal='cal -A 1'
 alias mygittoken='xclip -sel c < ~/Dropbox/.git-token'
 
@@ -103,28 +96,20 @@ alias myfiles='gdu'
 alias mytop='bpytop'
 alias myspeed='speedtest'
 
-alias start-vpn='sudo openvpn --config "$HOME/openvpn/FinLogic OpenVPN/FinLogicProd.ovpn"'
+alias mystart-vpn='sudo openvpn --config "$HOME/openvpn/FinLogic OpenVPN/FinLogicProd.ovpn"'
 
-alias sleepy-time='xset dpms force off'
+alias mysleepy-time='xset dpms force off'
 
 alias mymontage='rm out.jpg; montage -geometry 1600x1600 *.jpg out.jpg'
 
 alias mybattery='acpi -V|grep -i battery'
 
 alias myopen='xdg-open'
-alias make_excel='unoconv --format xls'
-alias reload_xresources='xrdb -load ~/.Xresources'
+alias mymake_excel='unoconv --format xls'
 
-alias geekfind='geeknote find --search'
-function geekedit() { geeknote edit '$@' ;}
-alias geekshow='geeknote show'
+alias myweather='curl http://wttr.in?u'
 
-alias weather='curl http://wttr.in?u'
-
-alias tmux-cheat='cat $HOME/Dropbox/tmux/tmux-cheat-sheet.txt'
-
-alias screens-louisville='arandr ~/.screenlayout/louisville.sh'
-alias screens-georgia='arandr ~/.screenlayout/georgia.sh'
+alias mytmux-cheat='cat $HOME/Dropbox/tmux/tmux-cheat-sheet.txt'
 
 alias xcomp='xcompmgr -c -l0 -t0 -r0 -o.00'
 
@@ -137,7 +122,7 @@ umask 000
 
 PATH=$PATH:$HOME/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-function findit() {
+function myfindit() {
   find . -name "*$1*"
 }
 
