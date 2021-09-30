@@ -12,10 +12,25 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 autoload -Uz promptinit
 setopt PROMPT_SUBST
 
-PS1=$'\n''%F{yellow}┌─%f%F{cyan}%n@%m%b%f%F{magenta}[zsh]%f %~'$'\n''%F{yellow}└─%f  '
+PS1='
+%F{yellow}┌─%f\
+%F{yellow}%f\
+%F{black}%K{yellow}%n@%m%b%f%F{magenta}[zsh]%k%f\
+%F{yellow}%K{red}%k%f\
+%F{black}%K{red}  %~  %k%f\
+%F{red}%f
+%F{yellow}└─%f '
+
 PS2="%F{yellow}└─ %f "
 
-export RPROMPT='%F{black}%K{white} %D{%L:%M %m/%d} %k%f $(__git_ps1 "(%s)")'
+#PS1=$'\n''%F{yellow}┌─%f%F{cyan}%n@%m%b%f%F{magenta}[zsh]%f %~'$'\n''%F{yellow}└─%f  '
+
+export RPROMPT='\
+%F{black}%f\
+%F{white}%K{black} \
+ %D{%L:%M%p  %m/%d} %k%f\
+%K{black}$(__git_ps1 "(%s)")%k\
+%F{black}%f'
 
 setopt histignorealldups sharehistory
 
