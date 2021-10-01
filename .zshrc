@@ -19,7 +19,9 @@ PS1='
 %F{yellow}%K{red}%k%f\
 %F{black}%K{red}  %~  %k%f\
 %F{red}%f
-%F{yellow}└─%f '
+%F{yellow}└─%f\
+%F{blue}%f\
+%F{white}  '
 
 PS2="%F{yellow}└─ %f "
 
