@@ -20,8 +20,10 @@ PS1='
 %F{black}%K{red}  %~  %k%f\
 %F{red}%f
 %F{yellow}└─%f\
-%F{blue} %f\
-%F{white}  '
+%F{red}%f\
+%F{red} %f\
+%F{blue}%f\
+%F{white} '
 
 PS2="%F{yellow}└─ %f "
 
@@ -76,6 +78,9 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+#source ~/.zplug/init.zsh
+#zplug "dracula/zsh", as:theme
 
 # ALIASES
 

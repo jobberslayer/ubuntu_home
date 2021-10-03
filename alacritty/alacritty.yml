@@ -111,16 +111,15 @@ font:
     #   - (Windows) Consolas
     #family: Source Code Pro
     #family: CodeNewRoman Nerd Font
-    #family: DejaVu Sans Mono Nerd Font 
-    #family: RobotoMono Nerd Font
-    family: RobotoMono Nerd Font 
-    #family: Go Mono Nerd Font 
-    # family: Hack
-    # family: JetBrains Mono
-    # family: UbuntuMono Nerd Font
+    #family: DejaVu Sans Mono Nerd Font
+    family: RobotoMono Nerd Font
+    #family: Go Mono Nerd Font
+    #family: Hack
+    #family: JetBrains Mono
+    #family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
-    # family: Mononoki Nerd Font
+    #family: Mononoki Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -151,8 +150,8 @@ font:
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
     #family: Source Code Pro
-    family: CodeNewRoman Nerd Font
-    # family: RobotoMono Nerd Font
+    #family: CodeNewRoman Nerd Font
+    family: RobotoMono Nerd Font
     # family: Hack
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
@@ -170,8 +169,8 @@ font:
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
     #family: Source Code Pro
-    family: CodeNewRoman Nerd Font
-    # family: RobotoMono Nerd Font
+    #family: CodeNewRoman Nerd Font
+    family: RobotoMono Nerd Font
     # family: Hack
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
@@ -666,3 +665,6 @@ key_bindings:
   - { key: Home,      mods: Shift,         action: ScrollToTop,    mode: ~Alt  }
   - { key: End,       mods: Shift,         action: ScrollToBottom, mode: ~Alt  }
 
+
+import:
+  - ~/.config/alacritty/dracula.yml 
