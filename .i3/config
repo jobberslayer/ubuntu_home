@@ -596,28 +596,28 @@ mode "$spotify_system" {
 
 # Now done via super+arrowkeys
 # Resize window (you can also use the mouse for that)
-# bindsym $caps+r mode "resize"
-# mode "resize" {
-#         # These bindings trigger as soon as you enter the resize mode
-#         # Pressing left will shrink the window’s width.
-#         # Pressing right will grow the window’s width.
-#         # Pressing up will shrink the window’s height.
-#         # Pressing down will grow the window’s height.
-#         bindsym h resize shrink width 5 px or 5 ppt
-#         bindsym k resize grow height 5 px or 5 ppt
-#         bindsym j resize shrink height 5 px or 5 ppt
-#         bindsym l resize grow width 5 px or 5 ppt
-#
-#         # same bindings, but for the arrow keys
-#         bindsym Left resize shrink width 10 px or 10 ppt
-#         bindsym Down resize grow height 10 px or 10 ppt
-#         bindsym Up resize shrink height 10 px or 10 ppt
-#         bindsym Right resize grow width 10 px or 10 ppt
-#
-#         # exit resize mode: Enter or Escape
-#         bindsym Return mode "default"
-#         bindsym Escape mode "default"
-# }
+ bindsym $caps+r mode "resize"
+ mode "resize" {
+         # These bindings trigger as soon as you enter the resize mode
+         # Pressing left will shrink the window’s width.
+         # Pressing right will grow the window’s width.
+         # Pressing up will shrink the window’s height.
+         # Pressing down will grow the window’s height.
+         bindsym h resize shrink width 5 px or 5 ppt
+         bindsym k resize grow height 5 px or 5 ppt
+         bindsym j resize shrink height 5 px or 5 ppt
+         bindsym l resize grow width 5 px or 5 ppt
+
+         # same bindings, but for the arrow keys
+         bindsym Left resize shrink width 10 px or 10 ppt
+         bindsym Down resize grow height 10 px or 10 ppt
+         bindsym Up resize shrink height 10 px or 10 ppt
+         bindsym Right resize grow width 10 px or 10 ppt
+
+         # exit resize mode: Enter or Escape
+         bindsym Return mode "default"
+         bindsym Escape mode "default"
+ }
 
 # Lock screen
 #bindsym $caps+9 exec --no-startup-id blurlock
@@ -707,95 +707,3 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
 
 client.background       #2B2C2B
 
-#############################
-### settings for i3-gaps: ###
-#############################
-
-# Set inner/outer gaps
-#gaps inner 14
-#gaps outer -8
-
-# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
-# gaps inner|outer current|all set|plus|minus <px>
-# gaps inner all set 10
-# gaps outer all plus 5
-
-# Smart gaps (gaps used if only more than one container on the workspace)
-#smart_gaps on
-
-# Smart borders (draw borders around container only if it is not the only container on this workspace)
-# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-#smart_borders on
-
-# Press $caps+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
-# set $capse_gaps Gaps: (o) outer, (i) inner
-# set $capse_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-# set $capse_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-# bindsym $caps+Shift+g mode "$capse_gaps"
-#
-# mode "$capse_gaps" {
-#         bindsym o      mode "$capse_gaps_outer"
-#         bindsym i      mode "$capse_gaps_inner"
-#         bindsym Return mode "default"
-#         bindsym Escape mode "default"
-# }
-# mode "$capse_gaps_inner" {
-#         bindsym plus  gaps inner current plus 5
-#         bindsym minus gaps inner current minus 5
-#         bindsym 0     gaps inner current set 0
-#
-#         bindsym Shift+plus  gaps inner all plus 5
-#         bindsym Shift+minus gaps inner all minus 5
-#         bindsym Shift+0     gaps inner all set 0
-#
-#         bindsym Return mode "default"
-#         bindsym Escape mode "default"
-# }
-# mode "$capse_gaps_outer" {
-#         bindsym plus  gaps outer current plus 5
-#         bindsym minus gaps outer current minus 5
-#         bindsym 0     gaps outer current set 0
-#
-#         bindsym Shift+plus  gaps outer all plus 5
-#         bindsym Shift+minus gaps outer all minus 5
-#         bindsym Shift+0     gaps outer all set 0
-#
-#         bindsym Return mode "default"
-#         bindsym Escape mode "default"
-# }
-
-#exec--no-startup-id ~/.i3/scripts/scratch_pad_windows.sh
-
-#Calculator
-# for_window [instance="calculator"] floating enable;
-# for_window [instance="calculator"] move position center
-# for_window [instance="calculator"] move scratchpad;
-# bindsym XF86Calculator [instance="calculator"] scratchpad show, move position center
-
-# Spotify
-# for_window [instance="spotify"] floating enable;
-# for_window [instance="spotify"] resize set 1200 800
-# for_window [instance="spotify"] move position center
-# for_window [instance="spotify"] move scratchpad
-
-# Gnome System Monitor
-# for_window [instance="gnome-system-monitor"] floating enable;
-# for_window [instance="gnome-system-monitor"] resize set 1200 800
-# for_window [instance="gnome-system-monitor"] move position center
-# for_window [instance="gnome-system-monitor"] move scratchpad
-
-
-# bindcode $caps+48 mode "$scratchpad"
-# set $scratchpad <s>   <m> 
-# mode "$scratchpad" {
-#   # Spotify
-#   bindsym s [instance="spotify"] scratchpad show, resize set 1200 800, move position center
-#
-#   # Gnome System Monitor
-#   bindsym m [instance="gnome-system-monitor"] scratchpad show, resize set 1200 800, move position center
-#
-#   # exit system mode: "Enter" or "Escape"
-#   bindsym Return mode "default"
-#   bindsym Escape mode "default"
-# }
-#
