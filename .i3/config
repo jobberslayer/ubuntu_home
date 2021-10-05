@@ -381,20 +381,22 @@ bindsym $caps+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortc
 #playerctl with rofi
 bindsym  $caps+p exec "~/bin/myrofi-playerctl.sh"
 
+bindsym  $super+r exec "~/bin/myremmina-list.sh"
+bindsym  $super+shift+r exec "~/bin/myremmina-passwords.sh"
 #Remmina VPN
-bindsym  $super+r mode "$remmina_vpn_sys"
+#bindsym  $super+r mode "$remmina_vpn_sys"
 #set $remmina_vpn_sys VPN Connections <f>inlogic  <g>unnison  fish <b>owl
-set $remmina_vpn_sys VPN Connections <f>inlogic   fish <b>owl  (c)fofnx
-mode "$remmina_vpn_sys" {
-  bindsym f exec remmina -c .remmina/NewFinlogicServerVPN.remmina, mode "default"
-  #bindsym g exec remmina -c .remmina/NewGunnisonServerVPN.remmina, mode "default"
-  bindsym b exec remmina -c .remmina/fishbowl.remmina, mode "default"
-  bindsym c exec remmina -c .remmina/CFOfxn.remmina, mode "default"
+#set $remmina_vpn_sys VPN Connections <f>inlogic   fish <b>owl  (c)fofnx
+#mode "$remmina_vpn_sys" {
+#  bindsym f exec remmina -c .remmina/NewFinlogicServerVPN.remmina, mode "default"
+#  #bindsym g exec remmina -c .remmina/NewGunnisonServerVPN.remmina, mode "default"
+#  bindsym b exec remmina -c .remmina/fishbowl.remmina, mode "default"
+#  bindsym c exec remmina -c .remmina/CFOfxn.remmina, mode "default"
 
-# exit mode: "Enter" or "Escape"
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
+## exit mode: "Enter" or "Escape"
+#    bindsym Return mode "default"
+#    bindsym Escape mode "default"
+#}
 
 #tmuxinator starter
 bindsym $super+t mode "$tmux"
@@ -627,24 +629,10 @@ mode "$spotify_system" {
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id update-notifier
 exec --no-startup-id parcellite
-#exec --no-startup-id pidgin
 exec --no-startup-id nitrogen --restore
-#exec --no-startup-id checkgmail -no_cookies
-#exec --no-startup-id /home/kevin/.Conky/startconky.sh
 exec --no-startup-id dropbox start
-#exec --no-startup-id remmina -i
 exec --no-startup-id guake
 exec --no-startup-id /usr/bin/nm-applet
-#exec --no-startup-id /usr/bin/compton
-#exec --no-startup-id nm-applet
-#exec --no-startup-id pamac-tray
-#exec --no-startup-id clipit
-# exec --no-startup-id blueman
-# exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_green
-#exec --no-startup-id xautolock -time 10 -locker blurlock
-#exec --no-startup-id /usr/bin/adjust_i3statusconf
-#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
@@ -680,10 +668,6 @@ bar {
 	active_workspace   #000000 #CCCCCC #000000
 	inactive_workspace #000000 #CCCCCC #000000
 	urgent_workspace   #FF0000 #F2D7D5 #FF0000
-# focused_workspace  #e8cdc9 #660e00 #FFFFFF
-# active_workspace   #FF0000 #e8cdc9 #000000
-# inactive_workspace #FF0000 #e8cdc9 #000000
-# urgent_workspace   #16A085 #FDF6E3 #E5201D
     }
 }
 
@@ -692,16 +676,9 @@ bindsym ctrl+space bar mode toggle
 
 # Theme colors
 # class                 border  backgr. text    indic.  child_border
-#client.focused          #000000 #7D6608 #FFFFFF #000000
-#client.focused          #FFFFFF #2980B9 #000000 #FFFFFF
-#client.focused          #FFFFFF #1E8449 #000000 #FFFFFF
-#client.focused          #000000 #228C22 #FFFFFF #000000
 client.focused          #000000 #80423b #FFFFFF #000000
 client.focused_inactive #FFFFFF #362d2c #FFFFFF #000000
-#client.focused_inactive #FFFFFF #8B0000 #FFFFFF #000000
-#client.unfocused        #FFFFFF #8B0000 #FFFFFF #000000
 client.unfocused        #FFFFFF #362d2c #FFFFFF #000000
-#client.unfocused        #FFFFFF #000000 #FFFFFF #000000
 client.urgent           #E27B45 #FDF6E3 #16A085 #268BD2
 client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
 
