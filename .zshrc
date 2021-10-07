@@ -126,11 +126,15 @@ alias mybattery='acpi -V|grep -i battery'
 alias myopen='xdg-open'
 alias mymake_excel='unoconv --format xls'
 
-alias myweather='curl http://wttr.in?u'
+alias myweather='curl "http://wttr.in?u"'
 
 alias mytmux-cheat='cat $HOME/Dropbox/tmux/tmux-cheat-sheet.txt'
 
 alias xcomp='xcompmgr -c -l0 -t0 -r0 -o.00'
+
+alias mycompton='picom -CGb&'
+
+alias myhotkeys="grep bind .i3/config|grep -v "^#"|sed 's/bind\w*//'|rofi -dmenu"
 
 # /ALIASES
 
