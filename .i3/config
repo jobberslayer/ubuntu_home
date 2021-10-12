@@ -62,6 +62,8 @@ bindsym $super+f exec nautilus
 
 bindsym $super+a exec ~/bin/myscripts.sh
 bindsym $caps+0 exec ~/bin/mysystem.sh
+bindsym $caps+b exec ~/bin/myi3commands.sh
+bindsym $caps+y exec ~/bin/myi3workspaces.sh
 
 # rofi popup launcher
 bindsym $caps+space exec rofi -show drun -show-icons
@@ -134,9 +136,9 @@ bindsym $caps+Shift+Up move up
 bindsym $caps+Shift+Right move right
 
 # workspace back and forth (with/without active container)
-workspace_auto_back_and_forth yes
-bindsym $caps+b workspace back_and_forth
-bindsym $caps+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+#workspace_auto_back_and_forth yes
+#bindsym $caps+b workspace back_and_forth
+#bindsym $caps+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
 bindsym $caps+o split h;exec notify-send 'tile horizontally'
@@ -489,7 +491,7 @@ mode "$terminator_layouts" {
   bindsym Escape mode "default"
 }
 
-bindsym $super+s mode "$spotify_system"
+bindsym $super+shift+s mode "$spotify_system"
 set $spotify_system <p>  /    <n>   <r>   <i> 
 mode "$spotify_system" {
   bindsym p exec sp play
@@ -503,6 +505,8 @@ mode "$spotify_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
+bindsym $super+s exec ~/bin/myspotify.sh
 
 # Now done via super+arrowkeys
 # Resize window (you can also use the mouse for that)
