@@ -60,7 +60,7 @@ bindcode $caps+shift+60 move position center
 bindcode $super+60 move position center
 bindsym $super+f exec nautilus
 
-bindsym $super+a exec ~/bin/myscripts.sh
+bindsym $caps+a exec ~/bin/myscripts.sh
 bindsym $caps+0 exec ~/bin/mysystem.sh
 bindsym $caps+b exec ~/bin/myi3commands.sh
 bindsym $caps+y exec ~/bin/myi3workspaces.sh
@@ -71,7 +71,8 @@ bindsym $caps+semicolon exec rofi -show window
 bindsym $caps+ctrl+f exec rofi  -show fb -modi fb:/home/kevin/.rofi/rofi-file-browser.sh
 
 # shutter for screen capture
-bindsym $caps+shift+p exec shutter -s
+#bindsym $caps+shift+p exec shutter -s
+bindsym $caps+shift+p exec flameshot launcher 
 
 #Management
 bindsym $caps+shift+f exec thunar
