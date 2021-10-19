@@ -23,7 +23,7 @@ bindsym $super+x exec xmodmap ~/.Xmodmap
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 6
+new_window pixel 3
 new_float normal
 
 # Hide borders
@@ -64,6 +64,9 @@ bindsym $caps+a exec ~/bin/myscripts.sh
 bindsym $caps+0 exec ~/bin/mysystem.sh
 bindsym $caps+b exec ~/bin/myi3commands.sh
 bindsym $caps+y exec ~/bin/myi3workspaces.sh
+bindsym $caps+shift+y exec ~/bin/mymv2i3workspaces.sh
+
+bindsym $caps+7 exec ~/.i3/scripts/i3-layout-manager/layout_manager.sh
 
 # rofi popup launcher
 bindsym $caps+space exec rofi -show drun -show-icons
@@ -186,8 +189,8 @@ bindsym $caps+3 workspace 3
 bindsym $caps+4 workspace 4
 bindsym $caps+5 workspace 5
 bindsym $caps+6 workspace 6
-bindsym $caps+7 workspace 7
-bindsym $caps+8 workspace 8
+#bindsym $caps+7 workspace 7
+#bindsym $caps+8 workspace 8
 
 # switch to workspace - alt hotkey
 bindsym $menu+1 workspace 1
