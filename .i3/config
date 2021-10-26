@@ -58,7 +58,8 @@ bindsym $menu+Return exec alacritty
 # '>'
 bindcode $caps+shift+60 move position center
 bindcode $super+60 move position center
-bindsym $super+f exec nautilus
+#bindsym $super+f exec nautilus
+bindsym $super+f exec thunar
 
 bindsym $caps+a exec ~/bin/myscripts.sh
 bindsym $caps+0 exec ~/bin/mysystem.sh
@@ -181,6 +182,10 @@ set $ws1 1:
 set $ws2 2:
 set $ws3 3:
 set $ws3 4:
+
+workspace 1 output DP-1
+workspace 2 output HDMI-1
+workspace 3 output Screen 0
 
 # switch to workspace
 bindsym $caps+1 workspace 1

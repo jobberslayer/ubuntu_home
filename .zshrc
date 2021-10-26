@@ -106,6 +106,7 @@ alias myless='less -M +Gg'
 alias mycal='cal -A 1'
 #alias mygittoken='xclip -sel c < ~/Dropbox/.git-token'
 alias mygittoken='lpass show "Git Token" -c --password'
+alias myrdppasswords='lpass show "RDP/Remmina Login information"'
 
 alias mymap='xmodmap ~/ubuntu_home/.Xmodmap_popos'
 

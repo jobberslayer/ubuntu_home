@@ -14,19 +14,19 @@
 "Zen/Emmet - Ctrl + y and Comma
 "BufExplorer - ;be or ;b (set up below) current window, ;bs - hsplit, ;bv - vsplit
 "Commentary - comment out using gcc
-"Folding
-" za - normal fold/unfold
-" zM - fold everything
-" zm - fold next level
-" zR - unfold everything
-" zr - unfold next level
+"? Folding
+"?  za - normal fold/unfold
+"?  zM - fold everything
+"?  zm - fold next level
+"?  zR - unfold everything
+"?  zr - unfold next level
 "
-" Spell check
-" z= - get suggestions
-" ]s – Find the misspelled word after the cursor (Forward search) while you making a README file for your project
-" [s – Find the misspelled word before the cursor (Backward search)
-" ]S (Note the capital “S”) – Similar to “]s” but only stop at bad words, not at rare words or words for another region.
-" [S – Similar to “[s” but search backwards.
+"? Spell check
+"? z= - get spelling suggestions
+"? ]s – Find the misspelled word after the cursor (Forward search) while you making a README file for your project
+"? [s – Find the misspelled word before the cursor (Backward search)
+"? ]S (Note the capital “S”) – Similar to “]s” but only stop at bad words, not at rare words or words for another region.
+"? [S – Similar to “[s” but search backwards.
 "
 " Use Ctrl-v then hit a modifier sequence when trying to map one.
 " clean up whitespace :StripWhitespace
@@ -259,31 +259,31 @@ highlight ExtraWhitespace ctermbg=red
 "filetype on
 "filetype plugin on
 
-" alternative to hitting escape key
+" alternative to hitting escape key - ;jj
 :imap jj <Esc>
 
 :imap l; <Esc>A
 
-" insert a line above and stay in insert mode
+"? insert a line inline above - ;o
 :imap ;o O
 
-" save file while in insert mode and return to insert mode immediately
+"? save file inline - ;w
 :imap ;w <ESC>:w<CR>a
-" save file while in insert mode and leave in command mode
+"? save file inline and leave in command mode - ;ww
 :imap ;ww <ESC>:w<CR>
 
-" replace all after using * search
+"? replace all after using * search - ;rep
 :map <Leader>rep :%s/
 
-" delete all buffers
+"? delete all buffers - ;db
 :map <Leader>dab :bd *
-" use fzf Buffers command
+"? use fzf Buffers command - ;b
 :map <Leader>b :Buffers<CR>
 
-" alternative to saving file while in command mode
+"? alternative to saving file while in command mode - ;w
 :map <Leader>w :w<CR>
 
-" select paragraph how i want it to work
+"? select paragraph how i want it to work - ;hi
 :map <Leader>hi V}kk
 
 " don't like hitting these combos
@@ -311,61 +311,78 @@ highlight ExtraWhitespace ctermbg=red
 :imap ;b <esc>v`plS]<c-o>a
 :imap ;p <esc>v`plS)<c-o>a
 
-" Fix indentation
+"? Fix indentation - ;ind
 :map <Leader>ind gg=G
 
-" add lines to end
+"? add lines to end - ;<space>
 :map <Leader><space> :s/$/  /
 
-"edit/reload .vimrc
+"? edit .vimrc - ;con
 :map <Leader>con :vsplit $MYVIMRC<CR>
+"? reload .vimrc - ;vim
 :map <Leader>vim :so $MYVIMRC
+"? view snippets - ;snips
 :map <Leader>snips :vsplit ~/.vim/snippets<CR>
 
 " quickify using 'a' register
+"? yack into 'a' register - ;y
 :map <Leader>y "ay
+"? put from 'a' register - ;p
 :map <Leader>p "ap
 
-" paste from system clipboard
+"? paste from system clipboard - ;pp
 :map <Leader>pp "*p<CR>
 
-"terminal
+"? split out a terminal - ;x
 :map <Leader>x :bo split<CR>:terminal ++curwin /bin/bash --login<CR>
 
 "GUndo
 if has('python3')
   let g:gundo_prefer_python3 = 1
 endif
+
+"? Gundo Toggle - ;u
 :map <Leader>u :GundoToggle<CR>
 
-"Fuzzy Find - fzf
+"? Fuzzy Find [fzf] - ;f
 :map <Leader>f :FZF<CR>
 
 :map <Leader>dbl :g/^$/d<CR>
 
+"? open explore - ;e
 :map <Leader>e :Explore<CR>
 :map <Leader>csv :s/^/#,/<CR>
 :map <Leader>cws :%s/\s\+$//
 
-" Easy Align on =
+"? Easy Align on = - ;ea
 :map <Leader>ea :EasyAlign =<CR>
-" Start interactive EasyAlign in visual mode (e.g. vipga)
+"? Start interactive EasyAlign - ;ga
+" Start interactive EasyAlign in visual mode (e.g. vipga) - ;ga
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-"Commenting
+" ? Toggle Commenting - ;# or ;gcc
 :map <Leader># gcc
 
-"tabs
+"? tabs
+"? new tab - ;nt
 :map <Leader>nt :tabnew<CR>
+"? prev tab - ;h
 :map <Leader>h   :tabp<CR>
+"? next tab - ;l
 :map <Leader>l  :tabn<CR>
+"? split current file - ;fs
 :map <Leader>fs :tab split<CR>
+"? close current file split - ;xfs
 :map <Leader>xfs :tabc<CR>
+"? list of tabs - ;ts
 :map <leader>ts :Windows<CR>
+"? maximize split - ;m
+:map <Leader>m :MaximizerToggle<CR>
 
 "navigating windows, tmap for terminal mappings
+"? ctrl + hjkl direction to move around splits
 :map <c-l> :wincmd l<CR>
 :tmap <c-l> <c-w>l
 :map <c-h> :wincmd h<CR>
@@ -378,36 +395,44 @@ nmap ga <Plug>(EasyAlign)
 :tmap <Leader>e <c-\><c-n>
 
 "resize windowi
+"? resize split using ctrl + right,left,up,down
 :map <c-right> :vertical resize +5<CR>
 :map <c-left> :vertical resize -5<CR>
 :map <c-up> :resize +5<CR>
 :map <c-down> :resize -5<CR>
 
 "NERDTree plugin
+"? NERDTree - ;t
 :map <Leader>t :NERDTreeToggle<CR>
+"? NERDTree Mirror - ;tm
 :map <Leader>tm :NERDTreeMirror<CR>
 "put NERDTree on the right side
 let g:NERDTreeWinPos = "right"
 
 "ClipBoard paste
+"? clipboard copy - ;put
 :map <Leader>cp :put "+<CR>
+"? set paste mode - ;pp
 :map <Leader>pp :set paste
+"? end paste mode - ;np
 :map <Leader>np :set nopaste
+"? change word using what is in clipboard - ;cc
 :map <Leader>cc cw<C-r>0<ESC>
 
-"My simple todo system
+"? My simple todo system
 " test subject below
-"☐ test
+"? ☐ test
+"? mark as done - ;done
 :map <Leader>done <ESC>0lcw✔<ESC>A /<ESC>"=strftime('%Y-%m-%d %I:%M%p')"<ESC>pA/<ESC>0l
+"? unmark - ;redo
 :map <Leader>redo <ESC>0lcw☐<ESC>V<ESC>:s/\s*\/.*\/$//<CR><ESC>0l
+"? create task - ;task
 :map <Leader>task <ESC>i ☐
-
-"CTags
+"
+"? Toggle CTags - ;c
 :map <Leader>c :TlistToggle<CR>
 
-:map <Leader>m :MaximizerToggle<CR>
-
-" Thesaurus
+"? Thesaurus = ;th
 nnoremap <Leader>th :ThesaurusQueryReplaceCurrentWord<CR>
 
 "rails.vim
