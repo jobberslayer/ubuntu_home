@@ -103,10 +103,13 @@ alias myexternal_ip='wget http://ipinfo.io/ip -qO -'
 alias myto_csv='libreoffice --headless --convert-to csv'
 alias myupdate='sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upgrade; need_reboot.sh'
 alias myless='less -M +Gg'
-alias mycal='cal -A 1'
+alias mycal='ncal -b -3'
 #alias mygittoken='xclip -sel c < ~/Dropbox/.git-token'
 alias mygittoken='lpass show "Git Token" -c --password'
 alias myrdppasswords='lpass show "RDP/Remmina Login information"'
+
+alias mymntgoogledrive='google-drive-ocamlfuse'
+alias mycreatemnt4googledrive='google-drive-ocamlfuse -label label'
 
 alias mymap='xmodmap ~/ubuntu_home/.Xmodmap_popos'
 
@@ -136,6 +139,9 @@ alias xcomp='xcompmgr -c -l0 -t0 -r0 -o.00'
 alias mycompton='picom -CGb&'
 
 alias myhotkeys="grep bind .i3/config|grep -v "^#"|sed 's/bind\w*//'|rofi -dmenu"
+
+# dir shortcuts
+export mydir_lf_costsplit="/home/kevin/googledrive-finlogic/finlogic/`date +%Y`/LiteFighter/Cost splitting"
 
 # /ALIASES
 

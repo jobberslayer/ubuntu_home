@@ -1,0 +1,38 @@
+[
+  {
+    "name": "蓼 My PlayerCtl",
+    "command": "myrofi-playerctl.sh"
+  },
+  {
+    "name": " My FlatPaks",
+    "command": "myflatpaks.sh"
+  },
+  {
+    "name": "爵 My Websites",
+    "command": "myrofi-generic-menu.sh Websites websites"
+  },
+  {
+    "name": " My Hotkeys",
+    "command": "myhotkeys.sh"
+  },
+  {
+    "name": " My VimKeys",
+    "command": "myvimkeys.sh"
+  },
+  {
+    "name": " Move to workspace",
+    "command": "mymv2i3workspaces.sh"
+  },
+  {
+    "name": " Dev Terms",
+    "command": "myterms4devel.sh"
+  },
+  {
+    "name": " Lasspass",
+    "command": "mylasspass.sh"
+  },
+  {
+    "name": " Monitor Layouts",
+    "command": "myscreenlayouts.sh"
+  }
+]

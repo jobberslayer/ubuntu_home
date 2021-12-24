@@ -61,17 +61,19 @@ bindcode $super+60 move position center
 #bindsym $super+f exec nautilus
 bindsym $super+f exec thunar
 
-bindsym $caps+a exec ~/bin/myscripts.sh
+bindsym $caps+a exec ~/bin/myrofi-generic-menu.sh MyScripts scripts
 bindsym $caps+0 exec ~/bin/mysystem.sh
 bindsym $caps+b exec ~/bin/myi3commands.sh
 bindsym $caps+y exec ~/bin/myi3workspaces.sh
+bindsym $caps+u exec ~/bin/myi3workspaces_others.sh
 bindsym $caps+shift+y exec ~/bin/mymv2i3workspaces.sh
 
-bindsym $caps+7 exec ~/.i3/scripts/i3-layout-manager/layout_manager.sh
+bindsym $caps+8 exec ~/.i3/scripts/i3-layout-manager/layout_manager.sh
 
 # rofi popup launcher
 bindsym $caps+space exec rofi -show drun -show-icons
 bindsym $caps+semicolon exec rofi -show window
+bindsym $caps+7 exec rofi -show window
 bindsym $caps+ctrl+f exec rofi  -show fb -modi fb:/home/kevin/.rofi/rofi-file-browser.sh
 
 # shutter for screen capture
@@ -146,8 +148,8 @@ bindsym $caps+Shift+Right move right
 #bindsym $caps+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $caps+o split h;exec notify-send 'tile horizontally'
-bindsym $caps+v split v;exec notify-send 'tile vertically'
+bindsym $caps+o split h;exec rofi -e 'tile horizontally'
+bindsym $caps+v split v;exec rofi -e 'tile vertically'
 bindsym $caps+q split toggle
 
 # toggle fullscreen mode for the focused container
