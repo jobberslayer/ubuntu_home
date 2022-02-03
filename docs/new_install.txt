@@ -56,11 +56,14 @@
   - link .i3 dir
   - install i3blocks
   - make sure bin has been linked for i3exit script
-  - nitrogen 
+  - nitrogen
   - link .Xmodmap
 
 - openvpn
-  - Dropbox/finlogic/openvpn  
+  - Dropbox/finlogic/openvpn
 
 - mount google-drive
   - https://ubunlog.com/en/montar-google-drive-localmente/
+
+- lastpass command line
+  - sudo apt install lastpass-cli
