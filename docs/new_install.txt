@@ -1,0 +1,66 @@
+- lastpass
+- dropbox
+- github
+- zsh
+  - link .zshrc
+  - chsh to zsh
+  - link .git-prompt.sh
+- lsd
+  - https://github.com/Peltoche/lsd/releases
+- autojump
+- arandr
+- bat
+- link Dropbox/finlogic/bin
+- link Dropbox/finlogic/Remote\ Share
+
+
+- ruby
+  - gem install
+    - money
+    - activesupport
+    - rubyXL
+    - write_xlsx
+
+- link Dropbox/finlogic/workspace
+
+- Nerd Font
+  - https://www.nerdfonts.com/font-downloads
+    - RobotoMono
+    - Should already be in ubuntu_home/.fonts
+    - link .fonts
+    - fc-cache -fv
+
+- guake
+- thunar
+
+- vim
+  - install vim
+  - install neovim to get deoplete working easier
+  - link .vimrc
+  - link .vim dir
+  - Vundle
+    - sudo apt install exuberant-ctags
+    - https://github.com/VundleVim/Vundle.vim
+    - git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim  
+    - start vim and :PluginInstall
+
+- alacritty
+  - sudo snap install alacritty --classic
+  - had errors last install.  update this doc later. going back to terminator for now
+
+- rofi
+  - run rofi-theme-selector (usually use fancy)
+  - scripts in bin directory for rest
+
+- i3
+  - link .i3 dir
+  - install i3blocks
+  - make sure bin has been linked for i3exit script
+  - nitrogen 
+  - link .Xmodmap
+
+- openvpn
+  - Dropbox/finlogic/openvpn  
+
+- mount google-drive
+  - https://ubunlog.com/en/montar-google-drive-localmente/

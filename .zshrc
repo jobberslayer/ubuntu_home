@@ -145,5 +145,7 @@ export mydir_lf_costsplit="/home/kevin/googledrive-finlogic/finlogic/`date +%Y`/
 
 # /ALIASES
 
+PATH="$PATH:$HOME/bin"
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
