@@ -51,6 +51,7 @@
 - rofi
   - run rofi-theme-selector (usually use fancy)
   - scripts in bin directory for rest
+  - apt install jq - for rofi-json mod
 
 - i3
   - link .i3 dir
