@@ -1,4 +1,5 @@
 .vim/bundle
 .Conky/latest_weather.txt
 .vim/.netrwhist
-*.swp  
+*.swp
+.fonts/.uuid
