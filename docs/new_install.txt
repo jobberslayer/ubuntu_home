@@ -13,6 +13,7 @@
 - link Dropbox/finlogic/bin
 - link Dropbox/finlogic/Remote\ Share
 - parcellite - clipboard history
+- pavucontrol-qt - sound config
 
 
 - ruby
