@@ -14,6 +14,7 @@
 - link Dropbox/finlogic/Remote\ Share
 - parcellite - clipboard history
 - pavucontrol-qt - sound config
+- zoom
 
 
 - ruby
