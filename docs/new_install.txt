@@ -72,3 +72,6 @@
 
 - lastpass command line
   - sudo apt install lastpass-cli
+
+- apt install ure-java
+  -  Removes a warning when running libreoffice headless to convert files from csv to xlsx
