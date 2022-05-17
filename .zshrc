@@ -140,6 +140,8 @@ alias mycompton='picom -CGb&'
 
 alias myhotkeys="grep bind .i3/config|grep -v "^#"|sed 's/bind\w*//'|rofi -dmenu"
 
+alias myfrontrefresh='sudo fc-cache -f -v'
+
 # dir shortcuts
 export mydir_lf_costsplit="/home/kevin/googledrive-finlogic/finlogic/`date +%Y`/LiteFighter/Cost splitting"
 

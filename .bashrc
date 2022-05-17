@@ -120,6 +120,7 @@ alias mytmux-cheat='cat $HOME/Dropbox/tmux/tmux-cheat-sheet.txt'
 
 alias xcomp='xcompmgr -c -l0 -t0 -r0 -o.00'
 
+alias myfrontrefresh='sudo fc-cache -f -v'
 
 # /ALIASES
 
