@@ -120,6 +120,7 @@ alias mysystem='neofetch'
 alias myfiles='gdu'
 alias mytop='bpytop'
 alias myspeed='speedtest'
+alias myfm='thunar $1'
 
 alias mystart-vpn='sudo openvpn --config "$HOME/openvpn/FinLogic OpenVPN/FinLogicProd.ovpn"'
 
