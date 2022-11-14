@@ -66,6 +66,10 @@
   - nitrogen
   - link .Xmodmap
 
+- picom
+  - install picom
+  - link picom.config to ~/.config/picom.config
+
 - openvpn
   - Dropbox/finlogic/openvpn
 
