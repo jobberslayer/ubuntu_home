@@ -50,8 +50,14 @@
     - start vim and :PluginInstall
 
 - alacritty
-  - sudo snap install alacritty --classic
-  - had errors last install.  update this doc later. going back to terminator for now
+  - https://github.com/alacritty/alacritty/blob/master/INSTALL.md
+    - double check install docs incase things change
+  - install cargo
+  - double check dependencies
+    - sudo apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+  - cargo install alacritty
+  - link .config/alacritty to ubuntu_home/alacritty
+
 
 - rofi
   - run rofi-theme-selector (usually use fancy)

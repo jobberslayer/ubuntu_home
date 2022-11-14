@@ -54,8 +54,8 @@ floating_modifier $caps
 
 # start a terminal
 bindsym $caps+ctrl Return exec nitrogen --restore
-bindsym $caps+Return exec terminator, mode "default"
-#bindsym $caps+Return exec alacritty, mode "default"
+#bindsym $caps+Return exec terminator, mode "default"
+bindsym $caps+Return exec ~/.cargo/bin/alacritty, mode "default"
 bindcode 166 exec terminator, mode "default"
 bindsym ctrl+mod1+Return exec alacritty
 bindsym $menu+Return exec alacritty
