@@ -1,5 +1,9 @@
 [
   {
+    "name": "VASSAL",
+    "command": "cd ~/VASSAL-3.6.7;./VASSAL.sh"
+  },
+  {
     "name": "蓼 My PlayerCtl",
     "command": "myrofi-playerctl.sh"
   },

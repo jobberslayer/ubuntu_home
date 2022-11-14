@@ -7,6 +7,10 @@
 
 #keep screen from blanking
 exec xset dpms 0 0 0 && xset s noblank  && xset s off
+exec ~/.screenlayout/louisville.sh
+exec sleep 1
+exec picom --config ~/.config/picom.config -b
+exec nitrogen --restore
 
 set $super Mod4
 set $menu Mod5
@@ -503,7 +507,8 @@ mode "$terminator_layouts" {
   bindsym Escape mode "default"
 }
 
-bindsym $super+shift+s mode "$spotify_system"
+# bindsym $super+shift+s mode "$spotify_system"
+bindsym $caps+s mode "$spotify_system"
 set $spotify_system <p>  /    <n>   <r>   <i> 
 mode "$spotify_system" {
   bindsym p exec sp play
