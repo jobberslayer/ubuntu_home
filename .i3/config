@@ -55,16 +55,17 @@ floating_modifier $caps
 # start a terminal
 bindsym $caps+ctrl Return exec nitrogen --restore
 #bindsym $caps+Return exec terminator, mode "default"
-bindsym $caps+Return exec ~/.cargo/bin/alacritty, mode "default"
 bindcode 166 exec terminator, mode "default"
 bindsym ctrl+mod1+Return exec alacritty
-bindsym $menu+Return exec alacritty
+bindsym $caps+Return exec ~/.cargo/bin/alacritty, mode "default"
+bindsym $super+Return exec ~/bin/alacritty-vertical-i3.sh
 
 # '>'
 bindcode $caps+shift+60 move position center
 bindcode $super+60 move position center
 #bindsym $super+f exec nautilus
-bindsym $super+f exec thunar
+#bindsym $super+f exec thunar
+bindsym $super+f exec nautilus -w
 
 bindsym $caps+a exec ~/bin/myrofi-generic-menu.sh MyScripts scripts
 bindsym $caps+0 exec ~/bin/mysystem.sh
@@ -496,16 +497,16 @@ mode "$capse_system" {
 }
 
 # terminator layouts
-bindsym $super+Return mode "$terminator_layouts"
-set $terminator_layouts (i)DE (b)lendItUp
+#bindsym $super+Return mode "$terminator_layouts"
+#set $terminator_layouts (i)DE (b)lendItUp
 #set $terminator_layouts (i)DE (g)unnison (b)lendItUp
-mode "$terminator_layouts" {
-  bindsym i exec terminator -l IDE, mode "default"
+#mode "$terminator_layouts" {
+#  bindsym i exec terminator -l IDE, mode "default"
   #bindsym g exec terminator -l Gunnison, mode "default"
-  bindsym b exec terminator -l BIU, mode "default"
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-}
+#  bindsym b exec terminator -l BIU, mode "default"
+#  bindsym Return mode "default"
+#  bindsym Escape mode "default"
+#}
 
 # bindsym $super+shift+s mode "$spotify_system"
 bindsym $caps+s mode "$spotify_system"
