@@ -239,6 +239,8 @@ let g:nerdtree_open_cmd = 'gnome-open'
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 let g:NERDTreeGlyphReadOnly = ''
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeDirArrows = 1
 
 "put filename in status line
 "set statusline=%f

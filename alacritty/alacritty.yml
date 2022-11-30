@@ -131,9 +131,9 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: Source Code Pro
-    family: CodeNewRoman Nerd Font
-    # family: RobotoMono Nerd Font
+    # family: Source Code Pro
+    #family: CodeNewRoman Nerd Font
+    family: RobotoMono Nerd Font
     # family: Hack
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
