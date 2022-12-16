@@ -88,3 +88,15 @@
 
 - apt install ure-java
   -  Removes a warning when running libreoffice headless to convert files from csv to xlsx
+
+- get airpods working
+  - sudo vi /etc/bluetooth/main.conf
+  - add line
+    - ControllerMode = bredr
+  - sudo /etc/init.d/bluetooth restart
+  - install bluetooth gui 
+    - sudo apt install blueman
+  - put airpods in pairing mode
+    - put airpods in case
+    - leave lid open
+    - hold button on back of case until light blinks white
