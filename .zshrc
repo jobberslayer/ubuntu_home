@@ -109,6 +109,7 @@ alias mydiff='diffuse'
 alias mygittoken='lpass show "Git Token" -c --password'
 alias myrdppasswords='lpass show "RDP/Remmina Login information"'
 alias myfinlogicpassword='lpass show "Finlogic Login" -c --password'
+alias mytime='/usr/bin/time -f "%E"'
 
 alias mymntgoogledrive='google-drive-ocamlfuse'
 alias mycreatemnt4googledrive='google-drive-ocamlfuse -label label'
