@@ -81,17 +81,13 @@ bindsym $caps+semicolon exec rofi -show window
 bindsym $caps+ctrl+f exec rofi  -show fb -modi fb:/home/kevin/.rofi/rofi-file-browser.sh
 
 # shutter for screen capture
-#bindsym $caps+shift+p exec shutter -s
-bindsym $caps+shift+p exec flameshot launcher 
+bindsym $caps+shift+p exec flameshot launcher
 
 #Management
 bindsym $caps+shift+f exec thunar
 
 # htop
 bindsym $caps+t exec terminator -r HTOP -e htop
-
-#Skippy osx expose <$caps + =>
-bindcode $caps+21 exec skippy-xd
 
 # set screen layout
 bindsym $caps+ctrl+s exec .screenlayout/louisville.sh
