@@ -75,12 +75,11 @@ bindsym $caps+y exec ~/bin/myi3workspaces.sh
 bindsym $caps+u exec ~/bin/myi3workspaces_others.sh
 bindsym $caps+shift+y exec ~/bin/mymv2i3workspaces.sh
 
-bindsym $caps+8 exec ~/.i3/scripts/i3-layout-manager/layout_manager.sh
+bindsym $caps+Ctrl+8 exec ~/.i3/scripts/i3-layout-manager/layout_manager.sh
 
 # rofi popup launcher
 bindsym $caps+space exec rofi -show drun -show-icons
 bindsym $caps+semicolon exec rofi -show window
-bindsym $caps+7 exec rofi -show window
 bindsym $caps+ctrl+f exec rofi  -show fb -modi fb:/home/kevin/.rofi/rofi-file-browser.sh
 
 # shutter for screen capture
@@ -203,8 +202,9 @@ bindsym $caps+3 workspace 3
 bindsym $caps+4 workspace 4
 bindsym $caps+5 workspace 5
 bindsym $caps+6 workspace 6
-#bindsym $caps+7 workspace 7
-#bindsym $caps+8 workspace 8
+bindsym $caps+7 workspace 7
+bindsym $caps+8 workspace 8
+bindsym $caps+9 workspace 9
 
 bindsym $caps+Mod2+KP_1 workspace 1
 bindsym $caps+Mod2+KP_2 workspace 2
@@ -226,6 +226,7 @@ bindsym $menu+5 workspace 5
 bindsym $menu+6 workspace 6
 bindsym $menu+7 workspace 7
 bindsym $menu+8 workspace 8
+bindsym $menu+9 workspace 9
 
 #navigate workspaces next / previous
 bindcode $caps+60 workspace next
@@ -240,6 +241,7 @@ bindsym $super+Shift+5 move container to workspace number 5
 bindsym $super+Shift+6 move container to workspace number 6
 bindsym $super+Shift+7 move container to workspace number 7
 bindsym $super+Shift+8 move container to workspace number 8
+bindsym $super+Shift+9 move container to workspace number 9
 
 # Move focused container to workspace
 bindsym $caps+Ctrl+Mod2+KP_1 move container to workspace number 1;workspace 1
@@ -253,14 +255,16 @@ bindsym $caps+Ctrl+Mod2+KP_8 move container to workspace number 8;workspace 8
 bindsym $caps+Ctrl+Mod2+KP_9 move container to workspace number 9;workspace 9
 bindsym $caps+Ctrl+Mod2+KP_0 move container to workspace number 10;workspace 10
 
-bindsym $caps+Shift+1 move container to workspace number 1
-bindsym $caps+Shift+2 move container to workspace number 2
-bindsym $caps+Shift+3 move container to workspace number 3
-bindsym $caps+Shift+4 move container to workspace number 4
-bindsym $caps+Shift+5 move container to workspace number 5
-bindsym $caps+Shift+6 move container to workspace number 6
-bindsym $caps+Shift+7 move container to workspace number 7
-bindsym $caps+Shift+8 move container to workspace number 8
+bindsym $caps+Shift+1 move container to workspace number 1;workspace 1
+bindsym $caps+Shift+2 move container to workspace number 2;workspace 2
+bindsym $caps+Shift+3 move container to workspace number 3;workspace 3
+bindsym $caps+Shift+4 move container to workspace number 4;workspace 4
+bindsym $caps+Shift+5 move container to workspace number 5;workspace 5
+bindsym $caps+Shift+6 move container to workspace number 6;workspace 6
+bindsym $caps+Shift+7 move container to workspace number 7;workspace 7
+bindsym $caps+Shift+8 move container to workspace number 8;workspace 8
+bindsym $caps+Shift+9 move container to workspace number 9;workspace 9
+bindsym $caps+Shift+0 move container to workspace number 10;workspace 10
 
 # Move to workspace with focused container
 bindsym $caps+$super+1 move container to workspace number 1; workspace 1
@@ -271,6 +275,8 @@ bindsym $caps+$super+5 move container to workspace number 5; workspace 5
 bindsym $caps+$super+6 move container to workspace number 6; workspace 6
 bindsym $caps+$super+7 move container to workspace number 7; workspace 7
 bindsym $caps+$super+8 move container to workspace number 8; workspace 8
+bindsym $caps+$super+9 move container to workspace number 9; workspace 9
+bindsym $caps+$super+0 move container to workspace number 10; workspace 10
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. 
 # Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). 
