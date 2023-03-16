@@ -146,7 +146,8 @@ alias myhotkeys="grep bind .i3/config|grep -v "^#"|sed 's/bind\w*//'|rofi -dmenu
 
 alias myfrontrefresh='sudo fc-cache -f -v'
 
-alias mydeckcreator="montage -tile 10x7 -geometry 366x510 *.png out.jpg"
+alias mydeckcreator_png="montage -tile 10x7 -geometry 366x510 *.png out.jpg"
+alias mydeckcreator_jpg="montage -tile 10x7 -geometry 366x510 *.jpg out.jpg"
 
 # dir shortcuts
 export mydir_lf_costsplit="/home/kevin/googledrive-finlogic/finlogic/`date +%Y`/LiteFighter/Cost splitting"
