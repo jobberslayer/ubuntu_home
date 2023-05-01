@@ -122,6 +122,8 @@ Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'lervag/vimtex'
 Plugin 'vimwiki/vimwiki'
 Plugin 'ron89/thesaurus_query.vim'
+" Tab Manager swankiness
+Plugin 'pacha/vem-tabline'
 
 "Deoplete
 Plugin 'Shougo/deoplete.nvim'
@@ -129,6 +131,7 @@ Plugin 'roxma/nvim-yarp'
 Plugin 'roxma/vim-hug-neovim-rpc'
 let g:deoplete#enable_at_startup = 1
 "/Deoplete
+
 
 " Plugin 'powerline/powerline
 
@@ -302,6 +305,17 @@ highlight ExtraWhitespace ctermbg=red
 :map <Leader>sa S)
 :map <Leader>sq S"
 :map <Leader>st S'
+"
+"vem tabline
+:noremap <Leader>1 :1tabnext<CR>
+:noremap <Leader>2 :2tabnext<CR>
+:noremap <Leader>3 :3tabnext<CR>
+:noremap <Leader>4 :4tabnext<CR>
+:noremap <Leader>5 :5tabnext<CR>
+:noremap <Leader>6 :6tabnext<CR>
+:noremap <Leader>7 :7tabnext<CR>
+:noremap <Leader>8 :8tabnext<CR>
+:noremap <Leader>9 :9tabnext<CR>
 
 "Support motions for surround I like
 " hit space when your choice is selected

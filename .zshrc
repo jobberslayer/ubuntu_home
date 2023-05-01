@@ -8,6 +8,8 @@ export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_HIDE_IF_PWD_IGNORED=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 
+export RUBYLIB=/home/kevin/github/cfofxn-smarter/libs
+export RUBYCONF=/home/kevin/github/cfofxn-smarter/confs
 
 autoload -Uz promptinit
 setopt PROMPT_SUBST
