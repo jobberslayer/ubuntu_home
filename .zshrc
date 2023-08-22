@@ -112,6 +112,7 @@ alias mygittoken='lpass show "Git Token" -c --password'
 alias myrdppasswords='lpass show "RDP/Remmina Login information"'
 alias myfinlogicpassword='lpass show "Finlogic Login" -c --password'
 alias mytime='/usr/bin/time -f "%E"'
+alias mylargefiles='ncdu'
 
 alias mymntgoogledrive='google-drive-ocamlfuse'
 alias mycreatemnt4googledrive='google-drive-ocamlfuse -label label'
@@ -150,6 +151,8 @@ alias myfrontrefresh='sudo fc-cache -f -v'
 
 alias mydeckcreator_png="montage -tile 10x7 -geometry 366x510 *.png out.jpg"
 alias mydeckcreator_jpg="montage -tile 10x7 -geometry 366x510 *.jpg out.jpg"
+
+alias myvalheim="r2modman --no-sandbox &!"
 
 # dir shortcuts
 export mydir_lf_costsplit="/home/kevin/googledrive-finlogic/finlogic/`date +%Y`/LiteFighter/Cost splitting"

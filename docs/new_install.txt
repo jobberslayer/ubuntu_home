@@ -100,3 +100,13 @@
     - put airpods in case
     - leave lid open
     - hold button on back of case until light blinks white
+
+TROUBLE SHOOTING
+- steam having issues playing dota 2 or windows games
+  - remove mesa-vulkan drivers, clash with nvidia drivers
+  - make sure nvidia driver is up to date
+
+- If something goes sideways and X stuff is uninstalled
+  - sudo apt install gdm3
+  - sudo ubuntu-drivers autoinstall
+  - may need to remove vulkan drivers from above
