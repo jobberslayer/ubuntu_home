@@ -348,6 +348,7 @@ highlight ExtraWhitespace ctermbg=red
 
 "? paste from system clipboard - ;pp
 :map <Leader>pp "*p<CR>
+:noremap <Leader>cb "+y
 
 "? split out a terminal - ;x
 :map <Leader>x :bo split<CR>:terminal ++curwin /bin/bash --login<CR>
