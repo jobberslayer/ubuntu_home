@@ -101,6 +101,10 @@
     - leave lid open
     - hold button on back of case until light blinks white
 
+- edit pdf files
+  - Xournal++
+    - sudo apt install xournalpp
+
 TROUBLE SHOOTING
 - steam having issues playing dota 2 or windows games
   - remove mesa-vulkan drivers, clash with nvidia drivers
